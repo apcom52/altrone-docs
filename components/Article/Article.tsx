@@ -11,7 +11,7 @@ interface ArticleProps {
 export const Article = ({ imageUrl, title, section, href}: ArticleProps) => {
   return <a href={href} className={s.Article}>
     <div className={s.Article__imageContainer}>
-      <Image src={imageUrl} alt="" className={s.Article__image} />
+      <Image width={1024} height={440} src={imageUrl} alt="" className={s.Article__image} />
     </div>
     <div className={s.Article__section}>{section}</div>
     <div className={s.Article__title}>{title}</div>
