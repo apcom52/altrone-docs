@@ -1,0 +1,48 @@
+.Article:hover .Article__image {
+  transform: scale(1.025);
+}
+
+.Article {
+  display: flex;
+  width: 256px;
+  flex-direction: column;
+}
+
+.Article__imageContainer {
+  width: 256px;
+  height: 110px;
+  border-radius: 12px;
+  overflow: hidden;
+  pointer-events: none;
+  clip-path: content-box;
+}
+
+.Article__image {
+  width: 256px;
+  height: auto;
+  user-select: none;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.Article__section {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--secondaryTextColor);
+  font-weight: 500;
+}
+
+.Article__title {
+  margin-top: 4px;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+.ArticleList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 30px;
+  margin: 40px 0;
+}

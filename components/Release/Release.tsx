@@ -1,4 +1,4 @@
-import s from '../../styles/components/Relese.module.css';
+import s from './Relese.module.css';
 import React from "react";
 import {Icon} from "../../altrone";
 
