@@ -5,7 +5,7 @@ import {Release} from "../components/Release/Release";
 export default function Home() {
   return (<>
     <Heading>Make beautiful and functional interfaces!</Heading>
-    <Paragraph>Altrone - it's about convenience. It has many components for every purpose which provide a good interface and user
+    <Paragraph>Altrone - it&apos;s about convenience. It has many components for every purpose which provide a good interface and user
       experience. Every component has a lot of features and customization - variants, roles and etc. Also all
       components perfectly work with dark interfaces.
     </Paragraph>

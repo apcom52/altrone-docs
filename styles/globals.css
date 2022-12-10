@@ -40,3 +40,21 @@ a {
     color: white;
   }
 }
+
+code {
+  background-color: var(--surface);
+  border-radius: 4px;
+  padding: 2px 4px;
+  border: 1px solid var(--borderColor);
+  font-size: 0.9em;
+  color: var(--textColor);
+  margin: 0 0.5ch;
+}
+
+p .alt-icon {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent);
+  margin: -2px 4px;
+  font-size: 1.2em !important;
+}

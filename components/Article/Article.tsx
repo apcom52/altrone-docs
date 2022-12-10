@@ -1,4 +1,5 @@
 import s from './Article.module.css';
+import Image from "next/image";
 
 interface ArticleProps {
   imageUrl: string
@@ -10,7 +11,7 @@ interface ArticleProps {
 export const Article = ({ imageUrl, title, section, href}: ArticleProps) => {
   return <a href={href} className={s.Article}>
     <div className={s.Article__imageContainer}>
-      <img src={imageUrl} alt="" className={s.Article__image} />
+      <Image src={imageUrl} alt="" className={s.Article__image} />
     </div>
     <div className={s.Article__section}>{section}</div>
     <div className={s.Article__title}>{title}</div>

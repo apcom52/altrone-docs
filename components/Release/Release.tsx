@@ -1,4 +1,4 @@
-import s from './Relese.module.css';
+import s from './Release.module.css';
 import React from "react";
 import {Icon} from "../../altrone";
 
@@ -23,7 +23,7 @@ export const Release = ({ title, latestVersion, lastUpdate, backgroundImage}: Re
         <div className={s.ReleaseAction__icon}>
           <Icon i='auto_awesome' />
         </div>
-        <div className={s.ReleaseAction__label}>What's new?</div>
+        <div className={s.ReleaseAction__label}>What&apos;s new?</div>
       </a>
       <a href='#' className={s.ReleaseAction}>
         <div className={s.ReleaseAction__icon}>
