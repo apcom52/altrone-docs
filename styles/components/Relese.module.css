@@ -1,0 +1,80 @@
+.ReleaseWrapper {
+  display: grid;
+  grid-template-columns: 400px minmax(100px, 200px) minmax(100px, 200px);
+  grid-gap: 30px;
+}
+
+.ReleaseWrapper + .ReleaseWrapper {
+  margin-top: 40px;
+}
+
+.Release {
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 600px;
+  background-size: cover;
+  background-position: bottom center;
+  border-radius: 20px;
+}
+
+.Release__container {
+  position: absolute;
+  width: 100%;
+  height: 170px;
+  top: 430px;
+  background: var(--surfaceGlass);
+  backdrop-filter: blur(16px);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 -3px 15px 0 var(--shadow);
+}
+
+.Release__version {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--textColor);
+}
+
+.Release__name {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--textColor);
+}
+
+.Release__updated {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 15px;
+  color: var(--secondaryTextColor);
+}
+
+.ReleaseAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--accent);
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  min-height: 180px;
+}
+
+.ReleaseAction:hover, .ReleaseAction:focus {
+  background-color: var(--highlight);
+}
+
+.ReleaseAction__icon {
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+
+.ReleaseAction__label {
+  font-size: 24px;
+}
+
+.ReleaseColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

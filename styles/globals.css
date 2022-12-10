@@ -2,8 +2,20 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background-image: url(../public/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+body .altrone {
+  background-color: var(--surfaceGlass);
+  backdrop-filter: blur(16px);
 }
 
 a {
@@ -21,6 +33,5 @@ a {
   }
   body {
     color: white;
-    background: black;
   }
 }
