@@ -49,6 +49,7 @@ code {
   font-size: 0.9em;
   color: var(--textColor);
   margin: 0 0.5ch;
+  white-space: nowrap;
 }
 
 p .alt-icon {
@@ -57,4 +58,12 @@ p .alt-icon {
   color: var(--accent);
   margin: -2px 4px;
   font-size: 1.2em !important;
+}
+
+p a {
+  color: var(--accent);
+}
+
+p a:hover, p a:focus {
+  text-decoration: underline;
 }

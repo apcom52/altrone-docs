@@ -1,10 +1,10 @@
-import 'altrone-ui/dist/index.css';
+import '../altrone/index.css';
 import '../styles/globals.css'
 import styles from '../styles/Home.module.css'
-import type { AppProps } from 'next/app'
-import { Altrone, Theme } from 'altrone-ui'
+import type {AppProps} from 'next/app'
+import {Altrone, Theme} from '../altrone'
 import Head from "next/head";
-import {Button, Heading, Icon, NavigationList, Paragraph, Role} from "../altrone";
+import {Button, ButtonVariant, Icon, NavigationList, Role} from "../altrone";
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 
@@ -80,7 +80,7 @@ export default function App({ Component, pageProps }: AppProps) {
           />
           <Button
             className={styles.themeSwitcher}
-            variant='text'
+            variant={ButtonVariant.text}
             role={Role.primary}
             isIcon
             onClick={() => setTheme(theme === Theme.light ? Theme.dark : Theme.light)}

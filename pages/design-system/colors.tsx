@@ -1,6 +1,5 @@
-import {Heading, Icon, Paragraph} from "../../altrone";
+import {ButtonVariant, Heading, Icon, Paragraph, Button, Role} from "../../altrone";
 import React from "react";
-import {Button, Role} from "altrone-ui";
 import s from '../../styles/Home.module.css';
 import {TokenList} from "../../components/Tokens/TokenList";
 import {ColorToken} from "../../components/Tokens/ColorToken";
@@ -11,7 +10,8 @@ import {TextToken} from "../../components/Tokens/TextToken";
 export default function Home() {
   return (<>
     <div className={s.backButton}>
-      <Button href='/design-system' variant='text' leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Design System</Button>
+      <Button href='/design-system' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Design System</Button>
+      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
     </div>
     <Heading>
       Colors
