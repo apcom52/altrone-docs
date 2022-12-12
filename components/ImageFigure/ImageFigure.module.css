@@ -1,0 +1,27 @@
+.ImageFigure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImageFigure__image {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 var(--shadow);
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.ImageFigure__caption {
+  margin-top: 10px;
+  font-size: var(--bodySmallFontSize);
+  font-weight: var(--bodySmallFontWeight);
+  line-height: var(--bodySmallLineHeight);
+  color: var(--secondaryTextColor);
+}
+
+.ImageList {
+  display: flex;
+  margin: 20px 0;
+  gap: 30px;
+}

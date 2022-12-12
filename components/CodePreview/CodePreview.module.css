@@ -1,0 +1,12 @@
+.CodePreview {
+  border-radius: 12px;
+  background-color: var(--surface);
+  box-shadow: 0 3px 15px 0 var(--shadow);
+  overflow: hidden;
+  padding: 8px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.CodePreview > span {
+  background: transparent !important;
+}

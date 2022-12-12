@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 html,
 body {
   padding: 0;
@@ -41,7 +43,7 @@ a {
   }
 }
 
-code {
+code:not([style]) {
   background-color: var(--surface);
   border-radius: 4px;
   padding: 2px 4px;
