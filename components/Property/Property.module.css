@@ -1,0 +1,50 @@
+.Property {
+  display: grid;
+  grid-template-columns: 250px 150px 1fr;
+  grid-gap: 30px;
+  color: var(--textColor);
+  font-size: var(--bodyFontSize);
+  margin: 15px 0;
+  padding: 15px 0;
+}
+
+.Property + .Property {
+  border-top: 1px solid var(--borderColor);
+}
+
+.Property__nameColumn {
+
+}
+
+.Property__nameBlock {
+  background-color: var(--surface);
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-family: monospace;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.Property__requiredAsterisk {
+  color: var(--importantText);
+  margin-left: 4px;
+}
+
+.Property__type {
+  color: var(--secondaryTextColor);
+  font-size: 12px;
+  margin-top: 8px;
+  font-family: monospace;
+}
+
+.Property__defaultValueColumn {
+  font-family: monospace;
+}
+
+.Property__descriptionColumn {
+
+}
+
+.Property_header {
+  font-weight: 600;
+}

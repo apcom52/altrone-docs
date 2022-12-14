@@ -12,8 +12,8 @@ const backgrounds: Record<string, string> = {
   'default': '/bg.png',
   'installation': '/bg-installation.png',
   'design-system': '/bg-design-system.png',
-  'library': 'bg-library.png',
-  'accessibility': 'bg-accessibility.png',
+  'components': '/bg-library.png',
+  'accessibility': '/bg-accessibility.png',
   'license': '/bg-license.png',
 }
 
@@ -63,7 +63,7 @@ export default function App({ Component, pageProps }: AppProps) {
               }, {
                 icon: <Icon i='widgets' />,
                 label: 'Components',
-                value: 'library'
+                value: 'components'
               }, {
                 icon: <Icon i='accessibility_new' />,
                 label: 'Accessibility',

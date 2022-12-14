@@ -6,7 +6,6 @@ import {ArticleList} from "../../components/Article/ArticleList";
 import darkThemeSnippet from '../../snippets/design-system/themes/darkTheme';
 import darkThemeSelectorSnippet from '../../snippets/design-system/themes/darkThemeSelector';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
-import Image from "next/image";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
 import {ImageList} from "../../components/ImageFigure/ImageList";
 import Link from "next/link";

@@ -1,7 +1,9 @@
 .CodePreview {
+  margin: 15px 0;
   border-radius: 12px;
   background-color: var(--surface);
   box-shadow: 0 3px 15px 0 var(--shadow);
+  border: 1px solid var(--borderColor);
   overflow: hidden;
   padding: 8px;
   font-family: 'Roboto Mono', monospace;

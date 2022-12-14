@@ -1,0 +1,19 @@
+.Playground {
+  display: grid;
+  margin: 15px 0;
+  grid-template-columns: 1fr 400px;
+  background-color: var(--surface);
+  border-radius: 12px;
+  align-items: stretch;
+  padding: 12px 12px;
+  gap: 24px;
+  max-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 3px 15px 0 var(--shadow);
+  border: 1px solid var(--borderColor);
+}
+
+.Playground > :global(div.altrone) {
+  padding: 12px;
+  border-radius: 8px;
+}

@@ -1,0 +1,1 @@
+export default `<Heading level={1}>My Heading</Heading>`;
