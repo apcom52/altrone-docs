@@ -34,6 +34,7 @@
   color: var(--secondaryTextColor);
   font-size: 12px;
   margin-top: 8px;
+  margin-left: 5px;
   font-family: monospace;
 }
 
@@ -41,8 +42,12 @@
   font-family: monospace;
 }
 
-.Property__descriptionColumn {
+.Property__descriptionColumn a {
+  color: var(--accent);
+}
 
+.Property__descriptionColumn a:hover, .Property__descriptionColumn a:focus {
+  text-decoration: underline;
 }
 
 .Property_header {

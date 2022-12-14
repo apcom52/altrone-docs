@@ -3,9 +3,9 @@ import s from './Property.module.css';
 
 interface PropertyProps {
   name: string
-  required: boolean
   type: string
   defaultValue: string
+  required?: boolean
 }
 
 export const Property = ({ name, required, type, defaultValue, children }: PropsWithChildren<PropertyProps>) => {

@@ -12,9 +12,9 @@ export default function Home() {
 
     <ArticleList>
       <Article imageUrl='/components/heading.png' title='Heading' section='Typography' href='/components/heading' />
-      <Article imageUrl='/components/paragraph.png' title='Paragraph' section='Typography' href='/components/heading' />
-      <Article imageUrl='/components/blockquote.png' title='Blockquote' section='Typography' href='/components/heading' />
-      <Article imageUrl='/components/message.png' title='Message' section='Typography' href='/components/heading' />
+      <Article imageUrl='/components/paragraph.png' title='Paragraph' section='Typography' href='/components/paragraph' />
+      <Article imageUrl='/components/blockquote.png' title='Blockquote' section='Typography' href='/components/blockquote' />
+      <Article imageUrl='/components/message.png' title='Message' section='Typography' href='/components/message' />
     </ArticleList>
 
     <ArticleList>
