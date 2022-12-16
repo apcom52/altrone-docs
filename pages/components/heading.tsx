@@ -51,7 +51,7 @@ export default function Page() {
       <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
       <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
     </div>
-    <Heading>Heading</Heading>
+    <Heading><span className={s.PageTitleParent}>Typography /</span>Heading</Heading>
 
     <Paragraph><code>&lt;Heading /&gt;</code> is one of typography components. It is used to place heading of different
     levels on your page.</Paragraph>

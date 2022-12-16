@@ -50,7 +50,7 @@ export default function Page() {
       <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
       <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
     </div>
-    <Heading>Message</Heading>
+    <Heading><span className={s.PageTitleParent}>Typography /</span>Message</Heading>
 
     <Paragraph>If you want to add warning or another important message for user on your page, you can use
       <code>&lt;Message /&gt;</code> component.</Paragraph>
