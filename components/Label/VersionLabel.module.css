@@ -40,3 +40,19 @@
   --background: #D84315;
   --backgroundVersion: #BF360C;
 }
+
+:global(.altrone--dark) .VersionLabel_accessibility {
+  --background: #1976d2;
+  --text: white;
+}
+
+.VersionLabel_accessibility {
+  --background: #42a5f5;
+  --text: white;
+  padding-right: 6px;
+}
+
+.VersionLabel_accessibility :global(.alt-icon) {
+  font-size: 1.45em !important;
+  margin-right: 4px;
+}

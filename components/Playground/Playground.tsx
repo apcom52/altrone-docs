@@ -2,13 +2,13 @@ import {PropsWithChildren, ReactNode, useState} from "react";
 import {Altrone, Form, Switcher, Theme, useThemeContext} from "../../altrone";
 import s from './Playground.module.css';
 
-interface PlaygroundProps extends PropsWithChildren {
-  renderFunc: (args: any) => ReactNode,
-  args: any
+interface PlaygroundProps<T> extends PropsWithChildren {
+  renderFunc: (args: T) => ReactNode,
+  args: T
   title: string
 }
 
-export const Playground = ({ title, renderFunc, args, children }: PlaygroundProps) => {
+export const Playground = <T extends object>({ title, renderFunc, args, children }: PlaygroundProps<T>) => {
   const [theme, setTheme] = useState(useThemeContext()?.theme || Theme.light)
 
   return <div className={s.Playground}>
