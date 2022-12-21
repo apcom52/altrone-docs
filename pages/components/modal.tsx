@@ -132,6 +132,13 @@ export default function Page() {
     <Paragraph>For example, to implement the actions presented on the screenshot above, you have to pass the following prop:</Paragraph>
     <CodePreview text={modalActionsSnippet} />
 
+    <Heading level={2}>Modals on Mobile Devices</Heading>
+    <Paragraph>On mobile devices Modal has different appearance. To improve user experience for mobile devices with large
+    displays each Modal placed on the bottom side of screen.</Paragraph>
+    <ImageList>
+      <ImageFigure src='/images/components/mobile-modal.png' width={203} height={360}>Modal on mobile device</ImageFigure>
+    </ImageList>
+
     <Heading level={2}>Accessibility</Heading>
     <Paragraph>Altrone provides some improvements for Modal to make work with Modal easier. For example, every Modal has
     <code>Cancel</code> button by default. This button helps user easily to find button which can cancel the action.</Paragraph>
