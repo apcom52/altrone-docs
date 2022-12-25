@@ -115,7 +115,6 @@ declare const useThemeContext: () => ThemeConfig;
 
 interface FormContextProps {
     required?: boolean;
-    disabled?: boolean;
 }
 declare const FormContext: react.Context<FormContextProps>;
 declare const useFormContext: () => FormContextProps;
@@ -326,7 +325,7 @@ declare const FloatingBox: react.ForwardRefExoticComponent<FloatingBoxProps & re
 
 interface FormProps extends Omit<React.HTMLProps<HTMLFormElement>, 'required' | 'disabled'>, FormContextProps {
 }
-declare const _default$t: react.MemoExoticComponent<({ className, children, required, disabled, ...props }: FormProps) => JSX.Element>;
+declare const _default$t: react.MemoExoticComponent<({ className, children, required, ...props }: FormProps) => JSX.Element>;
 
 declare enum FormGroupVariant {
     default = "default",
@@ -338,14 +337,14 @@ interface FormGroupProps extends React.HTMLProps<HTMLDivElement>, FormContextPro
     align?: Align;
     weights?: number[];
 }
-declare const _default$s: react.MemoExoticComponent<({ variant, align, children, className, required, disabled, weights }: FormGroupProps) => JSX.Element>;
+declare const _default$s: react.MemoExoticComponent<({ variant, align, children, className, required, weights }: FormGroupProps) => JSX.Element>;
 
 interface FormFieldProps extends Omit<React.HTMLProps<HTMLDivElement>, 'children'>, FormContextProps {
     children: ReactElement;
     label?: string;
     required?: boolean;
 }
-declare const _default$r: react.MemoExoticComponent<({ className, label, children, required, disabled }: FormFieldProps) => JSX.Element>;
+declare const _default$r: react.MemoExoticComponent<({ className, label, children, required }: FormFieldProps) => JSX.Element>;
 
 interface ModalProps extends PropsWithChildren {
     onClose: () => void;
@@ -670,4 +669,4 @@ interface MessageProps extends Omit<React.HTMLProps<HTMLDivElement>, 'title' | '
 }
 declare const _default: react.MemoExoticComponent<({ title, children, role, IconComponent, className }: MessageProps) => JSX.Element>;
 
-export { Align, Altrone, _default$o as BasicInput, BasicInputProps, _default$2 as Blockquote, _default$u as Box, _default$v as Button, _default$p as ButtonContainer, ButtonVariant, _default$k as Checkbox, _default$j as CheckboxList, _default$9 as Chips, ContextAction, _default$a as ContextMenu, ContextMenuType, ContextSeparator, DEFAULT_OFFSET, DEFAULT_THEME, _default$w as DataTable, DataTableAppliedFilter, DataTableContext, DataTableContextType, DataTableFilter, _default$g as DatePicker, Direction, FloatingBox, _default$t as Form, FormContext, FormContextProps, _default$r as FormField, _default$s as FormGroup, FormGroupVariant, HORIZONTAL_MARGIN, _default$3 as Heading, _default$c as Icon, InputIsland, InputIslandAction, InputIslandType, Margin, _default as Message, _default$q as Modal, _default$4 as NavigationList, _default$l as NumberInput, OffsetObject, Option, OptionParent, PADDING, Padding, _default$1 as Paragraph, ParentContextAction, _default$m as PasswordInput, Point, _default$b as Progress, _default$e as RadioList, Role, _default$f as ScrollableSelector, _default$i as Select, Size, Sort, _default$h as Switcher, _default$8 as TabList, TabListVariant, _default$n as TextInput, TextInputProps, _default$d as Textarea, Theme, ThemeConfig, ThemeContext, _default$7 as Toolbar, _default$6 as ToolbarGroup, _default$5 as ToolbarSeparator, VERTICAL_MARGIN, WithAltroneOffsets, WithoutDefaultOffsets, ZERO_MARGIN, ZERO_PADDING, useDataTableContext, useFormContext, useLocalization, useMargin, useOffset, usePadding, useResizeObserver, useThemeContext, useWindowSize };
+export { Align, Altrone, _default$o as BasicInput, BasicInputProps, _default$2 as Blockquote, _default$u as Box, _default$v as Button, _default$p as ButtonContainer, ButtonVariant, _default$k as Checkbox, _default$j as CheckboxList, _default$9 as Chips, ContextAction, _default$a as ContextMenu, ContextMenuType, ContextSeparator, DEFAULT_OFFSET, DEFAULT_THEME, _default$w as DataTable, DataTableAppliedFilter, DataTableContext, DataTableContextType, DataTableFilter, _default$g as DatePicker, Direction, FloatingBox, FloatingBoxMobileBehaviour, _default$t as Form, FormContext, FormContextProps, _default$r as FormField, _default$s as FormGroup, FormGroupVariant, HORIZONTAL_MARGIN, _default$3 as Heading, _default$c as Icon, InputIsland, InputIslandAction, InputIslandType, Margin, _default as Message, _default$q as Modal, _default$4 as NavigationList, _default$l as NumberInput, OffsetObject, Option, OptionParent, PADDING, Padding, _default$1 as Paragraph, ParentContextAction, _default$m as PasswordInput, Point, _default$b as Progress, ProgressVariant, _default$e as RadioList, Role, _default$f as ScrollableSelector, _default$i as Select, Size, Sort, _default$h as Switcher, _default$8 as TabList, TabListVariant, _default$n as TextInput, TextInputProps, _default$d as Textarea, Theme, ThemeConfig, ThemeContext, _default$7 as Toolbar, _default$6 as ToolbarGroup, _default$5 as ToolbarSeparator, VERTICAL_MARGIN, WithAltroneOffsets, WithoutDefaultOffsets, ZERO_MARGIN, ZERO_PADDING, useDataTableContext, useFormContext, useLocalization, useMargin, useOffset, usePadding, useResizeObserver, useThemeContext, useWindowSize };
