@@ -23,6 +23,7 @@
   font-family: monospace;
   font-weight: 600;
   font-size: 20px;
+  line-break: anywhere;
 }
 
 .Property__requiredAsterisk {
