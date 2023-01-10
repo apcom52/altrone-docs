@@ -8,10 +8,8 @@ import {
   NumberInput,
   Option,
   Paragraph,
-  Progress, ProgressVariant,
   Role,
   Select,
-  Size
 } from "../../altrone";
 import React, {useRef, useState} from "react";
 import {Playground} from "../../components/Playground/Playground";
@@ -19,11 +17,9 @@ import {useArgs} from "../../utils/useArgs";
 import {Property} from "../../components/Property/Property";
 import {PropertyRow} from "../../components/Property/PropertyHeaderRow";
 import {CodePreview} from "../../components/CodePreview/CodePreview";
-import progressCode from '../../snippets/components/progress/example';
+import floatingBoxSnippet from '../../snippets/components/floating-box/example';
 import Link from "next/link";
 import Head from "next/head";
-import {SIZES} from "./button";
-import {ROLES} from "./message";
 import {ImageList} from "../../components/ImageFigure/ImageList";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
 
@@ -133,7 +129,7 @@ export default function Page() {
         </FormField>
       </>
     </Playground>
-    <CodePreview text={progressCode} />
+    <CodePreview text={floatingBoxSnippet} />
 
     <Heading level={2}>Mobile behaviour</Heading>
     <Paragraph>Some popups may look and work awkwardly on mobile devices. Therefore FloatingBox has special property - <code>mobileBehaviour</code> to
