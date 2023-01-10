@@ -1,0 +1,14 @@
+.Extends {
+  font-size: 0.5em;
+  font-weight: 300;
+  color: var(--secondaryTextColor);
+  margin-left: 0.5em;
+  vertical-align: middle;
+  font-family: monospace;
+}
+
+.Extends span {
+  font-weight: 600;
+  color: var(--accentText);
+  font-size: 1.25em;
+}
