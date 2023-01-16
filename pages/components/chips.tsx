@@ -6,10 +6,8 @@ import {
   FormField,
   Heading,
   Icon,
-  NumberInput,
   Option,
   Paragraph,
-  Progress,
   Role,
   Select,
   Size
@@ -24,7 +22,6 @@ import chipsCode from '../../snippets/components/chips/example';
 import Link from "next/link";
 import Head from "next/head";
 import {SIZES} from "./button";
-import {ROLES} from "./message";
 import {DIRECTION} from "./modal";
 
 const CHIPS_VALUES: Option[] = [{
@@ -113,7 +110,7 @@ export default function Page() {
       Size of Chips. Look on <Link href='/types/#size'>Size enum</Link> to see all possible values
     </Property>
     <Property name='SelectedIcon' type="JSX.Element" defaultValue="undefined">
-      Custom selected icon. By default component uses <code>&lt;Icon i="check" /&gt;</code>
+      Custom selected icon. By default component uses <code>&lt;Icon i=&quot;check&quot; /&gt;</code>
     </Property>
 
     <Heading level={2}>Callbacks</Heading>

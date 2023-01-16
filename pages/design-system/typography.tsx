@@ -1,12 +1,9 @@
   import {ButtonVariant, DataTable, Heading, Icon, Paragraph} from "../../altrone";
   import React, {useEffect, useState} from "react";
-  import {Button, Role} from "altrone-ui";
+  import {Button, Role} from "../../altrone";
   import s from '../../styles/Home.module.css';
-  import {TokenList} from "../../components/Tokens/TokenList";
-  import {ColorToken} from "../../components/Tokens/ColorToken";
   import {Article} from "../../components/Article/Article";
   import {ArticleList} from "../../components/Article/ArticleList";
-  import {TextToken} from "../../components/Tokens/TextToken";
   import Link from "next/link";
 
   const TYPOGRAPHY_TOKENS = [{
