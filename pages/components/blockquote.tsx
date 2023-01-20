@@ -18,6 +18,7 @@ import {Property} from "../../components/Property/Property";
 import {PropertyRow} from "../../components/Property/PropertyHeaderRow";
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import blockquoteCode from '../../snippets/components/blockquote/example';
+import Head from "next/head";
 
 interface PlaygroundInterface {
   children: string;
@@ -34,6 +35,9 @@ export default function Page() {
       'mattis sapien tortor quis mauris.' })
 
   return (<>
+    <Head>
+      <title>Blockquote - Altrone Documentation</title>
+    </Head>
     <div className={s.backButton}>
       <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
       <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
