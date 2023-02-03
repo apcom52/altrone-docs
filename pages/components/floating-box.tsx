@@ -10,7 +10,7 @@ import {
   Paragraph,
   Role,
   Select,
-} from "../../altrone";
+} from "altrone-ui";
 import React, {useRef, useState} from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -22,6 +22,7 @@ import Link from "next/link";
 import Head from "next/head";
 import {ImageList} from "../../components/ImageFigure/ImageList";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 const FLOATINGBOX_PLACEMENTS: Option[] = [{
   label: 'Auto',
@@ -86,11 +87,7 @@ export default function Page() {
     <Head>
       <title>FloatingBox - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Containers /</span>Floating Box</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Containers' name='Floating Box' />
 
     <Paragraph>Floating Box is used for popups that are attached to a specific element on the page.</Paragraph>
 

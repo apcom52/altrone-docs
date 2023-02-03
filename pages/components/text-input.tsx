@@ -16,7 +16,7 @@ import {
   Size,
   Switcher,
   TextInput
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React, {useState} from "react";
@@ -33,6 +33,7 @@ import componentsIslandSnippet from '../../snippets/components/text-input/compon
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import {SIZES} from "./button";
 import {SimplePlayground} from "../../components/Playground/SimplePlayground";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 export const DIRECTION = [{
   label: 'Horizontal',
@@ -88,12 +89,7 @@ export default function Page() {
     <Head>
       <title>Text Input - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Form /</span>Text Input</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Form' name='Text Input' />
     <Paragraph>Text Input is a part of form. This component allows you to type simple text.</Paragraph>
 
     <Heading level={2}>Usage</Heading>

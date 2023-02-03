@@ -10,7 +10,7 @@ import {
   Role,
   Textarea,
   TextInput
-} from "../../altrone";
+} from "altrone-ui";
 import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -19,6 +19,8 @@ import {PropertyRow} from "../../components/Property/PropertyHeaderRow";
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import blockquoteCode from '../../snippets/components/blockquote/example';
 import Head from "next/head";
+import Link from "next/link";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 interface PlaygroundInterface {
   children: string;
@@ -38,12 +40,7 @@ export default function Page() {
     <Head>
       <title>Blockquote - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Typography /</span>Blockquote</Heading>
-
+    <ArticleHeader backLinkTitle='Components' category='Typography' name='Blockquote' />
     <Paragraph><code>&lt;Blockquote /&gt;</code> uses for a section that is quoted from another source.</Paragraph>
 
     <Heading level={2}>Usage</Heading>

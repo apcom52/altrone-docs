@@ -10,7 +10,7 @@ import {
   Paragraph, PasswordInput,
   Role,
   Switcher,
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React, {useState} from "react";
@@ -21,6 +21,7 @@ import {Playground} from "../../components/Playground/Playground";
 import passwordSnippet from '../../snippets/components/text-input/password';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import {Extends} from "../../components/Extends";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 type PlaygroundProps = {
   showControls: boolean;
@@ -39,12 +40,7 @@ export default function Page() {
     <Head>
       <title>Password Input - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Form /</span>Password Input</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Typography' name='Password Input' />
     <Paragraph>Password Input uses for form with confidential data</Paragraph>
 
     <Heading level={2}>Usage</Heading>

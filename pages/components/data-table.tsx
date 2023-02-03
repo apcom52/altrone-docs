@@ -1,17 +1,17 @@
 import s from "../../styles/Home.module.css";
 import {
   Button,
-  ButtonVariant, DataTable,
+  ButtonVariant,
+  DataTable,
   FormField,
   Heading,
   Icon,
   NumberInput,
-  Option,
   Paragraph,
   Role,
-  Select, Switcher,
-} from "../../altrone";
-import React, {useRef, useState} from "react";
+  Switcher,
+} from "altrone-ui";
+import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
 import {Property} from "../../components/Property/Property";
@@ -23,7 +23,7 @@ import Head from "next/head";
 import {ImageList} from "../../components/ImageFigure/ImageList";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
 import {AvailableFrom} from "../../components/Label/AvailableFrom";
-import {DataTableColumn} from "../../altrone/types/components/data/DataTable";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 interface PlaygroundInterface {
   sorting: boolean;
@@ -83,7 +83,7 @@ const DATA = [
   }
 ];
 
-const COLUMNS: DataTableColumn[] = [
+const COLUMNS = [
   {
     accessor: 'continent',
     label: 'Continent'
@@ -117,11 +117,7 @@ export default function Page() {
     <Head>
       <title>DataTable - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Data /</span>Data Table</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Data' name='DataTable' />
 
     <Paragraph>DataTable provide easy way to render table data with additional functionality like sorting, searching or filtering.</Paragraph>
 
@@ -179,7 +175,7 @@ export default function Page() {
       button with <code>dropdown</code> prop. Popup action shows floating box when activated (it can be form, text messages, etc).</Paragraph>
 
     <Paragraph>Pay attention on amount of your actions. Try not to use more than 4 actions (with sorting and filtering) in one table. If you want to
-    add more than 4 actions, use <code>isIcon</code> prop for your actions. On mobile devices <code>isCode</code> uses by default and can't be overrided.</Paragraph>
+    add more than 4 actions, use <code>isIcon</code> prop for your actions. On mobile devices <code>isCode</code> uses by default and can&apos;t be overrided.</Paragraph>
 
     <Paragraph>Interface <code>DataTableAction</code> has following structure:</Paragraph>
     <PropertyRow />
@@ -216,7 +212,7 @@ export default function Page() {
     </Paragraph>
     <Paragraph>
       Default sorting function just compares the field values of two adjacent objects in your array. If you want to override
-      default sorting function, you have to pass new function with following type: <code>(props: DataTableSortFunc) => number</code>.
+      default sorting function, you have to pass new function with following type: <code>(props: DataTableSortFunc) =&gt; number</code>.
       <code>DataTableSortFunc</code> interface has following fields:
     </Paragraph>
     <PropertyRow />
@@ -255,7 +251,7 @@ export default function Page() {
     of the <code>searchBy</code> prop should be equals to one of the keys of the data object. </Paragraph>
     <Paragraph>Default search function transforms your value into lowercase string and compares the beginning of the string
       with the value entered in the search field. If you want to override default search function, you should pass a new function
-    <code>(args: DataTableSearchFunc) => boolean</code> as <code>searchFunc</code> prop. <code>DataTableSearchFunc</code> has
+    <code>(args: DataTableSearchFunc) =&gt; boolean</code> as <code>searchFunc</code> prop. <code>DataTableSearchFunc</code> has
       following fields:</Paragraph>
     <PropertyRow />
     <Property name='item' required type="unknown" defaultValue="undefined">
@@ -273,7 +269,7 @@ export default function Page() {
     all columns except the first one and provide button <Icon i="arrow_forward_ios" /> which allows you to open a modal window
     where you can see all columns. You can specify which columns you want to see on mobile devices via prop <code>mobileColumns</code>.</Paragraph>
     <ImageList>
-      <ImageFigure src='/images/components/data-table.png' width={318} height={564}>DataTable on mobile device with <code>mobileColumns=['iso', 'name']</code></ImageFigure>
+      <ImageFigure src='/images/components/data-table.png' width={318} height={564}>DataTable on mobile device with <code>mobileColumns=[&amp;iso&amp;, &amp;name&amp;]</code></ImageFigure>
       <ImageFigure src='/images/components/data-table-opened.png' width={318} height={564}>DataTable after click on arrow</ImageFigure>
     </ImageList>
 

@@ -1,7 +1,5 @@
-import {Heading, Paragraph} from "../../altrone";
+import {Heading, Paragraph} from "altrone-ui";
 import React from "react";
-import {ArticleList} from "../../components/Article/ArticleList";
-import {Article} from "../../components/Article/Article";
 
 export default function Home() {
   return (<>

@@ -1,6 +1,5 @@
-  import {ButtonVariant, DataTable, Heading, Icon, Paragraph} from "../../altrone";
+  import {ButtonVariant, DataTable, Heading, Icon, Paragraph, Button, Role} from "altrone-ui";
   import React, {useEffect, useState} from "react";
-  import {Button, Role} from "../../altrone";
   import s from '../../styles/Home.module.css';
   import {Article} from "../../components/Article/Article";
   import {ArticleList} from "../../components/Article/ArticleList";

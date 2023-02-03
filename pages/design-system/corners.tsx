@@ -1,8 +1,7 @@
 import s from "../../styles/Home.module.css";
-import {Button, ButtonVariant, Heading, Icon, Paragraph, Role} from "../../altrone";
+import {Button, ButtonVariant, Heading, Icon, Paragraph, Role} from "altrone-ui";
 import React from "react";
 import {ImageList} from "../../components/ImageFigure/ImageList";
-import Image from "next/image";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
 
 export default function Home() {

@@ -11,7 +11,7 @@ import {
   Switcher,
   TextInput,
   Align, Modal
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React, {useState} from "react";
@@ -27,6 +27,7 @@ import {Accessibility} from "../../components/Label/Accessibility";
 import {SIZES} from "./button";
 import {ImageList} from "../../components/ImageFigure/ImageList";
 import {ImageFigure} from "../../components/ImageFigure/ImageFigure";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 export const DIRECTION = [{
   label: 'Horizontal',
@@ -74,12 +75,7 @@ export default function Page() {
     <Head>
       <title>Modal - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Containers /</span>Modal</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Containers' name='Modal' />
     <Paragraph>Modal container provides foundation for creating dialogs, popovers, lightboxes and etc.</Paragraph>
 
     <Heading level={2}>Usage</Heading>

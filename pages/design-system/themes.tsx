@@ -1,4 +1,4 @@
-import {Button, ButtonVariant, Heading, Icon, Paragraph, Role} from "../../altrone";
+import {Button, ButtonVariant, Heading, Icon, Paragraph, Role} from "altrone-ui";
 import React from "react";
 import s from '../../styles/Home.module.css';
 import {Article} from "../../components/Article/Article";
@@ -42,12 +42,12 @@ export default function Home() {
     </ImageList>
 
     <Paragraph>
-      It's best not to implement special styles for the dark theme, but just use the default colors
+      It&apot;s best not to implement special styles for the dark theme, but just use the default colors
       (<Link href='/design-system/colors'>Color Tokens</Link>). But if you want override some styles in dark mode, you
       can just use following selector:
     </Paragraph>
 
-    <CodePreview text={darkThemeSelectorSnippet} language='sass' />
+    <CodePreview text={darkThemeSelectorSnippet} language='css' />
 
     <Heading level={2}>See also</Heading>
     <ArticleList>

@@ -8,7 +8,7 @@ import {
   Role,
   Select,
   Align
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React from "react";
@@ -19,6 +19,7 @@ import Link from "next/link";
 import {Playground} from "../../components/Playground/Playground";
 import buttonContainerSnippet from '../../snippets/components/button-container/example';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 export const DIRECTION = [{
   label: 'Horizontal',
@@ -56,12 +57,7 @@ export default function Page() {
     <Head>
       <title>Button Container - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Containers /</span>Button Container</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Containers' name='Button Container' />
     <Paragraph>If you have some buttons in one place you can use Button Container</Paragraph>
 
     <Heading level={2}>Usage</Heading>

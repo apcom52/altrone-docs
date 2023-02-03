@@ -10,7 +10,7 @@ import {
   Role,
   Select,
   TextInput
-} from "../../altrone";
+} from "altrone-ui";
 import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -20,6 +20,7 @@ import {CodePreview} from "../../components/CodePreview/CodePreview";
 import messageCode from '../../snippets/components/messages/example';
 import Link from "next/link";
 import Head from "next/head";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 export const ROLES: Option[] = [{
   label: 'Default',
@@ -46,11 +47,7 @@ export default function Page() {
     <Head>
       <title>Messages - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Typography /</span>Message</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Typography' name='Message' />
 
     <Paragraph>If you want to add warning or another important message for user on your page, you can use
       <code>&lt;Message /&gt;</code> component.</Paragraph>

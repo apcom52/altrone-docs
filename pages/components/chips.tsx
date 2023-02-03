@@ -11,7 +11,7 @@ import {
   Role,
   Select,
   Size
-} from "../../altrone";
+} from "altrone-ui";
 import React, {useState} from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -23,6 +23,7 @@ import Link from "next/link";
 import Head from "next/head";
 import {SIZES} from "./button";
 import {DIRECTION} from "./modal";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 const CHIPS_VALUES: Option[] = [{
   label: 'North America',
@@ -69,11 +70,7 @@ export default function Page() {
     <Head>
       <title>Chips - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Lists /</span>Chips</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Lists' name='Chips' />
 
     <Paragraph>Chips is a useful and visual component for filtration</Paragraph>
 

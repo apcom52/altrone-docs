@@ -1,5 +1,5 @@
-import React, {PropsWithChildren} from "react";
-import {Theme, useThemeContext} from "../../altrone";
+import React from "react";
+import {Theme, useThemeContext} from "altrone-ui";
 import {CodeBlock, github, dracula} from "react-code-blocks";
 import s from './CodePreview.module.css';
 

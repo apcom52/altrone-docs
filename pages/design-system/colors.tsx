@@ -1,4 +1,4 @@
-import {ButtonVariant, Heading, Icon, Paragraph, Button, Role} from "../../altrone";
+import {ButtonVariant, Heading, Icon, Paragraph, Button, Role} from "altrone-ui";
 import React from "react";
 import s from '../../styles/Home.module.css';
 import {TokenList} from "../../components/Tokens/TokenList";

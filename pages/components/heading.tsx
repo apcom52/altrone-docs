@@ -8,9 +8,8 @@ import {
   Option,
   Paragraph,
   Role,
-  Select,
-  TextInput
-} from "../../altrone";
+  Select
+} from "altrone-ui";
 import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -18,6 +17,7 @@ import {Property} from "../../components/Property/Property";
 import {PropertyRow} from "../../components/Property/PropertyHeaderRow";
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import headingCode from '../../snippets/components/heading/example';
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 const LEVELS: Option[] = [{
   label: 'h1',
@@ -47,11 +47,7 @@ export default function Page() {
   const [args, setArgs] = useArgs({ level: 1, children: 'Hi there!' })
 
   return (<>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Typography /</span>Heading</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Typography' name='Heading' />
 
     <Paragraph><code>&lt;Heading /&gt;</code> is one of typography components. It is used to place heading of different
     levels on your page.</Paragraph>

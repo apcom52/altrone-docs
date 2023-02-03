@@ -1,4 +1,4 @@
-import {Heading} from "../../altrone";
+import {Heading} from "altrone-ui";
 import React from "react";
 
 export default function Home() {

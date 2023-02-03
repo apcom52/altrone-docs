@@ -7,10 +7,10 @@ import {
   FormGroupVariant,
   Heading,
   Icon, NumberInput,
-  Paragraph, PasswordInput,
+  Paragraph,
   Role,
   Switcher, TextInput,
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React, {useState} from "react";
@@ -21,6 +21,7 @@ import {Playground} from "../../components/Playground/Playground";
 import numberInputSnippet from '../../snippets/components/text-input/number-input';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import {Extends} from "../../components/Extends";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 type PlaygroundProps = {
   showControls: boolean;
@@ -53,12 +54,7 @@ export default function Page() {
     <Head>
       <title>Number Input - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Form /</span>Number Input</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Form' name='Number Input' />
     <Paragraph>Number Input uses to enter valid numeric values</Paragraph>
 
     <Heading level={2}>Usage</Heading>

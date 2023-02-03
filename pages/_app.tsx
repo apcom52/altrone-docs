@@ -2,9 +2,8 @@ import '../altrone/index.css';
 import '../styles/globals.css'
 import styles from '../styles/Home.module.css'
 import type {AppProps} from 'next/app'
-import {Altrone, Theme} from '../altrone'
+import {Altrone, Theme, Button, ButtonVariant, Icon, NavigationList, Role} from 'altrone-ui'
 import Head from "next/head";
-import {Button, ButtonVariant, Icon, NavigationList, Role} from "../altrone";
 import React, {useEffect, useState} from "react";
 import {useRouter} from "next/router";
 

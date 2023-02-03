@@ -12,7 +12,7 @@ import {
   Role,
   Select,
   Size
-} from "../../altrone";
+} from "altrone-ui";
 import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
@@ -24,6 +24,7 @@ import Link from "next/link";
 import Head from "next/head";
 import {SIZES} from "./button";
 import {ROLES} from "./message";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 const PROGRESS_VARIANTS: Option[] = [{
   label: 'Default',
@@ -54,11 +55,7 @@ export default function Page() {
     <Head>
       <title>Progress - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Indicators /</span>Progress</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Indicators' name='Progress' />
 
     <Paragraph>Progress component let people know that your application loads something or make a lenghtly operation.</Paragraph>
 

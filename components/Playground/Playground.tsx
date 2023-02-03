@@ -1,5 +1,5 @@
 import {PropsWithChildren, ReactNode, useEffect, useState} from "react";
-import {Altrone, Form, Switcher, Theme, useThemeContext} from "../../altrone";
+import {Altrone, Form, Switcher, Theme, useThemeContext} from "altrone-ui";
 import s from './Playground.module.css';
 
 interface PlaygroundProps<T> extends PropsWithChildren {
@@ -8,8 +8,8 @@ interface PlaygroundProps<T> extends PropsWithChildren {
   title: string
 }
 
-export const Playground = <T extends object>({ title, renderFunc, args, children }: PlaygroundProps<T>) => {
-  const [theme, setTheme] = useState(useThemeContext()?.theme || Theme.light)
+export const Playground = <T extends object>({ renderFunc, args, children }: PlaygroundProps<T>) => {
+  const [theme, setTheme] = useState(Theme.light)
 
   const [isVisible, setIsVisible] = useState(false);
 

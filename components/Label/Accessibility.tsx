@@ -1,6 +1,6 @@
 import s from './VersionLabel.module.css';
 import React from "react";
-import {Icon} from "../../altrone";
+import {Icon} from "altrone-ui";
 
 export const Accessibility = () => {
   return <div className={`${s.VersionLabel} ${s.VersionLabel_accessibility}`}>

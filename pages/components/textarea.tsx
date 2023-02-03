@@ -11,7 +11,7 @@ import {
   Role, Select,
   Size,
   Switcher, Textarea, TextInput,
-} from "../../altrone";
+} from "altrone-ui";
 import Head from "next/head";
 import s from "../../styles/Home.module.css";
 import React, {useState} from "react";
@@ -23,6 +23,7 @@ import textareaSnippet from '../../snippets/components/text-input/textarea';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import {Extends} from "../../components/Extends";
 import {SIZES} from "./button";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 type PlaygroundProps = {
   disabled: boolean;
@@ -47,12 +48,7 @@ export default function Page() {
     <Head>
       <title>Textarea - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Form /</span>Textarea</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Form' name='Textarea' />
     <Paragraph>Textarea uses for enter text with line breaks.</Paragraph>
 
     <Heading level={2}>Usage</Heading>

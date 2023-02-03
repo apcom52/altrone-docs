@@ -6,23 +6,20 @@ import {
   Icon,
   Paragraph,
   Role,
-} from "../../altrone";
+} from "altrone-ui";
 import React from "react";
 import {Playground} from "../../components/Playground/Playground";
 import {useArgs} from "../../utils/useArgs";
 import {CodePreview} from "../../components/CodePreview/CodePreview";
 import {Extends} from "../../components/Extends";
 import codeSnippet from '../../snippets/components/paragraph/example';
+import {ArticleHeader} from "../../components/ArticleHeader";
 
 export default function Page() {
   const [args, setArgs] = useArgs({})
 
   return (<>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios' />} role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share' />} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Typography /</span>Paragraph</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Typography' name='Paragraph' />
 
     <Paragraph>Paragraph component uses for making paragraphs on the page</Paragraph>
 

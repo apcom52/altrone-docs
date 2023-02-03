@@ -9,10 +9,10 @@ import {
   Select,
   Size,
   Switcher,
-  TextInput
-} from "../../altrone";
+  TextInput,
+  Option
+} from "altrone-ui";
 import Head from "next/head";
-import s from "../../styles/Home.module.css";
 import React from "react";
 import {useArgs} from "../../utils/useArgs";
 import {PropertyRow} from "../../components/Property/PropertyHeaderRow";
@@ -23,8 +23,9 @@ import {ROLES} from "./message";
 import buttonSnippet from '../../snippets/components/button/example';
 import iconButtonSnippet from '../../snippets/components/button/iconExample';
 import {CodePreview} from "../../components/CodePreview/CodePreview";
+import {ArticleHeader} from "../../components/ArticleHeader";
 
-export const SIZES = [{
+export const SIZES: Option<string>[] = [{
   label: 'Small',
   value: Size.small
 }, {
@@ -35,7 +36,7 @@ export const SIZES = [{
   value: Size.large
 }]
 
-export const BUTTON_VARIANTS = [{
+export const BUTTON_VARIANTS: Option<string>[] = [{
   label: 'Default',
   value: ButtonVariant.default
 }, {
@@ -70,12 +71,7 @@ export default function Page() {
     <Head>
       <title>Button - Altrone Documentation</title>
     </Head>
-    <div className={s.backButton}>
-      <Button href='/components' variant={ButtonVariant.text} leftIcon={<Icon i='arrow_back_ios'/>}
-              role={Role.primary}>Components</Button>
-      <Button variant={ButtonVariant.text} rightIcon={<Icon i='share'/>} role={Role.primary}>Share</Button>
-    </div>
-    <Heading><span className={s.PageTitleParent}>Actions /</span>Button</Heading>
+    <ArticleHeader backLinkTitle='Components' category='Actions' name='Button' />
     <Paragraph>Button component allow users to take actions or make choice from context menu with a simple click on
       this button</Paragraph>
 
@@ -99,7 +95,7 @@ export default function Page() {
           <Select value={args.role} options={ROLES} onChange={value => setArgs('role', value)} />
         </FormField>
         <FormField label='Variant'>
-          <Select value={args.variant} options={BUTTON_VARIANTS} onChange={value => setArgs('variant', value)} />
+          <Select value={String(args.variant)} options={BUTTON_VARIANTS} onChange={value => setArgs('variant', value)} />
         </FormField>
         <FormField label='Size'>
           <Select value={args.size} options={SIZES} onChange={value => setArgs('size', value)} />
@@ -110,7 +106,7 @@ export default function Page() {
         <FormField label='Right icon'>
           <TextInput value={args.rightIcon} onChange={value => setArgs('rightIcon', value)} />
         </FormField>
-        <Switcher value={args.disabled} onChange={value => setArgs('disabled', value)}>Disabled</Switcher>
+        <Switcher checked={args.disabled} onChange={value => setArgs('disabled', value)}>Disabled</Switcher>
       </>
     </Playground>
     <CodePreview text={buttonSnippet} />
@@ -139,7 +135,7 @@ export default function Page() {
         <FormField label='Size'>
           <Select value={args2.size} options={SIZES} onChange={value => setArgs2('size', value)} />
         </FormField>
-        <Switcher value={args2.disabled} onChange={value => setArgs2('disabled', value)}>Disabled</Switcher>
+        <Switcher checked={args2.disabled} onChange={value => setArgs2('disabled', value)}>Disabled</Switcher>
       </>
     </Playground>
     <CodePreview text={iconButtonSnippet} />
