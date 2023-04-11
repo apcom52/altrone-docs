@@ -33,10 +33,10 @@ export default function Home() {
     <CodePreview text={darkThemeSnippet} />
 
     <ImageList>
-      <ImageFigure src='/images/design-system/light-tabs.png' width={564} height={76}>
+      <ImageFigure src='/images/design-system/light-tabs.png' width={376} height={50.6}>
         Picture 1. <code>&lt;TabList&gt;</code> in light mode
       </ImageFigure>
-      <ImageFigure src='/images/design-system/dark-tabs.png' width={564} height={76}>
+      <ImageFigure src='/images/design-system/dark-tabs.png' width={376} height={50.6}>
         Picture 2. <code>&lt;TabList&gt;</code> in dark mode
       </ImageFigure>
     </ImageList>
