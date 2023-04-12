@@ -40,7 +40,7 @@ export default function Home() {
       <Article imageUrl='/components/checkbox.png' title='Checkbox' section='Form' href='components/checkbox' />
       <Article imageUrl='/components/radio-list.png' title='Radio List' section='Form' href='components/radio' />
       <Article imageUrl='/components/select.png' title='Select' section='Form' href='components/select' />
-      <Article imageUrl='/components/scrollable-select.png' title='Scrollable Select' section='Form' href='components/scrollable-select' />
+      <Article imageUrl='/components/scrollable-select.png' title='Scrollable Selector' section='Form' href='components/scrollable-selector' />
       <Article imageUrl='/components/date-picker.png' title='Date Picker' section='Form' href='components/date-picker' />
       <Article imageUrl='/components/switcher.png' title='Switcher' section='Form' href='components/switcher' />
     </ArticleList>

@@ -242,7 +242,7 @@ export default function Page() {
       Add special option in the beginning of the list to clear
     </Property>
     <Property name='size' type="Size" defaultValue="Size.medium">
-      Size of the Checkbox. Look on <Link href='/types/#size'>Size enum</Link> to see all possible values.
+      Size of the Select. Look on <Link href='/types/#size'>Size enum</Link> to see all possible values.
     </Property>
     <Property name='classNames' type="{ select: string, currentValue: string, menu: string, option: string }" defaultValue="{}">
       Custom classNames of some internal components
