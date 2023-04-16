@@ -25,7 +25,7 @@ import {SIZES} from "./button";
 import {DIRECTION} from "./modal";
 import {ArticleHeader} from "../../components/ArticleHeader";
 
-const CHIPS_VALUES: Option[] = [{
+const CHIPS_VALUES: Option<string>[] = [{
   label: 'North America',
   value: 'na'
 }, {
@@ -45,7 +45,7 @@ const CHIPS_VALUES: Option[] = [{
   value: 'au'
 }]
 
-const PROGRESS_VARIANTS: Option[] = [{
+const PROGRESS_VARIANTS: Option<string>[] = [{
   label: 'Default',
   value: 'default'
 }, {
