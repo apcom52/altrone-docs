@@ -1,6 +1,7 @@
 import React from "react";
 import {Heading, Paragraph} from 'altrone-ui';
 import {Release} from "../components/Release/Release";
+import AcromantulaImage from "../public/acromantula.JPG"
 
 export default function Home() {
   return (<>
@@ -14,7 +15,7 @@ export default function Home() {
       <Release title='Decent Dragon' latestVersion='4.0.0 RC' lastUpdate='9 December 2022' backgroundImage='/dragon.JPG' />
       <Release title='Curious CatZilla' latestVersion='3.0.0 RC' lastUpdate='9 December 2022' backgroundImage='/catzilla.JPG' />
       <Release title='Blind Basilisk' latestVersion='2.0.0 RC' lastUpdate='9 December 2022' backgroundImage='/basilisk.JPG' />
-      <Release title='Angry Acromantula' latestVersion='1.0.0 RC' lastUpdate='9 December 2022' backgroundImage='/acromantula.JPG' />
+      <Release title='Angry Acromantula' latestVersion='1.0.0 RC' lastUpdate='9 December 2022' backgroundImage={AcromantulaImage} />
     </div>
   </>)
 }

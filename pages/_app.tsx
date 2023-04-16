@@ -1,4 +1,4 @@
-import '../altrone/index.css';
+import 'altrone-ui/dist/index.css';
 import '../styles/globals.css'
 import styles from '../styles/Home.module.css'
 import type {AppProps} from 'next/app'

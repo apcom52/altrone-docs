@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/altrone-docs',
   reactStrictMode: true,
   swcMinify: true,
   eslint: {
