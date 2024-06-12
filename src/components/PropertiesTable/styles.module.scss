@@ -1,0 +1,39 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Link {
+  display: flex;
+  color: var(--primary-600);
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}
+
+.PropNameColumn {
+  display: flex;
+  align-items: center;
+  font-size: var(--smallParagraphFontSize);
+  line-height: var(--smallParagraphLineHeight);
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--default-900);
+}
+
+.TypeColumn {
+  font-size: var(--smallParagraphFontSize);
+  line-height: var(--smallParagraphLineHeight);
+  font-weight: 400;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--default-600);
+}
+
+.Asterisk {
+  color: var(--danger-600);
+  margin-left: 2px;
+  transform: translateY(-4px);
+}

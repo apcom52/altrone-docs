@@ -1,0 +1,10 @@
+.Footer {
+  grid-area: footer;
+  background-color: var(--default-300);
+}
+
+:global(.AltroneDark) {
+  .Footer {
+    background-color: var(--default-700);
+  }
+}

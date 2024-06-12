@@ -1,0 +1,46 @@
+.Container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
+.LeftColumn {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.RightColumn {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.PageButton {
+  padding: 20px 30px;
+  border-radius: 12px;
+  background-color: var(--default-100);
+  border: 1px solid var(--default-200);
+  cursor: pointer;
+}
+
+:global(.AltroneDark) {
+  .PageButton {
+    background-color: var(--default-800);
+    border-color: var(--default-700);
+  }
+}
+
+.ButtonTitle {
+  font-size: var(--labelFontSize);
+  line-height: var(--labelLineHeight);
+  font-weight: var(--labelFontWeight);
+}
+
+.ButtonContent {
+  font-size: var(--bigParagraphFontSize);
+  line-height: var(--bigParagraphLineHeight);
+  font-weight: var(--bigParagraphFontWeight);
+}

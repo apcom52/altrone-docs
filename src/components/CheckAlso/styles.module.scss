@@ -1,0 +1,15 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Link {
+  display: flex;
+  color: var(--primary-600);
+  text-decoration: none;
+
+  &:hover, &:active {
+    text-decoration: underline;
+  }
+}

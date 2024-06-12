@@ -1,0 +1,13 @@
+.Header {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Logo > * {
+}

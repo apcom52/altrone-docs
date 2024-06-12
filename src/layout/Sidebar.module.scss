@@ -1,0 +1,11 @@
+.Sidebar {
+  grid-area: sidebar;
+  overflow: hidden;
+}
+
+.SideNavigation {
+  position: sticky;
+  top: 0;
+  margin-top: 0;
+  align-self: start;
+}
