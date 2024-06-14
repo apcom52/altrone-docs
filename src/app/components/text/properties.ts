@@ -43,7 +43,7 @@ export const TextSectionProperties: ComponentDescription = {
 }
 
 export const TextHeadingProps: ComponentDescription = {
-  extends: 'React.HTMLAttributes<HTMLDivElement>',
+  extends: 'React.HTMLAttributes<HTMLHeadingElement>',
   properties: [
     {
       name: 'children',
@@ -67,5 +67,195 @@ export const TextHeadingProps: ComponentDescription = {
       version: 30,
       description: 'Visual role of the heading. Doesn’t change tag name.'
     }
+  ]
+}
+
+export const TextParagraphProperties: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLParagraphElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the paragraph'
+    },
+    {
+      name: 'size',
+      type: 'Size',
+      defaultValue: 'm',
+      version: 30,
+      description: 'Font-size of the paragraph content'
+    }
+  ]
+}
+
+export const TextInlineProps: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLSpanElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the inline text block'
+    },
+    {
+      name: 'bold',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as bold'
+    },
+    {
+      name: 'italic',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as italic '
+    },
+    {
+      name: 'underline',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as underline'
+    },
+    {
+      name: 'deleted',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as deleted'
+    },
+    {
+      name: 'highlighted',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as highlighted'
+    }
+  ]
+}
+
+export const TextLinkProps: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLAnchorElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Link content'
+    },
+    {
+      name: 'bold',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as bold'
+    },
+    {
+      name: 'italic',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as italic '
+    }
+  ]
+}
+
+export const TextCodeProperties: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLSpanElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the code block'
+    },
+    {
+      name: 'bold',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as bold'
+    },
+    {
+      name: 'italic',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as italic '
+    }
+  ]
+}
+
+export const TextKeyboardProperties: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLSpanElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the element'
+    },
+    {
+      name: 'bold',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 30,
+      description: 'Makes nested text as bold'
+    }
+  ]
+}
+
+export const TextListProperties: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLUListElement | HTMLOListElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the list'
+    },
+    {
+      name: 'type',
+      type: 'numeric | marked',
+      defaultValue: 'marked',
+      version: 30,
+      description: 'Type of the list'
+    },
+    {
+      name: 'size',
+      type: 'Size',
+      defaultValue: 'm',
+      version: 30,
+      description: 'Size of the nested elements'
+    }
+  ]
+}
+
+
+export const TextListItemProperties: ComponentDescription = {
+  extends: 'React.HTMLAttributes<HTMLLIElement>',
+  properties: [
+    {
+      name: 'children',
+      required: true,
+      type: 'JSX.Element | JSX.Element[]',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Content of the list item'
+    },
   ]
 }

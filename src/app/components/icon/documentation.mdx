@@ -1,0 +1,23 @@
+import {IconProperties} from "@/app/components/icon/properties";
+import {Icon} from "altrone-ui";
+
+<BluePrint title="Icon" description="This component is used to render icon" />
+
+<Text.Section>
+# Usage
+
+The Icon component is a UI element used to display graphical symbols or pictograms within an interface. Its usage enhances visual appeal,
+improves user navigation, and conveys information quickly without relying on text. Adding icons to the interface boosts usability and
+accessibility, making actions and features more intuitive and easily recognizable.
+
+Altrone uses [Google Material Icons](https://fonts.google.com/icons) out-of-box, but you can use your own icons, providing necessary icons through special properties
+(like `icon` in `<Message>`, or `leftIcon` in `<Button>`)
+
+<Playground code={`import { Icon } from 'altrone-ui';
+
+<Icon i="face" />`}>
+  <Icon i="face" />
+</Playground>
+</Text.Section>
+
+<PropertiesTable title="Properties" data={IconProperties} />

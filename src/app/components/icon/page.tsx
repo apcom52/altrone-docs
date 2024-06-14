@@ -6,6 +6,6 @@ import {PageNavigation} from "@/components/PageNavigation";
 export default function Page() {
   return <Text gap="xxl">
     <Documentation />
-    <PageNavigation page="text" />
+    <PageNavigation page="icon" />
   </Text>
 }

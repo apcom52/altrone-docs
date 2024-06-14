@@ -37,3 +37,13 @@
   margin-left: 2px;
   transform: translateY(-4px);
 }
+
+:global(.AltroneDark) {
+  .PropNameColumn {
+    color: var(--default-50);
+  }
+
+  .TypeColumn {
+    color: var(--default-400);
+  }
+}

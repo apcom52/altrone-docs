@@ -1,0 +1,26 @@
+.Wrapper {
+  background-color: var(--default-100);
+  border-radius: 12px;
+  padding: 4px 16px 12px;
+}
+
+.Toolbar {
+  background-color: transparent;
+  backdrop-filter: none;
+}
+
+.RightPanel {
+  flex: 1;
+  align-items: flex-end;
+}
+
+.Preview {
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+:global(.AltroneDark) {
+  .Wrapper {
+    background-color: var(--default-800);
+  }
+}

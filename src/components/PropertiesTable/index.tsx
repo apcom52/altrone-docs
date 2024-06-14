@@ -17,12 +17,11 @@ const DefaultValueCell = ({ value }: DataTableCellProps<ComponentType>) => <Text
 
 export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', data }: CheckAlsoProps) => {
   return <Text.Section>
-    <Text.Heading role={role}>{title}</Text.Heading>
-    {data.extends ? <Text.Paragraph>This component extends all properties from <Text.Code>{data.extends}</Text.Code></Text.Paragraph> : null}
+    {data.extends ? <Text.Paragraph>This component has all properties from <Text.Code>{data.extends}</Text.Code></Text.Paragraph> : null}
     <DataTable data={data.properties} columns={[
       { accessor: 'name', label: 'Property', Component: NameCell },
       { accessor: 'type', label: 'Type', Component: TypeCell },
-      { accessor: 'defaultValue', label: 'Default', Component: DefaultValueCell },
+      { accessor: 'defaultValue', label: 'Default value', Component: DefaultValueCell },
       { accessor: 'version', label: 'Version', Component: ({ value }) => {
           return `${Math.floor(Number(value) / 10)}.${Number(value) % 10}`;
       }},
