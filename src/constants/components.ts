@@ -67,5 +67,55 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'flex',
     title: 'Flex',
     group: 'containers'
+  },
+  {
+    name: 'list',
+    title: 'List',
+    group: 'containers'
+  },
+  {
+    name: 'scrollable',
+    title: 'Scrollable',
+    group: 'containers'
+  },
+  {
+    name: 'popover',
+    title: 'Popover',
+    group: 'containers'
+  },
+  {
+    name: 'dropdown',
+    title: 'Dropdown',
+    group: 'containers'
+  },
+  {
+    name: 'tooltip',
+    title: 'Tooltip',
+    group: 'containers'
+  },
+  {
+    name: 'collapsedList',
+    title: 'Collapsed List',
+    group: 'containers'
+  },
+  {
+    name: 'form',
+    title: 'Form',
+    group: 'containers'
+  },
+  {
+    name: 'modal',
+    title: 'Modal',
+    group: 'containers'
+  },
+  {
+    name: 'toolbar',
+    title: 'Toolbar',
+    group: 'containers'
+  },
+  {
+    name: 'spoiler',
+    title: 'Spoiler',
+    group: 'containers'
   }
 ]

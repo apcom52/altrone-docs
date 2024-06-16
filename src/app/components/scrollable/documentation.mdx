@@ -1,0 +1,58 @@
+import {List} from "altrone-ui";
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {ScrollableProps} from "@/app/components/scrollable/properties";
+
+<BluePrint title="Scrollable" description="This component is used to display large content inside a container with scrollbars" />
+
+<Text.Section>
+# Usage
+
+  If you have large content on the page (like List with a lot of elements) you need to wrap this content into `<Scrollable>` component.
+  You need to set `maxHeight` (or `maxWidth` in case of horizontal direction) to set maximum size of the content.
+
+  When your content takes up less space than `maxHeight` (or `maxWidth`) then the container works like usual `<Flex>` container.
+
+    <Playground code={`import { Scrollable, Text } from 'altrone-ui';
+
+<Scrollable maxHeight="300px">
+  <Text>
+    <Text.Heading role="heading">The Impact of the Digital Age on Modern Life</Text.Heading>
+    <Text.Paragraph>
+      The digital age has transformed how we <Text.Inline highlighted>access information</Text.Inline>, <Text.Inline highlighted>communicate</Text.Inline>, and <Text.Inline highlighted>conduct business</Text.Inline>. The internet and mobile technology enable instant connections, vast data sharing, and remote task completion. This shift impacts every aspect of life, from work and socializing to shopping and entertainment, forcing businesses to adapt with e-commerce, digital marketing, and remote work technologies.
+    </Text.Paragraph>
+    <Text.Paragraph>
+      Consumer behavior has changed significantly due to digital transformation. Online shopping is now standard, with companies like Amazon leading in convenience and service. Social media has become a vital marketing tool, allowing brands to engage directly with audiences and personalize their strategies. Traditional stores are innovating to integrate online and offline experiences to meet modern consumer demands.
+    </Text.Paragraph>
+    <Text.Paragraph>
+      However, the rapid digitalization raises concerns about privacy, security, and the digital divide. Increased online data sharing heightens the risk of breaches and cyberattacks, necessitating strong cybersecurity measures. The digital divide highlights disparities in technology access, which can worsen social and economic inequalities. Addressing these issues is crucial to ensuring the equitable distribution of digitalization benefits and maximizing technological advancements' potential.
+    </Text.Paragraph>
+  </Text>
+</Scrollable>
+`}>
+      <Text>
+        <Text.Heading role="heading">The Impact of the Digital Age on Modern Life</Text.Heading>
+        <Text.Paragraph>
+          The digital age has transformed how we <Text.Inline highlighted>access information</Text.Inline>, <Text.Inline highlighted>communicate</Text.Inline>, and <Text.Inline highlighted>conduct business</Text.Inline>. The internet and mobile technology enable instant connections, vast data sharing, and remote task completion. This shift impacts every aspect of life, from work and socializing to shopping and entertainment, forcing businesses to adapt with e-commerce, digital marketing, and remote work technologies.
+        </Text.Paragraph>
+        <Text.Paragraph>
+          Consumer behavior has changed significantly due to digital transformation. Online shopping is now standard, with companies like Amazon leading in convenience and service. Social media has become a vital marketing tool, allowing brands to engage directly with audiences and personalize their strategies. Traditional stores are innovating to integrate online and offline experiences to meet modern consumer demands.
+        </Text.Paragraph>
+        <Text.Paragraph>
+          However, the rapid digitalization raises concerns about privacy, security, and the digital divide. Increased online data sharing heightens the risk of breaches and cyberattacks, necessitating strong cybersecurity measures. The digital divide highlights disparities in technology access, which can worsen social and economic inequalities. Addressing these issues is crucial to ensuring the equitable distribution of digitalization benefits and maximizing technological advancements' potential.
+        </Text.Paragraph>
+      </Text>
+    </Playground>
+
+</Text.Section>
+
+# Properties
+
+<PropertiesTable title="Properties" data={ScrollableProps} />
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="scrollable." />

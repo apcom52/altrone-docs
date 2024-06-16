@@ -12,3 +12,5 @@ export const BluePrint = memo(({ title, description }: BluePrintProps) => {
     <div className={s.Description}>{description}</div>
   </div>
 });
+
+BluePrint.displayName = "BluePrint";

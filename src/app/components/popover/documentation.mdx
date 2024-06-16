@@ -1,0 +1,83 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {PopoverChildrenContext, PopoverContentContext, PopoverProperties} from "@/app/components/popover/properties";
+import {Button, Flex, Icon, Popover, Text} from "altrone-ui";
+
+<BluePrint title="Popover" description="This component is used to display popovers on the page" />
+
+<Text.Section>
+# Usage
+
+  `<Popover>` is a great and convenient way to create a dropdown on the page. It requires an element around which positioning will occur.
+
+  You need to wrap your interactive element in a popover. It can be button, link or any other interactive element. When user clicks on
+  the wrapped element (you can also set type of interaction: `click`, `hover` or `focus`) the popover is shown on the page.
+
+  <Playground code={`import { Popover, Flex, Button, Icon, Text } from 'altrone-ui';
+
+<Popover title="Delete confirmation" showCloseButton content={({ closePopup }) => (
+  <Flex direction="vertical" gap="m">
+    <Text.Paragraph>
+      Do you really want to delete the item?
+    </Text.Paragraph>
+    <Flex direction="horizontal" justify="end" gap="m">
+      <Button onClick={closePopup} label="Cancel" />
+      <Button onClick={closePopup} role="danger" label="Delete" />
+    </Flex>
+  </Flex>
+)}>
+  <Button leftIcon={<Icon i="delete" />} label="Delete item" />
+</Popover>
+`}>
+      <Popover title="Delete confirmation" showCloseButton content={({ closePopup }) => <Flex direction="vertical" gap="m">
+        <Text.Paragraph>
+          Do you really want to delete the item?
+        </Text.Paragraph>
+        <Flex direction="horizontal" justify="end" gap="m">
+          <Button onClick={closePopup} label="Cancel" />
+          <Button onClick={closePopup} role="danger" label="Delete" />
+        </Flex>
+      </Flex>}>
+        <Button leftIcon={<Icon i="delete" />} label="Delete item" />
+      </Popover>
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={PopoverProperties} />
+</Text.Section>
+
+<Text.Section>
+# Position of the popover
+
+By default, Altrone uses auto-positioning for Popovers and choose more suitable position depends on interactive element position
+and scroll position of the page. By you can set a specific position using `placement` prop.
+
+When you set the placement of the popover but there is no enough space for displaying, the popover is displayed in the opposite side.
+</Text.Section>
+
+<Text.Section>
+  # Child element and popover content
+
+  Popover has two properties for displaying interactive element and the content of the popover: `children` and `content`.
+  These properties take either JSX component or render functions. Render function contains some useful information for rendering
+  content more appropriately.
+
+  ## Children render function
+  <PropertiesTable data={PopoverChildrenContext} />
+
+  ## Content render function
+  <PropertiesTable data={PopoverContentContext} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="popover." />
+</Text.Section>

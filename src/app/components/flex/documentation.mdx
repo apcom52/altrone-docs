@@ -1,0 +1,25 @@
+import {Button, Flex} from "altrone-ui";
+import {FlexProperties} from "@/app/components/flex/properties";
+
+<BluePrint title="Flex" description="This component is used to render a set of elements" />
+
+<Text.Section>
+# Usage
+
+Flex is used to render the list of components. You can set direction of the list (by-default `<Flex>` has horizontal direction), gap between child elements and set align.
+
+<Playground code={`import { Flex } from 'altrone-ui';
+
+return <Flex gap="m">
+  <Button label="Cancel" />
+  <Button role="primary" label="OK" />
+</Flex>`}>
+  <Flex direction="horizontal" gap="m">
+    <Button label="Cancel" />
+    <Button role="primary" label="OK" />
+  </Flex>
+</Playground>
+</Text.Section>
+
+# Properties
+<PropertiesTable title="Properties" data={FlexProperties} />

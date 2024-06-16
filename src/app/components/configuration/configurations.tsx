@@ -1,5 +1,4 @@
-import {JSX, ReactElement} from "react";
-import { Text } from 'altrone-ui';
+import {JSX} from "react";
 
 export interface ConfigurationOption {
   path: string;
@@ -10,10 +9,10 @@ export interface ConfigurationOption {
 }
 
 export const CONFIGS: (ConfigurationOption)[] = [
-  { path: 'language', type: 'string', availableSince: 30, description: <>Current language of the application. Default value is <Text.Code>EN</Text.Code></> },
-  { path: 'locale.dateFormat', type: 'string', availableSince: 30, description: <>Date format. Default value is <Text.Code>DD.MM.YYYY</Text.Code></> },
-  { path: 'locale.numberGrouping', type: 'string', availableSince: 30, description: <>Number grouping delimiter. Default value is <Text.Code>" "</Text.Code> (space)</> },
-  { path: 'locale.numberDecimal', type: 'string', availableSince: 30, description: <>Number decimal delimiter. Default value is <Text.Code>"."</Text.Code></> },
+  { path: 'language', type: 'string', availableSince: 30, description: "Current language of the application. Default value is EN" },
+  { path: 'locale.dateFormat', type: 'string', availableSince: 30, description: "Date format. Default value is 'DD.MM.YYYY'" },
+  { path: 'locale.numberGrouping', type: 'string', availableSince: 30, description: "Number grouping delimiter. Default value is ' ' (space)" },
+  { path: 'locale.numberDecimal', type: 'string', availableSince: 30, description: "Number decimal delimiter. Default value is '.'" },
 
   { path: 'autocompleteInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for AutocompleteInput component' },
   { path: 'autocompleteInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for AutocompleteInput component' },
@@ -25,7 +24,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'breadcrumbs.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Breadcrumbs component' },
   { path: 'button.className', type: 'string', availableSince: 30, description: 'Additional custom className for Button component' },
   { path: 'button.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Button component' },
-  { path: 'button.rainbowEffect', type: 'boolean', availableSince: 30, description: <>Enables the rainbow effect for Button component. Default value is <Text.Code>true</Text.Code></> },
+  { path: 'button.rainbowEffect', type: 'boolean', availableSince: 30, description: "Enables the rainbow effect for Button component. Default value is true" },
 
   { path: 'calendar.className', type: 'string', availableSince: 30, description: 'Additional custom className for Calendar component' },
   { path: 'calendar.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Calendar component' },
@@ -35,7 +34,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'closeButton.style', type: 'string', availableSince: 30, description: 'Additional custom style object for CloseButton component' },
   { path: 'collapsedList.className', type: 'string', availableSince: 30, description: 'Additional custom className for CollapsedList component' },
   { path: 'collapsedList.style', type: 'string', availableSince: 30, description: 'Additional custom style object for CollapsedList component' },
-  { path: 'collapsedList.limit', type: 'number', availableSince: 30, description: <>Defines how many items are shown in CollapsedList component. Default value is <Text.Code>5</Text.Code></> },
+  { path: 'collapsedList.limit', type: 'number', availableSince: 30, description: "Defines how many items are shown in CollapsedList component. Default value is 5" },
   { path: 'collapsedList.expandButtonLabel', type: 'string', availableSince: 30, description: 'Custom label for "Show X hidden" button in CollapsedList component' },
 
   { path: 'dataTable.className', type: 'string', availableSince: 30, description: 'Additional custom className for DataTable component' },

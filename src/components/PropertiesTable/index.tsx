@@ -29,3 +29,5 @@ export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', d
     ]} />
   </Text.Section>
 });
+
+PropertiesTable.displayName = 'PropertiesTable';

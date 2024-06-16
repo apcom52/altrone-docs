@@ -20,3 +20,5 @@ export const CheckAlso = memo(({ links }: CheckAlsoProps) => {
     </div>
   </div>
 });
+
+CheckAlso.displayName = "CheckAlso";

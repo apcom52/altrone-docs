@@ -1,0 +1,105 @@
+import {List} from "altrone-ui";
+import {ListContextProperties, ListProperties} from "@/app/components/list/properties";
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+
+<BluePrint title="List" description="This component is used to render a list of elements" />
+
+<Text.Section>
+# Usage
+
+  This component is used to display a series of content. List supports gaps and separators between item, you can also hide some of the items and set a special item render function.
+
+  To use this component you need to pass your dataset into `data` property and use `renderFunction` to render child items of the dataset.
+
+  <Playground code={`import { List, Text } from 'altrone-ui';
+
+const data = [
+    {
+        "name": "Alice Johnson",
+        "phone": "123-456-7890",
+        "age": 28
+    },
+    {
+        "name": "Bob Smith",
+        "phone": "234-567-8901",
+        "age": 34
+    },
+    {
+        "name": "Carol Williams",
+        "phone": "345-678-9012",
+        "age": 42
+    },
+    {
+        "name": "David Brown",
+        "phone": "456-789-0123",
+        "age": 25
+    },
+    {
+        "name": "Eve Davis",
+        "phone": "567-890-1234",
+        "age": 30
+    }
+]
+
+return <List data={data} gap="l" renderItem={({ item }) => <Text.Paragraph>
+    <Text.Inline bold>{item.name}</Text.Inline> ({item.age} yo): <Text.Code>{item.phone}</Text.Code>
+</Text.Paragraph>} />`}>
+    <List data={[
+    {
+      "name": "Alice Johnson",
+      "phone": "123-456-7890",
+      "age": 28
+    },
+    {
+      "name": "Bob Smith",
+      "phone": "234-567-8901",
+      "age": 34
+    },
+    {
+      "name": "Carol Williams",
+      "phone": "345-678-9012",
+      "age": 42
+    },
+    {
+      "name": "David Brown",
+      "phone": "456-789-0123",
+      "age": 25
+    },
+    {
+      "name": "Eve Davis",
+      "phone": "567-890-1234",
+      "age": 30
+    }
+  ]} gap="l" renderItem={({ item }) => <Text.Paragraph>
+      <Text.Inline bold>{item.name}</Text.Inline> ({item.age} yo): <Text.Code>{item.phone}</Text.Code>
+  </Text.Paragraph>} />
+</Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Rendering an item
+
+  This component has a `renderItem` property that allows you to specify a render function for your data object. This function takes a parameter called `context`, which provides all the necessary information about the current item, such as its index and the item itself.
+
+  You can also set a separator between items (this separator is not rendered for the last item) via `SeparatorComponent` prop.
+
+  By default List component uses index as key for list rendering. If you want to change this behavior you need to provide your own `keyExtractor` function.
+
+  <Text.Section>
+    ## ListContext object
+
+    <PropertiesTable title="Properties" data={ListContextProperties} />
+  </Text.Section>
+</Text.Section>
+
+# Properties
+
+<PropertiesTable title="Properties" data={ListProperties} />
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="list." />

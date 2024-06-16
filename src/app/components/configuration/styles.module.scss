@@ -18,3 +18,13 @@
   color: var(--default-700);
   font-family: "JetBrains Mono", monospace;
 }
+
+:global(.AltroneDark) {
+  .LastLeaf {
+    color: var(--default-50);
+  }
+
+  .TypeCell {
+    color: var(--default-200);
+  }
+}
