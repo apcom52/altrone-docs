@@ -1,0 +1,156 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Button, Dropdown, Flex, Icon, Popover, Text} from "altrone-ui";
+import {
+  DropdownActionProps, DropdownCheckboxProps, DropdownChildMenuProperties, DropdownMenuProperties,
+  DropdownProperties, DropdownRadioListItemProperties,
+  DropdownRadioListProperties
+} from "@/app/components/dropdown/properties";
+
+<BluePrint title="Dropdown" description="This component is used to show popover with menu options" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  `<Dropdown>` is a kind of Popover that aims to create context menus in application interfaces. This component provides
+  some useful features to build accessible and powerful menus.
+
+  Also this component has some subcomponents which are menu items that fulfil different actions (it can be simple action,
+  checkbox, radio list or child menu).
+
+  <Playground code={`import { Dropdown, Button, Icon } from 'altrone-ui';
+
+<Dropdown
+  placement="bottom"
+  content={
+    <Dropdown.Menu>
+      <Dropdown.Action
+        icon={<Icon i="account_tree" />}
+        label="View branches"
+      />
+      <Dropdown.Action
+        icon={<Icon i="add" />}
+        label="Create a new branch"
+        onClick={() => console.log('created')}
+        hintText="⌘+A"
+      />
+      <Dropdown.Action
+        label="Switch to another branch"
+        hintText="⌘+S"
+      />
+      <Dropdown.Action disabled label="Compare branches" />
+      <Dropdown.Action label="Refresh Branch list" />
+      <Dropdown.Action
+        danger
+        icon={<Icon i="delete" />}
+        label="Delete all branches"
+        hintText="⌘+Shift+D"
+      />
+    </Dropdown.Menu>
+  }>
+  {({ opened }) => (
+    <Button label="Click here to open the dropdown" rightIcon={<Icon i={opened ? 'expand_less' : 'expand_more'} />} />
+  )}
+</Dropdown>
+`}>
+    <Dropdown
+      placement="bottom"
+      content={
+        <Dropdown.Menu>
+          <Dropdown.Action
+            icon={<Icon i="account_tree" />}
+            label="View branches"
+          />
+          <Dropdown.Action
+            icon={<Icon i="add" />}
+            label="Create a new branch"
+            onClick={() => console.log('created')}
+            hintText="⌘+A"
+          />
+          <Dropdown.Action
+            label="Switch to another branch"
+            hintText="⌘+S"
+          />
+          <Dropdown.Action disabled label="Compare branches" />
+          <Dropdown.Action label="Refresh Branch list" />
+          <Dropdown.Action
+            danger
+            icon={<Icon i="delete" />}
+            label="Delete all branches"
+            hintText="⌘+Shift+D"
+          />
+        </Dropdown.Menu>
+      }
+    >
+      {({ opened }) => (<Button label="Click here to open the dropdown" rightIcon={<Icon i={opened ? 'expand_less' : 'expand_more'} />} />)}
+    </Dropdown>
+  </Playground>
+
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+
+  <PropertiesTable title="Properties" data={DropdownProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+# Subcomponents
+
+  <Text.Section gap='l'>
+    ## Dropdown.Menu
+
+    This is the main wrapper of dropdown content. This wrapper provides some useful features for nested dropdown menu items.
+
+    ### Dropdown.Menu Properties
+    <PropertiesTable data={DropdownMenuProperties} />
+  </Text.Section>
+
+  <Text.Section gap='l'>
+    ## Dropdown.Action
+
+    This is a simple dropdown action. This works like usual button - when user clicks on this then `onClick` callback is called.
+
+    ### Dropdown.Action Properties
+    <PropertiesTable data={DropdownActionProps} />
+  </Text.Section>
+
+  <Text.Section gap='l'>
+    ## Dropdown.Checkbox
+
+    This dropdown item works like checkbox. It has two possible states: checked and non-checked.
+
+    ### Dropdown.Checkbox Properties
+    <PropertiesTable data={DropdownCheckboxProps} />
+  </Text.Section>
+
+  <Text.Section gap='l'>
+    ## Dropdown.RadioList
+
+    This dropdown item works like radio list. User can choose only one value of the set.
+
+    ### Dropdown.RadioList Properties
+    <PropertiesTable data={DropdownRadioListProperties} />
+
+    ### Dropdown.RadioListItem Properties
+    <PropertiesTable data={DropdownRadioListItemProperties} />
+  </Text.Section>
+
+  <Text.Section gap='l'>
+    ## Dropdown.ChildMenu
+
+    This dropdown item opens another dropdown when user clicks on the action
+
+    ### Dropdown.ChildMenu Properties
+    <PropertiesTable data={DropdownChildMenuProperties} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="dropdown." />
+</Text.Section>

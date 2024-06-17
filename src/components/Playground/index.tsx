@@ -1,3 +1,5 @@
+'use client';
+
 import {Scrollable, Tabs, Toolbar, useAltroneTheme} from "altrone-ui";
 import s from './styles.module.scss';
 import {PropsWithChildren, useState} from "react";

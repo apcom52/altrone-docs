@@ -1,14 +1,11 @@
 'use client';
 
 import s from './Header.module.scss';
-import {Button, Dropdown, Icon, Search, TopNavigation, useAltroneTheme, useRainbowEffect} from 'altrone-ui';
+import {Button, Dropdown, Icon, Search, TopNavigation, useAltroneTheme} from 'altrone-ui';
 import Image from 'next/image';
 import {usePathname} from "next/navigation";
 import lightLogo from '../../public/altrone-light.png';
 import darkLogo from '../../public/altrone-dark.png';
-import * as altrone from 'altrone-ui';
-
-import dynamic from 'next/dynamic'
 
 interface HeaderProps {
   selected?: string;

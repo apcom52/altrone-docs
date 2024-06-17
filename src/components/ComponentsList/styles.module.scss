@@ -1,0 +1,23 @@
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--l-gap);
+}
+
+.ComponentCard {
+  font-size: var(--bigParagraphFontSize);
+  line-height: var(--bigParagraphLineHeight);
+  font-weight: 400;
+  padding: 20px 30px;
+  border-radius: 12px;
+  background-color: var(--default-100);
+  border: 1px solid var(--default-200);
+  cursor: pointer;
+}
+
+:global(.AltroneDark) {
+  .ComponentCard {
+    background-color: var(--default-800);
+    border: 1px solid var(--default-700);
+  }
+}

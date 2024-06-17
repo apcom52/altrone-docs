@@ -18,7 +18,7 @@ const DefaultValueCell = ({ value }: DataTableCellProps<ComponentType>) => <Text
 export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', data }: CheckAlsoProps) => {
   return <Text.Section>
     {data.extends ? <Text.Paragraph>This component has all properties from <Text.Code>{data.extends}</Text.Code></Text.Paragraph> : null}
-    <DataTable data={data.properties} columns={[
+    <DataTable data={data.properties} showFooter={false} columns={[
       { accessor: 'name', label: 'Property', Component: NameCell },
       { accessor: 'type', label: 'Type', Component: TypeCell },
       { accessor: 'defaultValue', label: 'Default value', Component: DefaultValueCell },

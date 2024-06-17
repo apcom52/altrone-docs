@@ -29,7 +29,7 @@ export const ConfigTable = ({ filter = '' }) => {
     return CONFIGS.filter(item => item.path.startsWith(filter))
   }, [filter]);
 
-  return <DataTable data={filteredData} rowsPerPage={1000} columns={[
+  return <DataTable data={filteredData} showFooter={false} rowsPerPage={1000} columns={[
     { accessor: 'path', label: 'Path', Component: configCellRenderer },
     { accessor: 'type', label: 'Type', Component: typeCellRenderer },
     { accessor: 'availableSince', label: 'Version', Component: ({ value }) => {

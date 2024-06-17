@@ -1,3 +1,5 @@
+'use client';
+
 import s from './Sidebar.module.scss';
 import {SideNavigation} from "altrone-ui";
 import {useEffect, useState} from "react";

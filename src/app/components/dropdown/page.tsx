@@ -7,6 +7,6 @@ import {PageNavigation} from "@/components/PageNavigation";
 export default function Page() {
   return <Text gap="xxl">
     <Documentation />
-    <PageNavigation page="popover" />
+    <PageNavigation page="dropdown" />
   </Text>
 }

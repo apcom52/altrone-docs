@@ -1,3 +1,5 @@
+'use client';
+
 import s from './Navigation.module.scss';
 import {Icon, NavigationList, Scrollable} from "altrone-ui";
 import React from "react";
