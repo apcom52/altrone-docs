@@ -1,0 +1,35 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import { Text, Tooltip} from "altrone-ui";
+import {TooltipProperties} from "@/app/components/tooltip/properties";
+
+<BluePrint title="Tooltip" description="This component is used to show hints to users" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  `<Tooltip>` is a kind of Popover that aims to create floating elements with hints. Using tooltips you can provide some advices or
+  describe some features for your users.
+
+  <Playground code={`import { Tooltip } from 'altrone-ui';
+
+<Tooltip content="This is your tooltip content" />
+`}>
+    <Tooltip content="This is your tooltip content" />
+  </Playground>
+
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={TooltipProperties} />
+</Text.Section>
+
+<Text.Section gap="xl">
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="tooltip." />
+</Text.Section>

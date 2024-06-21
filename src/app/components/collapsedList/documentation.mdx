@@ -1,0 +1,72 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Checkbox, CollapsedList, Text, Tooltip} from "altrone-ui";
+import {CollapsedListProps} from "@/app/components/collapsedList/properties";
+
+<BluePrint title="Collapsed List" description="This component is used to render a list with limited number or visible items" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  `<CollapsedList>` allows to you to render dataset which is partially visible by default.
+
+  <Playground code={`import { CollapsedList, Checkbox } from 'altrone-ui';
+
+<CollapsedList limit={4}>
+  <Checkbox checked={value1} onChange={setValue1}>
+    Homepage
+  </Checkbox>
+  <Checkbox checked={value2} onChange={setValue2}>
+    Explore
+  </Checkbox>
+  <Checkbox checked={value3} onChange={setValue3}>
+    Notifications
+  </Checkbox>
+  <Checkbox checked={value4} onChange={setValue4}>
+    Messages
+  </Checkbox>
+  <Checkbox checked={value5} onChange={setValue5}>
+    Lists
+  </Checkbox>
+  <Checkbox checked={value6} onChange={setValue6}>
+    Bookmarks
+  </Checkbox>
+</CollapsedList>
+`}>
+    <CollapsedList limit={4}>
+      <Checkbox>
+        Homepage
+      </Checkbox>
+      <Checkbox>
+        Explore
+      </Checkbox>
+      <Checkbox>
+        Notifications
+      </Checkbox>
+      <Checkbox>
+        Messages
+      </Checkbox>
+      <Checkbox>
+        Lists
+      </Checkbox>
+      <Checkbox>
+        Bookmarks
+      </Checkbox>
+    </CollapsedList>
+  </Playground>
+
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={CollapsedListProps} />
+</Text.Section>
+
+<Text.Section gap="xl">
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="collapsedList." />
+</Text.Section>

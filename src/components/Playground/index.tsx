@@ -1,6 +1,6 @@
 'use client';
 
-import {Scrollable, Tabs, Toolbar, useAltroneTheme} from "altrone-ui";
+import {Scrollable, Tabs, Toolbar, useAltroneTheme, Text} from "altrone-ui";
 import s from './styles.module.scss';
 import {PropsWithChildren, useState} from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -31,5 +31,7 @@ export const Playground = ({ children, code }: PlaygroundProps) => {
         {code}
       </SyntaxHighlighter> : null}
     </Scrollable>
+    <Text.Paragraph className={s.Warning} size="s">This example is built on the latest version of Altrone UI. If you have an older version selected,
+      your result may be different from this one.</Text.Paragraph>
   </div>
 }
