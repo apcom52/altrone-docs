@@ -1,0 +1,60 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Text} from "altrone-ui";
+import {FormFieldProps, FormProps} from "@/app/components/form/properties";
+import {FormDemo} from "@/app/components/form/example";
+
+<BluePrint title="Form" description="This component is used to wrap form elements" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  Wrapping in `<Form>` component your form control you can easily make complex forms in your application. Each form control
+  you need to wrap into `<Form.Field>` subcomponent.
+
+    <Playground code={`import {Button, Checkbox, CollapsedList, Form, TextInput} from "altrone-ui";
+
+const [login, setLogin] = useState('');
+const [password, setPassword] = useState('');
+
+<Form>
+  <Form.Field required name="login" label="Username">
+    <TextInput placeholder="Enter your login" value={login} onChange={setLogin} />
+  </Form.Field>
+  <Form.Field required name="password" label="Password" description="No less than 7 characters. Has to include digits and special symbols">
+    <TextInput placeholder="Your password" value={password} onChange={setPassword} />
+  </Form.Field>
+  <Button size="l" label="Sign In" />
+</Form>
+`}>
+      <FormDemo />
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={FormProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  <Text.Section gap="l">
+    ## Form.Field
+
+    This component is used to wrap your field control and provides some useful properties for proper rendering of the field.
+
+    ### Form.Field Properties
+    <PropertiesTable title="Properties" data={FormFieldProps} />
+  </Text.Section>
+  <PropertiesTable title="Properties" data={FormProps} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="form." />
+</Text.Section>
