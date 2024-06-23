@@ -1,0 +1,74 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Text} from "altrone-ui";
+import {FormFieldProps, FormProps} from "@/app/components/form/properties";
+import {FormDemo} from "@/app/components/form/example";
+import {ToolbarActionProps, ToolbarGroupProps, ToolbarProps} from "@/app/components/toolbar/properties";
+import {ToolbarDemo} from "@/app/components/toolbar/example";
+
+<BluePrint title="Toolbar" description="This component is used to build a toolbar with different actions" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  You can use `<Toolbar.Group>` to align your `<Toolbar.Action>`. You can build custom actions using `renderFunc` or `children` props
+
+    <Playground code={`import { Toolbar, Search } from "altrone-ui";
+
+const [search, setSearch] = useState('');
+
+<Toolbar>
+  <Toolbar.Group weight={0}>
+    <Toolbar.Action icon={<Icon i="arrow_back" />} label="Back" />
+    <Toolbar.Action icon={<Icon i="arrow_forward" />} label="Forward" />
+  </Toolbar.Group>
+  <Toolbar.Group weight={0}>
+    <Toolbar.Action icon={<Icon i="refresh" />} label="Refresh" />
+  </Toolbar.Group>
+  <Toolbar.Group>
+    <Toolbar.Action label="Address bar" showLabel={false}>
+      <Search value={search} onChange={setSearch} />
+    </Toolbar.Action>
+  </Toolbar.Group>
+  <Toolbar.Group weight={0}>
+    <Toolbar.Action icon={<Icon i="ios_share" />} label="Share" />
+  </Toolbar.Group>
+</Toolbar>
+`}>
+      <ToolbarDemo />
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={ToolbarProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  <Text.Section gap="l">
+    ## Toolbar.Group
+
+    This subcomponent is used to align your actions inside of the toolbar.
+
+    ### Toolbar.Group Properties
+    <PropertiesTable title="Properties" data={ToolbarGroupProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Toolbar.Action
+
+    This subcomponent is used to render your action
+
+    ### Toolbar.Action Properties
+    <PropertiesTable title="Properties" data={ToolbarActionProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="toolbar." />
+</Text.Section>

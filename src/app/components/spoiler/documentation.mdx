@@ -1,0 +1,37 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {SpoilerProps} from "@/app/components/spoiler/properties";
+import {Spoiler} from "altrone-ui";
+
+<BluePrint title="Spoiler" description="This component is used to show content which can expand or collapse" />
+
+<Text.Section>
+# Usage
+
+  <Playground code={`import { Spoiler, Text } from 'altrone-ui';
+
+<Spoiler title="Click here to get more details">
+  <Text.Paragraph>
+    In the thrilling conclusion of "Mystery of the Lost Treasure," Alex's relentless pursuit of the legendary fortune leads to an unexpected revelation. Just as he uncovers the final clue, it's revealed that his closest ally, Sarah, has been secretly orchestrating the entire adventure to test his loyalty and courage, a twist that redefines their relationship and the true meaning of the treasure they sought.
+  </Text.Paragraph>
+</Spoiler>
+`}>
+      <Spoiler title="Click here to get more details">
+        <Text.Paragraph>
+          In the thrilling conclusion of "Mystery of the Lost Treasure," Alex's relentless pursuit of the legendary fortune leads to an unexpected revelation. Just as he uncovers the final clue, it's revealed that his closest ally, Sarah, has been secretly orchestrating the entire adventure to test his loyalty and courage, a twist that redefines their relationship and the true meaning of the treasure they sought.
+        </Text.Paragraph>
+      </Spoiler>
+    </Playground>
+
+</Text.Section>
+
+# Properties
+
+<PropertiesTable title="Properties" data={SpoilerProps} />
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="spoiler." />

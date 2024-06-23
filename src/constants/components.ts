@@ -117,5 +117,151 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'spoiler',
     title: 'Spoiler',
     group: 'containers'
+  },
+
+  {
+    name: 'button',
+    title: 'Button',
+    group: 'forms'
+  },
+  {
+    name: 'textInput',
+    title: 'Text Input',
+    group: 'forms'
+  },
+  {
+    name: 'passwordInput',
+    title: 'Password Input',
+    group: 'forms'
+  },
+  {
+    name: 'numberInput',
+    title: 'Number Input',
+    group: 'forms'
+  },
+  {
+    name: 'autocompleteInput',
+    title: 'Autocomplete Input',
+    group: 'forms'
+  },
+  {
+    name: 'search',
+    title: 'Search',
+    group: 'forms'
+  },
+  {
+    name: 'textarea',
+    title: 'Textarea',
+    group: 'forms'
+  },
+  {
+    name: 'checkbox',
+    title: 'Checkbox',
+    group: 'forms'
+  },
+  {
+    name: 'switcher',
+    title: 'Switcher',
+    group: 'forms'
+  },
+  {
+    name: 'radio',
+    title: 'Radio',
+    group: 'forms'
+  },
+  {
+    name: 'select',
+    title: 'Select',
+    group: 'forms'
+  },
+  {
+    name: 'datePicker',
+    title: 'Date Picker',
+    group: 'forms'
+  },
+  {
+    name: 'filePicker',
+    title: 'File Picker',
+    group: 'forms'
+  },
+  {
+    name: 'calendar',
+    title: 'Calendar',
+    group: 'display'
+  },
+  {
+    name: 'dataTable',
+    title: 'DataTable',
+    group: 'display'
+  },
+  {
+    name: 'message',
+    title: 'Message',
+    group: 'display'
+  },
+  {
+    name: 'photoViewer',
+    title: 'PhotoViewer',
+    group: 'display'
+  },
+  {
+    name: 'progress',
+    title: 'Progress',
+    group: 'display'
+  },
+  {
+    name: 'tags',
+    title: 'Tags',
+    group: 'display'
+  },
+  {
+    name: 'toasts',
+    title: 'Toast Notifications',
+    group: 'display'
+  },
+  {
+    name: 'navigationList',
+    title: 'NavigationList',
+    group: 'navigation'
+  },
+  {
+    name: 'topNavigation',
+    title: 'Top Navigation',
+    group: 'navigation'
+  },
+  {
+    name: 'bottomNavigation',
+    title: 'Bottom Navigation',
+    group: 'navigation'
+  },
+  {
+    name: 'sideNavigation',
+    title: 'Side Navigation',
+    group: 'navigation'
+  },
+  {
+    name: 'breadcrumbs',
+    title: 'Breadcrumbs',
+    group: 'navigation'
+  },
+  {
+    name: 'pagination',
+    title: 'Pagination',
+    group: 'navigation'
+  },
+  {
+    name: 'closeButton',
+    title: 'Close Button',
+    group: 'atoms'
+  },
+  {
+    name: 'divider',
+    title: 'Divider',
+    group: 'atoms'
+  },
+  {
+    name: 'loading',
+    title: 'Loading',
+    group: 'atoms'
   }
 ]
