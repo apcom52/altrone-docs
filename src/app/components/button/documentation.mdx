@@ -1,0 +1,34 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {SpoilerProps} from "@/app/components/spoiler/properties";
+import {Button, Icon, Spoiler} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {ButtonProps} from "@/app/components/button/properties";
+
+<BluePrint title="Button" description="This component is used to render action buttons" />
+
+<Text.Section>
+# Usage
+
+  This component is one of the most used components in any application. This component is highly customizable: you can add
+  icon, make button as transparent and use different colors.
+
+  <Playground code={`import { Button, Icon } from 'altrone-ui';
+
+<Button leftIcon={<Icon i="done_all" />} label="Complete all" />
+`}>
+      <Button leftIcon={<Icon i="done_all" />} label="Complete all" />
+    </Playground>
+
+</Text.Section>
+
+# Properties
+
+<PropertiesTable title="Properties" data={ButtonProps} />
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="button." />
