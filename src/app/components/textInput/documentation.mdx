@@ -1,0 +1,82 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Button, Icon, TextInput,} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {
+  ActionIslandProps, CustomIslandProps,
+  IconIslandProps,
+  TextInputProps,
+  TextIslandProps
+} from "@/app/components/textInput/properties";
+
+<BluePrint title="Text Input" description="This component is used to enter user information" />
+
+<Text.Section>
+# Usage
+
+  Use this component in forms or any other places there you need an information from user
+
+  <Playground code={`import { TextInput } from 'altrone-ui';
+
+<TextInput placeholder="Enter the price of the product">
+  <TextInput.TextIsland label="USD" />
+</TextInput>
+`}>
+      <TextInput placeholder="Enter the price of the product">
+        <TextInput.TextIsland label="USD" />
+      </TextInput>
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={TextInputProps} />
+</Text.Section>
+
+<Text.Section>
+  # Islands
+
+  Islands - it is a TextInput addons. Islands can be either dynamic (like actions and custom) or static (text and icon).
+  When you use islands, TextInput control automatically has the appropriate indents to prevent content overlapping.
+
+  <Text.Section gap="l">
+    ## Text Island
+
+    This island is used to render text
+
+    <PropertiesTable title="Properties" data={TextIslandProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Icon Island
+
+    This island is used to add icons for TextInput
+
+    <PropertiesTable title="Properties" data={IconIslandProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Action Island
+
+    This island is used to add actions for your TextInput
+
+    <PropertiesTable title="Properties" data={ActionIslandProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Custom Island
+
+    This island is used to add custom components
+
+    <PropertiesTable title="Properties" data={CustomIslandProps} />
+  </Text.Section>
+</Text.Section>
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="textInput." />
