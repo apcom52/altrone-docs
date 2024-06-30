@@ -1,0 +1,44 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {NumberInputProps} from "@/app/components/numberInput/properties";
+import {NumberInputDemo} from "@/app/components/numberInput/example";
+
+<BluePrint title="Number Input" description="This component is used to enter numeric values" />
+
+<Text.Section>
+# Usage
+
+  Use this component in forms or any other places where you need a numeric value (like age, phone number, credit card number, etc). Using
+  properties you can set minimum and maximum values, allow to enter negative and decimal numbers.
+
+  <Playground code={`import { NumberInput, Form } from 'altrone-ui';
+
+const [age, setAge] = useState<number | undefined>(24);
+
+return <Form>
+  <Form.Field required name="age" label="Your age">
+    <NumberInput placeholder="Enter your login" value={age} onChange={setAge} />
+  </Form.Field>
+</Form>
+`}>
+      <NumberInputDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={NumberInputProps} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="numberInput." />
+</Text.Section>
+

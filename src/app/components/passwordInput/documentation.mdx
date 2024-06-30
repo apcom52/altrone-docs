@@ -1,0 +1,37 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {PasswordInput} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {PasswordInputProps} from "@/app/components/passwordInput/properties";
+
+<BluePrint title="Password Input" description="This component is used to enter secret user information" />
+
+<Text.Section>
+# Usage
+
+  Use this component in forms or any other places there you need a secret information from user (like password, pin code, etc).
+
+  <Playground code={`import { PasswordInput } from 'altrone-ui';
+
+<PasswordInput placeholder="Enter PIN from SMS" maxLength={6} />
+`}>
+      <PasswordInput placeholder="Enter PIN from SMS" maxLength={6} />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={PasswordInputProps} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="passwordInput." />
+</Text.Section>
+
