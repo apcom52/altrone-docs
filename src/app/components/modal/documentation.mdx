@@ -1,0 +1,44 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Button, Checkbox, CollapsedList, Flex, Modal, Text} from "altrone-ui";
+import {ModalProperties} from "@/app/components/modal/properties";
+
+<BluePrint title="Modal" description="This component is used to show full-screen popups" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Modal, Button, Text } from 'altrone-ui';
+
+<Modal title="Delete confirmation" content={<Flex direction="vertical">
+  <Text.Paragraph>Are you really want to delete this item?</Text.Paragraph>
+</Flex>}
+  actions={<Button role="danger" label="Delete" />}
+>
+  <Button size="l" label="Delete item" />
+</Modal>
+`}>
+    <Modal title="Delete confirmation" content={<Flex direction="vertical">
+      <Text.Paragraph>Are you really want to delete this item?</Text.Paragraph>
+    </Flex>}
+      actions={<Button role="danger" label="Delete" />}
+    >
+      <Button size="l" label="Delete item" />
+    </Modal>
+  </Playground>
+
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={ModalProperties} />
+</Text.Section>
+
+<Text.Section gap="xl">
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="modal." />
+</Text.Section>

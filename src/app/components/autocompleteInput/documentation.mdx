@@ -1,0 +1,61 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {NumberInputDemo} from "@/app/components/numberInput/example";
+import {
+  AutocompleteInputProps,
+  AutocompleteRenderSuggestionContext,
+  AutocompleteSuggestionsContext
+} from "@/app/components/autocompleteInput/properties";
+import {AutocompleteInputDemo} from "@/app/components/autocompleteInput/example";
+
+<BluePrint title="Autocomplete Input" description="This component is used to render text input with autocomplete" />
+
+<Text.Section>
+# Usage
+
+  Using this component you can build input with autocomplete. It is useful when you need to provide a list of suggestions to the user.
+
+  <Playground code={`import { AutocompleteInput, Form } from 'altrone-ui';
+
+const [country, setCountry] = useState('');
+
+const getCountries = () => {
+  return COUNTRIES.filter(c => c.toLowerCase().startsWith(country.toLowerCase()));
+}
+
+return <Form>
+  <Form.Field required name="country" label="Your country">
+    <AutocompleteInput getSuggestions={getCountries} placeholder="Enter your country" value={country} onChange={setCountry} />
+  </Form.Field>
+</Form>
+`}>
+      <AutocompleteInputDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Properties
+  <PropertiesTable title="Properties" data={AutocompleteInputProps} />
+
+  <Text.Section>
+    ## AutocompleteSuggestionsContext
+    <PropertiesTable title="Properties" data={AutocompleteSuggestionsContext} />
+  </Text.Section>
+
+  <Text.Section>
+    ## AutocompleteRenderSuggestionContext
+    <PropertiesTable title="Properties" data={AutocompleteRenderSuggestionContext} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="autocompleteInput." />
+</Text.Section>
+
