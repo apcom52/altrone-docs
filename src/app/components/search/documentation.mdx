@@ -1,0 +1,46 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {SearchProperties} from "@/app/components/search/properties";
+import {SearchDemo} from "@/app/components/search/example";
+
+<BluePrint title="Search" description="This component is used to help user find an information in your application" />
+
+<Text.Section>
+# Usage
+
+  This component is a kind of AutocompleteInput with some useful features for searching
+
+  <Playground code={`import { Search, Form } from 'altrone-ui';
+
+const [country, setCountry] = useState('');
+
+const getCountries = () => {
+  return COUNTRIES.filter(c => c.toLowerCase().startsWith(country.toLowerCase()));
+}
+
+return <Form>
+  <Form.Field required name="country" label="Your country">
+    <Search getSuggestions={getCountries} placeholder="Enter your country" value={country} onChange={setCountry} />
+  </Form.Field>
+</Form>
+`}>
+      <SearchDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Properties
+  <PropertiesTable title="Properties" data={SearchProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="search." />
+</Text.Section>
+

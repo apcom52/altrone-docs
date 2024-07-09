@@ -1,0 +1,38 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {PasswordInput, Textarea} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {PasswordInputProps} from "@/app/components/passwordInput/properties";
+import {TextareaProperties} from "@/app/components/textarea/properties";
+
+<BluePrint title="Textarea" description="This component is used to input long text" />
+
+<Text.Section>
+# Usage
+
+  This component is a kind of `<TextInput>`, but without some features (for example, Textarea cannot have TextInput islands)
+
+  <Playground code={`import { Textarea } from 'altrone-ui';
+
+<Textarea placeholder="Enter your bio" />
+`}>
+    <Textarea placeholder="Enter your bio" />
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={TextareaProperties} />
+  This component doesn't contain any special properties
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="textarea." />
+</Text.Section>
+

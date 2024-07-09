@@ -1,0 +1,40 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Checkbox, Textarea} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {TextareaProperties} from "@/app/components/textarea/properties";
+import {CheckboxProperties} from "@/app/components/checkbox/properties";
+import {CheckboxDemo} from "@/app/components/checkbox/example";
+
+<BluePrint title="Checkbox" description="This component is used to show control with two possible states" />
+
+<Text.Section>
+# Usage
+
+  <Playground code={`import { Checkbox } from 'altrone-ui';
+
+const [agreed, setAgreed] = useState(false);
+
+return <Checkbox checked={agreed} onChange={setAgreed}>
+  I agree with Privacy Policy
+</Checkbox>
+`}>
+    <CheckboxDemo />
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={CheckboxProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="checkbox." />
+</Text.Section>
+

@@ -58,10 +58,10 @@ export const Sidebar = () => {
   }, [path]);
 
   return <aside className={s.Sidebar}>
-    <SideNavigation className={s.SideNavigation} title="Contents">
+    {content.length ? <SideNavigation className={s.SideNavigation} title="Contents">
       {content.map((item: ContentItem) => (
-        <SideNavigation.Item key={item.id} label={item.label} href={`#${item.id}`} />
+        <SideNavigation.Item key={`${path}-${item.id}`} label={`${path}-${item.id}`} href={`#${item.id}`} />
       ))}
-    </SideNavigation>
+    </SideNavigation> : null}
   </aside>
 }

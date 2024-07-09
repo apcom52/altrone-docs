@@ -1,0 +1,41 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {SwitcherDemo} from "@/app/components/switcher/example";
+import {SwitcherProperties} from "@/app/components/switcher/properties";
+
+<BluePrint title="Switcher" description="This component is used to show control with two possible states" />
+
+<Text.Section>
+# Usage
+
+  This component is a kind of Checkbox component with different styles
+
+  <Playground code={`import { Switcher } from 'altrone-ui';
+
+const [agreed, setAgreed] = useState(false);
+
+return <Switcher checked={agreed} onChange={setAgreed}>
+  I agree with Privacy Policy
+</Switcher>
+`}>
+    <SwitcherDemo />
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={SwitcherProperties} />
+  This component doesn't have any special properties
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+  <ConfigTable filter="switcher." />
+</Text.Section>
+
