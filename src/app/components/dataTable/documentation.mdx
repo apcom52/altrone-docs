@@ -1,0 +1,176 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {
+  DataTableActionProperties, DataTableColumnProperties,
+  DataTableProperties,
+  DataTableRenderContextProperties
+} from "@/app/components/dataTable/properties";
+import {Text} from "altrone-ui";
+import {DataTableDemo} from "@/app/components/dataTable/example";
+
+<BluePrint title="Data Table" description="This component is used to render big amount of table data" />
+
+<Text.Section>
+# Usage
+
+  You need to provide API request to the component to upload file automatically
+
+  <Playground code={`import { FilePicker } from 'altrone-ui';
+
+const EMPLOYEES = [
+  {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 30,
+    salary: 50000,
+    phoneNumber: '123-456-7890',
+    skills: ['JavaScript', 'React', 'Node.js'],
+    role: 'Frontend Developer',
+  },
+  ...
+]
+
+return <DataTable
+    data={EMPLOYEES}
+    rowsPerPage={6}
+    selectable
+    columns={[
+      {
+        accessor: 'firstName',
+        label: 'Employee',
+        Component: ({ item }) => (
+          <Text.Paragraph>{item.firstName item.lastName}</Text.Paragraph>
+        ),
+      },
+      {
+        accessor: 'role',
+        label: 'Position',
+        filterable: true,
+        searchable: true,
+      },
+      {
+        accessor: 'age',
+        label: 'Age',
+        width: '100px',
+        filterable: true,
+        sortable: true,
+      },
+      {
+        accessor: 'salary',
+        label: 'Salary',
+        width: '150px',
+        filterable: true,
+        sortable: true,
+        Component: ({ value }) => (
+          <Text.Paragraph style={{ width: '100%', textAlign: 'right' }}>
+            {new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'USD',
+            }).format(Number(value))}
+          </Text.Paragraph>
+        ),
+      },
+      { accessor: 'phoneNumber', label: 'Phone' },
+      {
+        accessor: 'skills',
+        label: 'Skills',
+        filterable: true,
+        searchable: true,
+        Component: ({ value }) => (
+          <Flex gap="s" wrap>
+            {value.map((skill, skillIndex) => (
+              <Text.Code key={skillIndex}>{skill}</Text.Code>
+            ))}
+          </Flex>
+        ),
+      },
+    ]}
+  />
+`}>
+    <DataTableDemo />
+</Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={DataTableProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Column configuration
+
+  To render DataTable you need to set columns.
+
+  ## DataTableColumn
+  <PropertiesTable title="Properties" data={DataTableColumnProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Subcomponents
+
+  <Text.Section>
+    ## DataTable.Action
+
+    This subcomponent is used to create custom actions in DataTable header
+
+    <PropertiesTable title="Properties" data={DataTableActionProperties} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section>
+  # Data filtering
+
+  User can create custom filter rules using "Filters" button. Type of the filter depends on object field type. To activate filtering
+  at least one of the columns should have enabled `filtering` flag.
+
+  User can create unlimited number of filter rules
+
+  <Text.Section>
+    ## String data filtering
+
+    When the value of the column is string, user can create following filters:
+    - empty or not empty
+    - contains or not contains substring
+    - equals or not equals to string
+  </Text.Section>
+
+  <Text.Section>
+    ## Number data filtering
+
+    When the value of the column is number, user can create following filters:
+    - empty or not empty
+    - equals or not equals to a specific number
+    - less, less or equals, greater, greater or equals than specific number
+    - between (or not between) two numbers
+  </Text.Section>
+
+  <Text.Section>
+    ## Array data filtering
+
+    When the value of the column is array, user can create following filters:
+    - has got or hasn't got one of the items
+  </Text.Section>
+</Text.Section>
+
+<Text.Section>
+  # Actions
+
+  By default DataTable provides two actions: selectable mode switcher and filtering. But you can create custom actions by providing
+  child elements.
+
+  If you want to show some actions only in selectable mode, you need to use function in children prop, where the argument have next values:
+
+  ## DataTableRenderContext
+  <PropertiesTable data={DataTableRenderContextProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="dataTable." />
+</Text.Section>

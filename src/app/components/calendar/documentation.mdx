@@ -1,0 +1,49 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {CalendarDateContextProperties, CalendarProperties} from "@/app/components/calendar/properties";
+
+<BluePrint title="Calendar" description="This component is used to show calendar on the page" />
+
+<Text.Section>
+# Usage
+
+  You need to provide API request to the component to upload file automatically
+
+  <Playground code={`import { FilePicker } from 'altrone-ui';
+
+return <FilePicker
+  defaultValue={[{ filename: 'Catalina.png' }]}
+  url="/path/to/upload/api"
+  method="post"
+  name="file"
+/>
+`}>
+    j1
+</Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={CalendarProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Rendering the date cell
+
+  Using `DateComponent` property you can set custom component for date cell.
+
+  ## CalendarRenderDateProps
+
+  <PropertiesTable title="Properties" data={CalendarDateContextProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="calendar." />
+</Text.Section>

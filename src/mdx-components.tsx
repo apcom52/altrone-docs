@@ -43,6 +43,8 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     blockquote: ({ children }) => <Text.Paragraph size="l">{children}</Text.Paragraph>,
     code: ({ children }) => <Text.Code>{children}</Text.Code>,
     a: ({ children, href }) => <Text.Link href={href}>{children}</Text.Link>,
+    ul: ({ children }) => <Text.List type="marked">{children}</Text.List>,
+    li: ({ children }) => <Text.ListItem>{children}</Text.ListItem>,
     PropertiesTable,
     BluePrint,
     Text,
