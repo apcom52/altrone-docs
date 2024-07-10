@@ -23,24 +23,17 @@ import {DatePickerProperties, DatePickerRangeProperties} from "@/app/components/
 
   Pay attention that Altrone uses `day.js` library and `Dayjs` objects instead of standard `Date` objects.
 
-  <Playground code={`import { Form, Select } from 'altrone-ui';
+  <Playground code={`import { Form, DatePicker } from 'altrone-ui';
 
-const OPTIONS = [
-  { label: 'Afghanistan', value: 'Afghanistan' },
-  { label: 'Albania', value: 'Albania' },
-  { label: 'Algeria', value: 'Algeria' },
-  ...
-]
-
-const [country, setCountry] = useState<string>();
-const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
+const [dateOfBirth, setDateOfBirth] = useState(undefined);
+const [vacation, setVacation] = useState([]);
 
 return <Form>
-  <Form.Field label="Your Motherland">
-    <Select value={country} placeholder="Where have you born?" onChange={setCountry} options={OPTIONS} />
+  <Form.Field label="Date of birth">
+    <DatePicker value={dateOfBirth} placeholder="When have you born?" onChange={setDateOfBirth} />
   </Form.Field>
-  <Form.Field label="Visited Countries">
-    <Select value={visitedCountries} multiple placeholder="Where have you born?" onChange={setVisitedCountries} options={OPTIONS} />
+  <Form.Field label="Following vacation">
+    <DatePicker.RangePicker value={vacation} multiple placeholder="Set start date and end date of your next vacation" onChange={setVacation} />
   </Form.Field>
 </Form>
 `}>

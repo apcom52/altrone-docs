@@ -1,0 +1,68 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {DatePickerDemo} from "@/app/components/datePicker/example";
+import {DatePicker, FilePicker} from "altrone-ui";
+import {DatePickerProperties, DatePickerRangeProperties} from "@/app/components/datePicker/properties";
+import {
+  FileItemProperties,
+  FilePickerProperties, FilePickerRemoveProperties,
+  FilePickerUploadProperties
+} from "@/app/components/filePicker/properties";
+
+<BluePrint title="File Picker" description="This component is used to upload file on the server" />
+
+<Text.Section>
+# Usage
+
+  You need to provide API request to the component to upload file automatically
+
+  <Playground code={`import { FilePicker } from 'altrone-ui';
+
+return <FilePicker
+  defaultValue={[{ filename: 'Catalina.png' }]}
+  url="/path/to/upload/api"
+  method="post"
+  name="file"
+/>
+`}>
+      <FilePicker defaultValue={[{ filename: 'Catalina.png' }]} url="/path/to/upload/api" method="post" name="file" />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Default Files
+
+  Sometimes you need to show to user that he already has some files, so you need to pass `defaultValue` prop.
+
+  ## FileItem
+  <PropertiesTable title="Properties" data={FileItemProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={FilePickerProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Custom upload and remove functions
+
+  In some cases you can write your own upload and remove functions. Check these function arguments to write your custom function:
+
+  ## FilePickerUploadContext
+  <PropertiesTable title="Properties" data={FilePickerUploadProperties} />
+
+  ## FilePickerRemoveContext
+  <PropertiesTable title="Properties" data={FilePickerRemoveProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="filePicker." />
+</Text.Section>
