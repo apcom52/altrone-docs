@@ -1,0 +1,77 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {
+  SelectContextProperties,
+  SelectOptionProperties,
+  SelectProperties
+} from "@/app/components/select/properties";
+import {SelectDemo} from "@/app/components/select/example";
+
+<BluePrint title="Select" description="This component is used to select options in the dropdown" />
+
+<Text.Section>
+# Usage
+
+  This component is very similar to radio list or checkbox list, but you need to choose options from dropdown. Instead of
+  using child components you need to pass options using mandatory `options` prop.
+
+  <Playground code={`import { Form, Select } from 'altrone-ui';
+
+const OPTIONS = [
+  { label: 'Afghanistan', value: 'Afghanistan' },
+  { label: 'Albania', value: 'Albania' },
+  { label: 'Algeria', value: 'Algeria' },
+  ...
+]
+
+const [country, setCountry] = useState<string>();
+const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
+
+return <Form>
+  <Form.Field label="Your Motherland">
+    <Select value={country} placeholder="Where have you born?" onChange={setCountry} options={OPTIONS} />
+  </Form.Field>
+  <Form.Field label="Visited Countries">
+    <Select value={visitedCountries} multiple placeholder="What countries have you visited?" onChange={setVisitedCountries} options={OPTIONS} />
+  </Form.Field>
+</Form>
+`}>
+      <SelectDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Select Option
+
+  You need to provide a list of options to render the select:
+
+  <PropertiesTable title="Properties" data={SelectOptionProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={SelectProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Rendering custom control
+
+  You can render custom control using `Component` property. Value of the property can be either just JSX element or
+  function.
+
+  Function provides `context` arguments:
+
+  <PropertiesTable title="Properties" data={SelectContextProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="select." />
+</Text.Section>

@@ -1,0 +1,58 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {SpoilerProps} from "@/app/components/spoiler/properties";
+import {Button, Icon, Spoiler} from "altrone-ui";
+import {BluePrint} from "@/components/BluePrint";
+import {ButtonProps} from "@/app/components/button/properties";
+import {RadioItemProperties, RadioProperties} from "@/app/components/radio/properties";
+import {RadioDemo} from "@/app/components/radio/example";
+
+<BluePrint title="Radio" description="This component is used to render list of options where user can select only one of the options" />
+
+<Text.Section>
+# Usage
+
+  <Playground code={`import { Radio } from 'altrone-ui';
+
+const [level, setLevel] = useState('junior');
+
+return <Radio value={level} onChange={setLevel}>
+  <Radio.Item value="intern">Intern</Radio.Item>
+  <Radio.Item value="junior">Junior</Radio.Item>
+  <Radio.Item value="middle">Middle</Radio.Item>
+  <Radio.Item value="senior">Senior</Radio.Item>
+  <Radio.Item value="team-lead">Team Lead</Radio.Item>
+</Radio>
+`}>
+      <RadioDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={RadioProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Subcomponents
+
+  <Text.Section>
+    ## Radio.Item
+
+    <Text.Section>
+      ### Radio.Item Properties
+
+      <PropertiesTable title="Properties" data={RadioItemProperties} />
+    </Text.Section>
+  </Text.Section>
+</Text.Section>
+
+
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="radio." />

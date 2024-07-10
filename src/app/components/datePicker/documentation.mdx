@@ -1,0 +1,91 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {
+  SelectContextProperties,
+  SelectOptionProperties,
+  SelectProperties
+} from "@/app/components/select/properties";
+import {SelectDemo} from "@/app/components/select/example";
+import {DatePickerDemo} from "@/app/components/datePicker/example";
+import {DatePicker} from "altrone-ui";
+import {DatePickerProperties, DatePickerRangeProperties} from "@/app/components/datePicker/properties";
+
+<BluePrint title="Date Picker" description="This component is used to choose a date or a range of dates" />
+
+<Text.Section>
+# Usage
+
+  Use `<DatePicker>` component to render date picker. To render month picker, year picker or date range picker use one of
+  the subcomponents (like `<DatePicker.MonthPicker>` or `<DatePicker.RangePicker>`).
+
+
+  Pay attention that Altrone uses `day.js` library and `Dayjs` objects instead of standard `Date` objects.
+
+  <Playground code={`import { Form, Select } from 'altrone-ui';
+
+const OPTIONS = [
+  { label: 'Afghanistan', value: 'Afghanistan' },
+  { label: 'Albania', value: 'Albania' },
+  { label: 'Algeria', value: 'Algeria' },
+  ...
+]
+
+const [country, setCountry] = useState<string>();
+const [visitedCountries, setVisitedCountries] = useState<string[]>([]);
+
+return <Form>
+  <Form.Field label="Your Motherland">
+    <Select value={country} placeholder="Where have you born?" onChange={setCountry} options={OPTIONS} />
+  </Form.Field>
+  <Form.Field label="Visited Countries">
+    <Select value={visitedCountries} multiple placeholder="Where have you born?" onChange={setVisitedCountries} options={OPTIONS} />
+  </Form.Field>
+</Form>
+`}>
+      <DatePickerDemo />
+    </Playground>
+
+</Text.Section>
+
+<Text.Section>
+  # Date Picker
+
+  This is basic component where you can choose a single date
+
+  <PropertiesTable title="Properties" data={DatePickerProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Month Picker
+
+  This is subcomponent (you **don't** need to wrap it into `<DatePicker>`) where you can choose a single month (in this case date is always the first day of the selected month)
+
+  <PropertiesTable title="Properties" data={DatePickerProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Year Picker
+
+  This is subcomponent (you **don't** need to wrap it into `<DatePicker>`) where you can choose a single year (in this case date and month are always the first day of the
+  first month of the selected year)
+
+  <PropertiesTable title="Properties" data={DatePickerProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Range Picker
+
+  This is subcomponent (you **don't** need to wrap it into `<DatePicker>`) where you can choose a two dates year (at first you need to choose start date and then you can choose end date)
+
+  <PropertiesTable title="Properties" data={DatePickerRangeProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="datePicker." />
+</Text.Section>
