@@ -1,0 +1,78 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Icon, NavigationList, Text, TopNavigation} from "altrone-ui";
+import {
+  NavigationListGroupProps,
+  NavigationListLinkProps,
+  NavigationListProps
+} from "@/app/components/navigationList/properties";
+import {
+  TopNavigationGroupProps,
+  TopNavigationLinkProps,
+  TopNavigationLogoProps, TopNavigationProps
+} from "@/app/components/topNavigation/properties";
+
+<BluePrint title="Top Navigation" description="This component is used to render a header of your application" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { TopNavigation, Icon } from "altrone-ui";
+
+<TopNavigation>
+  <TopNavigation.Logo>Logo</TopNavigation.Logo>
+  <TopNavigation.Group>
+    <TopNavigation.Link leftIcon={<Icon i="home" />} label="Home" />
+    <TopNavigation.Link label="Blog" />
+    <TopNavigation.Link label="About us" />
+  </TopNavigation.Group>
+  <TopNavigation.Group align="end">
+    <TopNavigation.Link leftIcon={<Icon i="phone" />} label="Make a call" />
+  </TopNavigation.Group>
+</TopNavigation>
+`}>
+      <TopNavigation>
+        <TopNavigation.Logo>Logo</TopNavigation.Logo>
+        <TopNavigation.Group>
+          <TopNavigation.Link leftIcon={<Icon i="home" />} label="Home" />
+          <TopNavigation.Link label="Blog" />
+          <TopNavigation.Link label="About us" />
+        </TopNavigation.Group>
+        <TopNavigation.Group align="end">
+          <TopNavigation.Link leftIcon={<Icon i="phone" />} label="Make a call" />
+        </TopNavigation.Group>
+      </TopNavigation>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={TopNavigationProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+  This component has two subcomponents - to render a single link and group of them.
+
+  <Text.Section gap="l">
+    ## Logo
+    <PropertiesTable title="Properties" data={TopNavigationLogoProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Group
+    <PropertiesTable title="Properties" data={TopNavigationGroupProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Link
+    <PropertiesTable title="Properties" data={TopNavigationLinkProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="topNavigation." />
+</Text.Section>

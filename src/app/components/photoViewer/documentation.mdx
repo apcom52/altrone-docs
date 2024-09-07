@@ -1,0 +1,51 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Icon, Message, Text} from "altrone-ui";
+import {MessageProps} from "@/app/components/message/properties";
+import {PhotoViewerImageProperties, PhotoViewerProperties} from "@/app/components/photoViewer/properties";
+import {PhotoViewerDemo} from "@/app/components/photoViewer/example";
+
+<BluePrint title="PhotoViewer" description="This component is used to show photo gallery" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { PhotoViewer, Button, useBoolean } from "altrone-ui";
+
+const { value: visible, enable, disable } = useBoolean(false);
+
+return <Flex>
+  <Button onClick={enable} label="Open gallery" />
+  {visible ? <PhotoViewer onClose={disable}>
+    <PhotoViewer.Image caption="Adele 30" src="https://upload.wikimedia.org/wikipedia/en/thumb/7/76/Adele_-_30.png/220px-Adele_-_30.png" />
+    <PhotoViewer.Image caption="Adele 25" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Adele_-_25_%28Official_Album_Cover%29.png/220px-Adele_-_25_%28Official_Album_Cover%29.png" />
+    <PhotoViewer.Image caption="Adele 21" src="https://cdns-images.dzcdn.net/images/cover/8bdaf37e2e7f883e84bbc3462c938293/500x500.jpg" />
+    <PhotoViewer.Image caption="Adele 19" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f8/Adele_-_19.png/220px-Adele_-_19.png" />
+  </PhotoViewer> : null}
+</Flex>
+`}>
+      <PhotoViewerDemo />
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={PhotoViewerProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+  This component has a subcomponent to render photo gallery item.
+
+  <Text.Section gap="l">
+    ## Image
+    <PropertiesTable title="Properties" data={PhotoViewerImageProperties} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="photoViewer." />
+</Text.Section>

@@ -1,0 +1,37 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Icon, Message, Text} from "altrone-ui";
+import {MessageProps} from "@/app/components/message/properties";
+
+<BluePrint title="Message" description="This component is used to show important information for user" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Message, Icon } from "altrone-ui";
+
+<Message header="Welcome!" icon={<Icon i="waving_hand" />}>
+  Welcome to our platform! We're excited to have you join our community.
+  Explore, learn, and engage with others. If you have any questions, don't
+  hesitate to reach out to our support team.
+</Message>
+`}>
+      <Message header="Welcome!" icon={<Icon i="waving_hand" />}>
+        Welcome to our platform! We're excited to have you join our community.
+        Explore, learn, and engage with others. If you have any questions, don't
+        hesitate to reach out to our support team.
+      </Message>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={MessageProps} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="message." />
+</Text.Section>

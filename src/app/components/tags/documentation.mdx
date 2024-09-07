@@ -1,0 +1,49 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Text, Tags} from "altrone-ui";
+import {ProgressContextProperties, ProgressProperties} from "@/app/components/progress/properties";
+import {TagsItemProperties, TagsProperties} from "@/app/components/tags/properties";
+
+<BluePrint title="Tags" description="This component is used to list of tags" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Tags } from "altrone-ui";
+
+<Tags>
+  <Tags.Item label="#Python" />
+  <Tags.Item label="#AI" />
+  <Tags.Item label="#ChatGPT" />
+</Tags>
+`}>
+    <Tags>
+      <Tags.Item label="#Python" />
+      <Tags.Item label="#AI" />
+      <Tags.Item label="#ChatGPT" />
+    </Tags>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+
+  <PropertiesTable title="Properties" data={TagsProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  ## Item
+
+  This component is used to render item inside of tags list
+
+  <PropertiesTable title="Properties" data={TagsItemProperties} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="tags." />
+</Text.Section>

@@ -3,24 +3,19 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
 import {CalendarDateContextProperties, CalendarProperties} from "@/app/components/calendar/properties";
+import {CalendarDemo} from "@/app/components/calendar/example";
 
 <BluePrint title="Calendar" description="This component is used to show calendar on the page" />
 
 <Text.Section>
 # Usage
 
-  You need to provide API request to the component to upload file automatically
+  You need to use `dayjs` object from Altrone to provide dates for properties
 
-  <Playground code={`import { FilePicker } from 'altrone-ui';
+  <Playground code={`import { Calendar, dayjs } from 'altrone-ui';
 
-return <FilePicker
-  defaultValue={[{ filename: 'Catalina.png' }]}
-  url="/path/to/upload/api"
-  method="post"
-  name="file"
-/>
-`}>
-    j1
+return <Calendar month={dayjs('2024-07')} selectedDates={[dayjs('2024-07-10'), dayjs('2024-07-16')]} />`}>
+    <CalendarDemo />
 </Playground>
 </Text.Section>
 

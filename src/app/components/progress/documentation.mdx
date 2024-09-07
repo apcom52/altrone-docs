@@ -1,0 +1,50 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Flex, Progress, Text} from "altrone-ui";
+import {ProgressContextProperties, ProgressProperties} from "@/app/components/progress/properties";
+
+<BluePrint title="Progress" description="This component is used to show progress of some action" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Flex, Progress } from "altrone-ui";
+
+<Flex direction="vertical" gap="s">
+  <Progress value={60} max={100} />
+  <Progress value={5} max={60}>
+    {({ value, max }) => <>{value} of {max} pages have read</>}
+  </Progress>
+</Flex>
+`}>
+      <Flex direction="vertical" gap="s">
+        <Progress value={60} max={100} />
+        <Progress value={5} max={60}>
+          {({ value, max }) => <>{value} of {max} pages have read</>}
+        </Progress>
+      </Flex>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+
+  <PropertiesTable title="Properties" data={ProgressProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Rendering custom label
+
+  When you need to render custom label inside of the progress you need to pass function into `children` property. The first
+  argument of this function is context object with following fields:
+
+  ## ProgressContext
+  <PropertiesTable title="Properties" data={ProgressContextProperties} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="progress." />
+</Text.Section>

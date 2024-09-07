@@ -6,15 +6,24 @@ import Image from 'next/image';
 import {usePathname} from "next/navigation";
 import lightLogo from '../../public/altrone-light.png';
 import darkLogo from '../../public/altrone-dark.png';
+import {Theme} from "altrone-ui/dist/src/components/application/AltroneApplication.types";
 
 interface HeaderProps {
   selected?: string;
+  onThemeChange: (theme: Theme) => void;
 }
 
-export const Header = ({ selected }: HeaderProps) => {
+export const Header = ({ selected, onThemeChange }: HeaderProps) => {
   const pathname = usePathname()
 
   const { theme } = useAltroneTheme();
+
+  const sessionTheme = sessionStorage.getItem('theme') || theme;
+
+  const changeTheme = () => {
+    onThemeChange(sessionTheme === 'dark' ? 'light' : 'dark')
+    sessionStorage.setItem('theme', sessionTheme === 'dark' ? 'light' : 'dark');
+  }
 
   const isComponents = pathname.startsWith("/components");
 
@@ -35,7 +44,7 @@ export const Header = ({ selected }: HeaderProps) => {
       <TopNavigation.Link href='/components' selected={isComponents} leftIcon={<Icon i="view_carousel" />} label="Components" />
       <TopNavigation.Link leftIcon={<Icon i="data_object" />} label="API" />
       <TopNavigation.Link leftIcon={<Icon i="feed" />} label="Blog" />
-      <Button size="l" leftIcon={<Icon i="dark_mode" />} />
+      <Button onClick={changeTheme} size="l" leftIcon={<Icon i={sessionTheme === 'dark' ? "light_mode" : "dark_mode"} />} />
       <Button size="l" label="Getting started" />
     </TopNavigation.Group>
   </TopNavigation>

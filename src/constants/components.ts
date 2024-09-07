@@ -221,7 +221,7 @@ export const COMPONENTS: ComponentInstance[] = [
   },
   {
     name: 'navigationList',
-    title: 'NavigationList',
+    title: 'Navigation List',
     group: 'navigation'
   },
   {

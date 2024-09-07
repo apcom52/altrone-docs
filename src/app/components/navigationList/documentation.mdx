@@ -1,0 +1,64 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Icon, NavigationList, Text} from "altrone-ui";
+import {
+  NavigationListGroupProps,
+  NavigationListLinkProps,
+  NavigationListProps
+} from "@/app/components/navigationList/properties";
+
+<BluePrint title="NavigationList" description="This component is used to render a navigation throughout your application" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { NavigationList, Icon } from "altrone-ui";
+
+<NavigationList>
+  <NavigationList.Link icon={<Icon i="home" />} label="Home" />
+  <NavigationList.Link icon={<Icon i="search" />} label="Explore" />
+  <NavigationList.Link icon={<Icon i="notifications" />} label="Notifications" />
+  <NavigationList.Link icon={<Icon i="email" />} label="Messages" />
+  <NavigationList.Link icon={<Icon i="bookmark_border" />} label="Bookmarks" />
+  <NavigationList.Link icon={<Icon i="account_circle" />} label="Profile" />
+  <NavigationList.Link label="More" />
+</NavigationList>
+`}>
+      <NavigationList>
+        <NavigationList.Link icon={<Icon i="home" />} label="Home" />
+        <NavigationList.Link icon={<Icon i="search" />} label="Explore" />
+        <NavigationList.Link icon={<Icon i="notifications" />} label="Notifications" />
+        <NavigationList.Link icon={<Icon i="email" />} label="Messages" />
+        <NavigationList.Link icon={<Icon i="bookmark_border" />} label="Bookmarks" />
+        <NavigationList.Link icon={<Icon i="account_circle" />} label="Profile" />
+        <NavigationList.Link label="More" />
+      </NavigationList>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={NavigationListProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+  This component has two subcomponents - to render a single link and group of them.
+
+  <Text.Section gap="l">
+    ## Group
+    <PropertiesTable title="Properties" data={NavigationListGroupProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Link
+    <PropertiesTable title="Properties" data={NavigationListLinkProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="navigationList." />
+</Text.Section>

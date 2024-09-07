@@ -1,0 +1,50 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {Playground} from "@/components/Playground";
+import {Text} from "altrone-ui";
+import {ToastsDemo} from "@/app/components/toasts/example";
+import {ToastFunctionParameters} from "@/app/components/toasts/properties";
+
+<BluePrint title="Tags" description="This component is used to show notification" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  To use this component you need to import `useToast` hook. This hook returns 4 functions: `toast()`, `success()`, `warning()` and `danger()`.
+  Each function is responsible for every type of notification.
+
+  <Playground code={`import { useToast, Flex, Button } from "altrone-ui";
+
+const { toast, success, warning, danger } = useToast();
+
+return <Flex gap="s">
+  <Button
+    label="Show toast message"
+    onClick={() => toast('New updates are available.')}
+  />
+  <Button
+    label="Successful toast"
+    onClick={() => success('File uploaded successfully!')}
+  />
+  <Button
+    label="Warning toast"
+    onClick={() =>
+      warning('Unsaved changes will be lost. Do you want to proceed?')
+    }
+  />
+  <Button
+    label="Danger toast"
+    onClick={() => danger('An error occurred. Please try again')}
+  />
+</Flex>
+`}>
+    <ToastsDemo />
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Toast function parameters
+
+  Every function accepts next arguments
+
+  <PropertiesTable title="Properties" data={ToastFunctionParameters} />
+</Text.Section>
