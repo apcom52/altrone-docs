@@ -1,0 +1,67 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BottomNavigation, Icon, Text, TopNavigation} from "altrone-ui";
+import {BottomNavigationLinkProps, BottomNavigationProps} from "@/app/components/bottomNavigation/properties";
+
+<BluePrint title="Bottom Navigation" description="This component is used to render a navigation for mobile devices" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { BottomNavigation, Icon } from "altrone-ui";
+
+<BottomNavigation>
+  <BottomNavigation.Item href="/" selected icon={<Icon i="home" />} label="Home" />
+  <BottomNavigation.Item href="/wallet" icon={<Icon i="wallet" />} label="Wallet" />
+  <BottomNavigation.Item href="/settings" icon={<Icon i="settings" />} label="Settings" />
+  <BottomNavigation.Item href="/profile" icon={<Icon i="account_circle" />} label="Profile" />
+</BottomNavigation>
+`}>
+      <BottomNavigation>
+        <BottomNavigation.Item
+          href="#"
+          selected
+          icon={<Icon i="home" />}
+          label="Home"
+        />
+        <BottomNavigation.Item
+          href="#"
+          icon={<Icon i="wallet" />}
+          label="Wallet"
+        />
+        <BottomNavigation.Item
+          href="#"
+          icon={<Icon i="settings" />}
+          label="Settings"
+        />
+        <BottomNavigation.Item
+          href="#"
+          icon={<Icon i="account_circle" />}
+          label="Profile"
+        />
+      </BottomNavigation>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={BottomNavigationProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  <Text.Section gap="l">
+    ## Item
+    This component is used to render a link in the BottomNavigation component
+
+    <PropertiesTable title="Properties" data={BottomNavigationLinkProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="bottomNavigation." />
+</Text.Section>

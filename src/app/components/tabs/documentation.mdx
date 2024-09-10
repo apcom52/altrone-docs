@@ -1,0 +1,67 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Icon, SideNavigation, Tabs, Text} from "altrone-ui";
+import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sideNavigation/properties";
+import {TabsItemProps, TabsProps} from "@/app/components/tabs/properties";
+
+<BluePrint title="Tabs" description="This component is used to make tabbed interface in your application" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Tabs, Icon } from "altrone-ui";
+
+<Tabs>
+  <Tabs.Item
+    icon={<Icon i="chat" />}
+    selected
+    href="#chat"
+    label="Chat"
+  />
+  <Tabs.Item
+    icon={<Icon i="list" />}
+    href="#description"
+    label="Description"
+  />
+  <Tabs.Item href="#subtasks" label="Subtasks" />
+</Tabs>
+`}>
+    <Tabs>
+      <Tabs.Item
+        icon={<Icon i="chat" />}
+        selected
+        href="#chat"
+        label="Chat"
+      />
+      <Tabs.Item
+        icon={<Icon i="list" />}
+        href="#description"
+        label="Description"
+      />
+      <Tabs.Item href="#subtasks" label="Subtasks" />
+    </Tabs>
+  </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={TabsProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  <Text.Section gap="l">
+    ## Item
+    This component is used to render a link in the BottomNavigation component
+
+    <PropertiesTable title="Properties" data={TabsItemProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="tabs." />
+</Text.Section>

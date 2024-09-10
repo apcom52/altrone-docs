@@ -1,6 +1,6 @@
 'use client';
 
-import {Scrollable, Tabs, Toolbar, useAltroneTheme, Text} from "altrone-ui";
+import {Scrollable, Tabs, Toolbar, useAltroneTheme, Text, Icon} from "altrone-ui";
 import s from './styles.module.scss';
 import {PropsWithChildren, useState} from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
@@ -17,11 +17,11 @@ export const Playground = ({ children, code }: PlaygroundProps) => {
   const [tab, setTab] = useState('preview')
 
   return <div className={s.Wrapper}>
-    <Toolbar className={s.Toolbar} compact align='between'>
+    <Toolbar className={s.Toolbar} compact>
       <Toolbar.Group>
         <Tabs>
-          <Tabs.Item label="Preview" onClick={() => setTab('preview')} selected={tab === 'preview'} />
-          <Tabs.Item label="Code" onClick={() => setTab('code')} selected={tab === 'code'} />
+          <Tabs.Item label="Preview" icon={<Icon i="category" />} onClick={() => setTab('preview')} selected={tab === 'preview'} />
+          <Tabs.Item label="Code" icon={<Icon i="code" />} onClick={() => setTab('code')} selected={tab === 'code'} />
         </Tabs>
       </Toolbar.Group>
     </Toolbar>

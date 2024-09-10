@@ -240,6 +240,11 @@ export const COMPONENTS: ComponentInstance[] = [
     group: 'navigation'
   },
   {
+    name: 'tabs',
+    title: 'Tabs',
+    group: 'navigation'
+  },
+  {
     name: 'breadcrumbs',
     title: 'Breadcrumbs',
     group: 'navigation'

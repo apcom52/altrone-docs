@@ -1,0 +1,100 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {SideNavigation, Text} from "altrone-ui";
+import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sideNavigation/properties";
+
+<BluePrint title="Side Navigation" description="This component is used to show navigation on the page with automatic updates based on scroll position" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { SideNavigation } from "altrone-ui";
+
+<SideNavigation title="Contents">
+  <SideNavigation.Item href="#introduction" label="Introduction" />
+  <SideNavigation.Item
+    href="#genesis"
+    label="The Genesis of Artificial Intelligence"
+  >
+    <SideNavigation.Item
+      href="#concepts"
+      label="Early Concepts and Theories"
+    />
+    <SideNavigation.Item
+      href="#ai_programs"
+      label="Early AI Programs and Achievements"
+    />
+  </SideNavigation.Item>
+  <SideNavigation.Item
+    href="#evolution"
+    label="The Evolution and Expansion of AI"
+  >
+    <SideNavigation.Item
+      href="#rise"
+      label="The Rise of Machine Learning"
+    />
+    <SideNavigation.Item
+      href="#ai_in_21"
+      label="AI in the 21st Century"
+    />
+  </SideNavigation.Item>
+  <SideNavigation.Item href="#conclusion" label="Conclusion" />
+  <SideNavigation.Item href="#references" label="References" />
+</SideNavigation>
+`}>
+    <SideNavigation title="Contents">
+      <SideNavigation.Item href="#introduction" label="Introduction" />
+      <SideNavigation.Item
+        href="#genesis"
+        label="The Genesis of Artificial Intelligence"
+      >
+        <SideNavigation.Item
+          href="#concepts"
+          label="Early Concepts and Theories"
+        />
+        <SideNavigation.Item
+          href="#ai_programs"
+          label="Early AI Programs and Achievements"
+        />
+      </SideNavigation.Item>
+      <SideNavigation.Item
+        href="#evolution"
+        label="The Evolution and Expansion of AI"
+      >
+        <SideNavigation.Item
+          href="#rise"
+          label="The Rise of Machine Learning"
+        />
+        <SideNavigation.Item
+          href="#ai_in_21"
+          label="AI in the 21st Century"
+        />
+      </SideNavigation.Item>
+      <SideNavigation.Item href="#conclusion" label="Conclusion" />
+      <SideNavigation.Item href="#references" label="References" />
+    </SideNavigation>
+  </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+  <PropertiesTable title="Properties" data={SideNavigationProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  <Text.Section gap="l">
+    ## Item
+    This component is used to render a link in the BottomNavigation component
+
+    <PropertiesTable title="Properties" data={SideNavigationLinkProps} />
+  </Text.Section>
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="sideNavigation." />
+</Text.Section>
