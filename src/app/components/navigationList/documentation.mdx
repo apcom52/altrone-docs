@@ -7,6 +7,8 @@ import {
   NavigationListLinkProps,
   NavigationListProps
 } from "@/app/components/navigationList/properties";
+import {NavigationListCSSVariables} from "@/app/components/navigationList/variables";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <BluePrint title="NavigationList" description="This component is used to render a navigation throughout your application" />
 
@@ -55,6 +57,11 @@ import {
     ## Link
     <PropertiesTable title="Properties" data={NavigationListLinkProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={NavigationListCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

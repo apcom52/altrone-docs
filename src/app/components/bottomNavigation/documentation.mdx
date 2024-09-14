@@ -1,8 +1,10 @@
 import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
-import {BottomNavigation, Icon, Text, TopNavigation} from "altrone-ui";
+import {BottomNavigation, Icon, Text} from "altrone-ui";
 import {BottomNavigationLinkProps, BottomNavigationProps} from "@/app/components/bottomNavigation/properties";
+import {BottomNavigationCSSVariables} from "@/app/components/bottomNavigation/variables";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <BluePrint title="Bottom Navigation" description="This component is used to render a navigation for mobile devices" />
 
@@ -58,6 +60,11 @@ import {BottomNavigationLinkProps, BottomNavigationProps} from "@/app/components
 
     <PropertiesTable title="Properties" data={BottomNavigationLinkProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={BottomNavigationCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

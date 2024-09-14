@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {Icon, SideNavigation, Tabs, Text} from "altrone-ui";
 import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sideNavigation/properties";
 import {TabsItemProps, TabsProps} from "@/app/components/tabs/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TabsCSSVariables} from "@/app/components/tabs/variables";
 
 <BluePrint title="Tabs" description="This component is used to make tabbed interface in your application" />
 
@@ -58,6 +60,11 @@ import {TabsItemProps, TabsProps} from "@/app/components/tabs/properties";
 
     <PropertiesTable title="Properties" data={TabsItemProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TabsCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

@@ -1,9 +1,10 @@
 'use client';
 
 import s from './Sidebar.module.scss';
-import {SideNavigation} from "altrone-ui";
 import {useEffect, useState} from "react";
 import {usePathname} from "next/navigation";
+// import { SideNavigation } from 'altrone-ui';
+import {SideNavigation} from "@/components/sideNavigation";
 
 type ContentItem = {
   label: string;
@@ -58,9 +59,11 @@ export const Sidebar = () => {
   }, [path]);
 
   return <aside className={s.Sidebar}>
-    {content.length ? <SideNavigation className={s.SideNavigation} title="Contents">
+    {content.length ? <SideNavigation key={path} className={s.SideNavigation} title="Contents">
       {content.map((item: ContentItem) => (
-        <SideNavigation.Item key={`${path}-${item.id}`} label={`${path}-${item.id}`} href={`#${item.id}`} />
+        <SideNavigation.Item key={`${path}-${item.id}`} label={`${item.label}`} href={`#${item.id}`}>
+          {/*{item.children.length ? item.children.map((child: ContentItem) => (<SideNavigation.Item key={`${path}-${item.id}-${child.id}`} href={`#${child.id}`} label={child.label} />)) : undefined}*/}
+        </SideNavigation.Item>
       ))}
     </SideNavigation> : null}
   </aside>

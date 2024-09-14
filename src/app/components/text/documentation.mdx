@@ -8,6 +8,9 @@ import {
   TextSectionProperties
 } from "@/app/components/text/properties";
 import {Playground} from "@/components/Playground";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TextCSSVariables} from "@/app/components/text/variables";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 
 <BluePrint title="Text" description="This component is used to render text" />
 
@@ -147,4 +150,15 @@ import {Playground} from "@/components/Playground";
     ### Properties
     <PropertiesTable title="Text.Inline Properties" role="inner" data={TextListItemProperties} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TextCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="text." />
 </Text.Section>

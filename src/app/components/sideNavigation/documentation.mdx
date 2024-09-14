@@ -1,8 +1,10 @@
 import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
-import {SideNavigation, Text} from "altrone-ui";
+import {Icon, Message, SideNavigation, Text} from "altrone-ui";
 import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sideNavigation/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {SideNavigationCSSVariables} from "@/app/components/sideNavigation/variables";
 
 <BluePrint title="Side Navigation" description="This component is used to show navigation on the page with automatic updates based on scroll position" />
 
@@ -75,6 +77,8 @@ import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sid
       <SideNavigation.Item href="#references" label="References" />
     </SideNavigation>
   </Playground>
+
+  <Message icon={<Icon i="info" />}>When you update child items you need to provide a new <Text.Code>key</Text.Code> property for <Text.Code>&lt;SideNavigation&gt;</Text.Code> wrapper</Message>
 </Text.Section>
 
 <Text.Section gap='xl'>
@@ -91,6 +95,11 @@ import {SideNavigationLinkProps, SideNavigationProps} from "@/app/components/sid
 
     <PropertiesTable title="Properties" data={SideNavigationLinkProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={SideNavigationCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

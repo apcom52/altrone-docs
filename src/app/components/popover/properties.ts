@@ -90,6 +90,13 @@ export const PopoverProperties: ComponentDescription = {
       version: 30,
       description: 'Popover has width equals to interactive element length'
     },
+    {
+      name: 'onOpenChange',
+      type: '(opened: boolean) => void',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'The callback is triggered every time when the popup is shown or hidden'
+    },
   ]
 }
 

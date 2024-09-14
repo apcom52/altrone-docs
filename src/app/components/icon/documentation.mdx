@@ -1,5 +1,6 @@
 import {IconProperties} from "@/app/components/icon/properties";
 import {Icon} from "altrone-ui";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 
 <BluePrint title="Icon" description="This component is used to render icon" />
 
@@ -21,3 +22,9 @@ Altrone uses [Google Material Icons](https://fonts.google.com/icons) out-of-box,
 </Text.Section>
 
 <PropertiesTable title="Properties" data={IconProperties} />
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="icon." />
+</Text.Section>

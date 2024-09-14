@@ -1,17 +1,14 @@
 import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
-import {Icon, NavigationList, Text, TopNavigation} from "altrone-ui";
-import {
-  NavigationListGroupProps,
-  NavigationListLinkProps,
-  NavigationListProps
-} from "@/app/components/navigationList/properties";
+import {Icon, Text, TopNavigation} from "altrone-ui";
 import {
   TopNavigationGroupProps,
   TopNavigationLinkProps,
   TopNavigationLogoProps, TopNavigationProps
 } from "@/app/components/topNavigation/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TopNavigationCSSVariables} from "@/app/components/topNavigation/variables";
 
 <BluePrint title="Top Navigation" description="This component is used to render a header of your application" />
 
@@ -69,6 +66,11 @@ import {
     ## Link
     <PropertiesTable title="Properties" data={TopNavigationLinkProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TopNavigationCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">
