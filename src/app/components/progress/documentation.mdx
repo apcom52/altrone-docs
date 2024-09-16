@@ -3,6 +3,8 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {Flex, Progress, Text} from "altrone-ui";
 import {ProgressContextProperties, ProgressProperties} from "@/app/components/progress/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {ProgressCSSVariables} from "@/app/components/progress/variables";
 
 <BluePrint title="Progress" description="This component is used to show progress of some action" />
 
@@ -41,6 +43,11 @@ import {ProgressContextProperties, ProgressProperties} from "@/app/components/pr
 
   ## ProgressContext
   <PropertiesTable title="Properties" data={ProgressContextProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={ProgressCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

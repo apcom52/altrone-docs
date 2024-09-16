@@ -5,6 +5,8 @@ import {Icon, Message, Text} from "altrone-ui";
 import {MessageProps} from "@/app/components/message/properties";
 import {PhotoViewerImageProperties, PhotoViewerProperties} from "@/app/components/photoViewer/properties";
 import {PhotoViewerDemo} from "@/app/components/photoViewer/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {PhotoViewerCSSVariables} from "@/app/components/photoViewer/variables";
 
 <BluePrint title="PhotoViewer" description="This component is used to show photo gallery" />
 
@@ -42,6 +44,11 @@ return <Flex>
     ## Image
     <PropertiesTable title="Properties" data={PhotoViewerImageProperties} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={PhotoViewerCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

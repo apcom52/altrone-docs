@@ -13,6 +13,7 @@
 
 .Preview {
   width: 32px;
+  min-width: 32px;
   height: 24px;
   border-radius: 6px;
   background-color: var(--default-100);
@@ -33,6 +34,39 @@
 .BorderPreview {
   border: 3px solid var(--default-200);
   box-shadow: none;
+}
+
+.SizePreview {
+  position: relative;
+  overflow: hidden;
+
+  .Rect {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 4px;
+    background-color: var(--primary-500);
+
+    &:before, &:after {
+      width: 1px;
+      height: 8px;
+      background-color: var(--primary-500);
+      content: '';
+    }
+
+    &:before {
+      position: absolute;
+      left: -1px;
+    }
+
+    &:after {
+      position: absolute;
+      right: -1px;
+    }
+  }
 }
 
 .Name {

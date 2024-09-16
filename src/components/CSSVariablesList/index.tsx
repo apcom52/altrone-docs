@@ -17,6 +17,8 @@ export const CSSVariablesList = ({data = []}: CSSVariablesListProps) => {
         palette = <div className={clsx(s.Preview, s.TextPreview)} style={{ color: `var(--${item.name})`}}>Alt</div>
       } else if (item.variant === 'border') {
         palette = <div className={clsx(s.Preview, s.BorderPreview)} style={{ borderColor: `var(--${item.name})`}} />
+      } else if (item.variant === 'size') {
+        palette = <div className={clsx(s.Preview, s.SizePreview)}><div className={s.Rect} style={{ width: `var(--${item.name})`}} /></div>
       }
 
       const version = `${Math.floor(item.version / 10)}.${item.version % 10}`

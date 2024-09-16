@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
 import {CalendarDateContextProperties, CalendarProperties} from "@/app/components/calendar/properties";
 import {CalendarDemo} from "@/app/components/calendar/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {CalendarCSSVariables} from "@/app/components/calendar/variables";
 
 <BluePrint title="Calendar" description="This component is used to show calendar on the page" />
 
@@ -33,6 +35,11 @@ return <Calendar month={dayjs('2024-07')} selectedDates={[dayjs('2024-07-10'), d
   ## CalendarRenderDateProps
 
   <PropertiesTable title="Properties" data={CalendarDateContextProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={CalendarCSSVariables} />
 </Text.Section>
 
 <Text.Section>

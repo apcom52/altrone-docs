@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
 import {SwitcherDemo} from "@/app/components/switcher/example";
 import {SwitcherProperties} from "@/app/components/switcher/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {SwitcherCSSVariables} from "@/app/components/switcher/variables";
 
 <BluePrint title="Switcher" description="This component is used to show control with two possible states" />
 
@@ -29,6 +31,11 @@ return <Switcher checked={agreed} onChange={setAgreed}>
 
   <PropertiesTable title="Properties" data={SwitcherProperties} />
   This component doesn't have any special properties
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={SwitcherCSSVariables} />
 </Text.Section>
 
 <Text.Section>

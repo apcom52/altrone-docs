@@ -3,6 +3,8 @@ import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {ScrollableProps} from "@/app/components/scrollable/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {ScrollableCSSVariables} from "@/app/components/scrollable/variables";
 
 <BluePrint title="Scrollable" description="This component is used to display large content inside a container with scrollbars" />
 
@@ -50,6 +52,11 @@ import {ScrollableProps} from "@/app/components/scrollable/properties";
 # Properties
 
 <PropertiesTable title="Properties" data={ScrollableProps} />
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={ScrollableCSSVariables} />
+</Text.Section>
 
 # Configuration
 

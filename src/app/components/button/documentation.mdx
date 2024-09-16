@@ -5,6 +5,8 @@ import {SpoilerProps} from "@/app/components/spoiler/properties";
 import {Button, Icon, Spoiler} from "altrone-ui";
 import {BluePrint} from "@/components/BluePrint";
 import {ButtonProps} from "@/app/components/button/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {ButtonCSSVariables} from "@/app/components/button/variables";
 
 <BluePrint title="Button" description="This component is used to render action buttons" />
 
@@ -26,6 +28,11 @@ import {ButtonProps} from "@/app/components/button/properties";
 # Properties
 
 <PropertiesTable title="Properties" data={ButtonProps} />
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={ButtonCSSVariables} />
+</Text.Section>
 
 # Configuration
 

@@ -3,8 +3,8 @@
 import s from './Sidebar.module.scss';
 import {useEffect, useState} from "react";
 import {usePathname} from "next/navigation";
-// import { SideNavigation } from 'altrone-ui';
-import {SideNavigation} from "@/components/sideNavigation";
+import { SideNavigation } from 'altrone-ui';
+// import {SideNavigation} from "@/components/sideNavigation";
 
 type ContentItem = {
   label: string;

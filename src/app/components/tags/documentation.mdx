@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {Text, Tags} from "altrone-ui";
 import {ProgressContextProperties, ProgressProperties} from "@/app/components/progress/properties";
 import {TagsItemProperties, TagsProperties} from "@/app/components/tags/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TagsCSSVariables} from "@/app/components/tags/variables";
 
 <BluePrint title="Tags" description="This component is used to list of tags" />
 
@@ -40,6 +42,11 @@ import {TagsItemProperties, TagsProperties} from "@/app/components/tags/properti
   This component is used to render item inside of tags list
 
   <PropertiesTable title="Properties" data={TagsItemProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TagsCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

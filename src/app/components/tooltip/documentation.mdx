@@ -3,6 +3,8 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import { Text, Tooltip} from "altrone-ui";
 import {TooltipProperties} from "@/app/components/tooltip/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TooltipCSSVariables} from "@/app/components/tooltip/variables";
 
 <BluePrint title="Tooltip" description="This component is used to show hints to users" />
 
@@ -24,6 +26,11 @@ import {TooltipProperties} from "@/app/components/tooltip/properties";
 <Text.Section gap='xl'>
   # Properties
   <PropertiesTable title="Properties" data={TooltipProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TooltipCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

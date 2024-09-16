@@ -7,6 +7,8 @@ import {
   DropdownProperties, DropdownRadioListItemProperties,
   DropdownRadioListProperties
 } from "@/app/components/dropdown/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {DropdownCSSVariables} from "@/app/components/dropdown/variables";
 
 <BluePrint title="Dropdown" description="This component is used to show popover with menu options" />
 
@@ -145,6 +147,11 @@ import {
     ### Dropdown.ChildMenu Properties
     <PropertiesTable data={DropdownChildMenuProperties} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={DropdownCSSVariables} />
 </Text.Section>
 
 <Text.Section>

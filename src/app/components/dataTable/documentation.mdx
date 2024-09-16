@@ -9,6 +9,8 @@ import {
 } from "@/app/components/dataTable/properties";
 import {Text} from "altrone-ui";
 import {DataTableDemo} from "@/app/components/dataTable/example";
+import {DataTableCSSVariables} from "@/app/components/dataTable/variables";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <BluePrint title="Data Table" description="This component is used to render big amount of table data" />
 
@@ -165,6 +167,11 @@ return <DataTable
 
   ## DataTableRenderContext
   <PropertiesTable data={DataTableRenderContextProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={DataTableCSSVariables} />
 </Text.Section>
 
 <Text.Section>

@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {Text} from "altrone-ui";
 import {FormFieldProps, FormProps} from "@/app/components/form/properties";
 import {FormDemo} from "@/app/components/form/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {FormCSSVariables} from "@/app/components/form/variables";
 
 <BluePrint title="Form" description="This component is used to wrap form elements" />
 
@@ -48,6 +50,11 @@ const [password, setPassword] = useState('');
     ### Form.Field Properties
     <PropertiesTable title="Properties" data={FormFieldProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={FormCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

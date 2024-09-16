@@ -11,6 +11,8 @@ import {SelectDemo} from "@/app/components/select/example";
 import {DatePickerDemo} from "@/app/components/datePicker/example";
 import {DatePicker} from "altrone-ui";
 import {DatePickerProperties, DatePickerRangeProperties} from "@/app/components/datePicker/properties";
+import {DatePickerCSSVariables} from "@/app/components/datePicker/variables";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <BluePrint title="Date Picker" description="This component is used to choose a date or a range of dates" />
 
@@ -73,6 +75,11 @@ return <Form>
   This is subcomponent (you **don't** need to wrap it into `<DatePicker>`) where you can choose a two dates year (at first you need to choose start date and then you can choose end date)
 
   <PropertiesTable title="Properties" data={DatePickerRangeProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={DatePickerCSSVariables} />
 </Text.Section>
 
 <Text.Section>

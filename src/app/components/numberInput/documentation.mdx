@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
 import {NumberInputProps} from "@/app/components/numberInput/properties";
 import {NumberInputDemo} from "@/app/components/numberInput/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {NumberInputCSSVariables} from "@/app/components/numberInput/variables";
 
 <BluePrint title="Number Input" description="This component is used to enter numeric values" />
 
@@ -32,6 +34,11 @@ return <Form>
   # Properties
 
   <PropertiesTable title="Properties" data={NumberInputProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={NumberInputCSSVariables} />
 </Text.Section>
 
 <Text.Section>

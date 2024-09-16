@@ -3,6 +3,8 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {SpoilerProps} from "@/app/components/spoiler/properties";
 import {Spoiler} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {SpoilerCSSVariables} from "@/app/components/spoiler/variables";
 
 <BluePrint title="Spoiler" description="This component is used to show content which can expand or collapse" />
 
@@ -29,6 +31,11 @@ import {Spoiler} from "altrone-ui";
 # Properties
 
 <PropertiesTable title="Properties" data={SpoilerProps} />
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={SpoilerCSSVariables} />
+</Text.Section>
 
 # Configuration
 

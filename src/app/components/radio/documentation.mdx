@@ -1,12 +1,11 @@
 import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
-import {SpoilerProps} from "@/app/components/spoiler/properties";
-import {Button, Icon, Spoiler} from "altrone-ui";
 import {BluePrint} from "@/components/BluePrint";
-import {ButtonProps} from "@/app/components/button/properties";
 import {RadioItemProperties, RadioProperties} from "@/app/components/radio/properties";
 import {RadioDemo} from "@/app/components/radio/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {RadioCSSVariables} from "@/app/components/radio/variables";
 
 <BluePrint title="Radio" description="This component is used to render list of options where user can select only one of the options" />
 
@@ -50,6 +49,10 @@ return <Radio value={level} onChange={setLevel}>
   </Text.Section>
 </Text.Section>
 
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={RadioCSSVariables} />
+</Text.Section>
 
 # Configuration
 

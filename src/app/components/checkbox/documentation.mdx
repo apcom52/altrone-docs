@@ -6,6 +6,8 @@ import {BluePrint} from "@/components/BluePrint";
 import {TextareaProperties} from "@/app/components/textarea/properties";
 import {CheckboxProperties} from "@/app/components/checkbox/properties";
 import {CheckboxDemo} from "@/app/components/checkbox/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {CheckboxCSSVariables} from "@/app/components/checkbox/variables";
 
 <BluePrint title="Checkbox" description="This component is used to show control with two possible states" />
 
@@ -28,6 +30,11 @@ return <Checkbox checked={agreed} onChange={setAgreed}>
   # Properties
 
   <PropertiesTable title="Properties" data={CheckboxProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={CheckboxCSSVariables} />
 </Text.Section>
 
 <Text.Section>

@@ -2,10 +2,10 @@ import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {Text} from "altrone-ui";
-import {FormFieldProps, FormProps} from "@/app/components/form/properties";
-import {FormDemo} from "@/app/components/form/example";
 import {ToolbarActionProps, ToolbarGroupProps, ToolbarProps} from "@/app/components/toolbar/properties";
 import {ToolbarDemo} from "@/app/components/toolbar/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {ToolbarCSSVariables} from "@/app/components/toolbar/variables";
 
 <BluePrint title="Toolbar" description="This component is used to build a toolbar with different actions" />
 
@@ -65,6 +65,11 @@ const [search, setSearch] = useState('');
     ### Toolbar.Action Properties
     <PropertiesTable title="Properties" data={ToolbarActionProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={ToolbarCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

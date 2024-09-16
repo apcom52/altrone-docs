@@ -9,6 +9,8 @@ import {
   TextInputProps,
   TextIslandProps
 } from "@/app/components/textInput/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {TextInputCSSVariables} from "@/app/components/textInput/variables";
 
 <BluePrint title="Text Input" description="This component is used to enter user information" />
 
@@ -73,6 +75,11 @@ import {
 
     <PropertiesTable title="Properties" data={CustomIslandProps} />
   </Text.Section>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={TextInputCSSVariables} />
 </Text.Section>
 
 # Configuration

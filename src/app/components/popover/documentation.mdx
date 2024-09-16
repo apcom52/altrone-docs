@@ -3,6 +3,8 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {PopoverChildrenContext, PopoverContentContext, PopoverProperties} from "@/app/components/popover/properties";
 import {Button, Flex, Icon, Popover, Text} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {PopoverCSSVariables} from "@/app/components/popover/variables";
 
 <BluePrint title="Popover" description="This component is used to display popovers on the page" />
 
@@ -72,6 +74,11 @@ When you set the placement of the popover but there is no enough space for displ
 
   ## Content render function
   <PropertiesTable data={PopoverContentContext} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={PopoverCSSVariables} />
 </Text.Section>
 
 <Text.Section>

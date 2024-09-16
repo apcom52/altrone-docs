@@ -2,14 +2,14 @@ import {PropertiesTable} from "@/components/PropertiesTable";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
-import {DatePickerDemo} from "@/app/components/datePicker/example";
-import {DatePicker, FilePicker} from "altrone-ui";
-import {DatePickerProperties, DatePickerRangeProperties} from "@/app/components/datePicker/properties";
+import {FilePicker} from "altrone-ui";
 import {
   FileItemProperties,
   FilePickerProperties, FilePickerRemoveProperties,
   FilePickerUploadProperties
 } from "@/app/components/filePicker/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {FilePickerCSSVariables} from "@/app/components/filePicker/variables";
 
 <BluePrint title="File Picker" description="This component is used to upload file on the server" />
 
@@ -57,6 +57,11 @@ return <FilePicker
 
   ## FilePickerRemoveContext
   <PropertiesTable title="Properties" data={FilePickerRemoveProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={FilePickerCSSVariables} />
 </Text.Section>
 
 <Text.Section>

@@ -4,6 +4,8 @@ import {Playground} from "@/components/Playground";
 import {BluePrint} from "@/components/BluePrint";
 import {SearchProperties} from "@/app/components/search/properties";
 import {SearchDemo} from "@/app/components/search/example";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {SearchCSSVariables} from "@/app/components/search/variables";
 
 <BluePrint title="Search" description="This component is used to help user find an information in your application" />
 
@@ -34,6 +36,11 @@ return <Form>
 <Text.Section gap="xl">
   # Properties
   <PropertiesTable title="Properties" data={SearchProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={SearchCSSVariables} />
 </Text.Section>
 
 <Text.Section>
