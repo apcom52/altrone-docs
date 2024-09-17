@@ -1,0 +1,41 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Text} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {BluePrint} from "@/components/BluePrint";
+import {PaginationDemo} from "@/app/components/pagination/demo";
+import {PaginationProps} from "@/app/components/pagination/properties";
+import {PaginationCSSVariables} from "@/app/components/pagination/variables";
+
+<BluePrint title="Pagination" description="This component is used to indicate current page location" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Pagination } from "altrone-ui";
+
+const [page, setPage] = useState(1);
+
+<Pagination currentPage={page} setPage={setPage} totalPages={15} />
+`}>
+    <PaginationDemo />
+  </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+
+  <PropertiesTable title="Properties" data={PaginationProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={PaginationCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="pagination." />
+</Text.Section>

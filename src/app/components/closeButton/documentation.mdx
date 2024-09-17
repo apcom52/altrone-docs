@@ -1,0 +1,39 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {CloseButton, Text} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {BluePrint} from "@/components/BluePrint";
+import {CloseButtonProps} from "@/app/components/closeButton/properties";
+import {CloseButtonCSSVariables} from "@/app/components/closeButton/variables";
+
+<BluePrint title="Close Button" description="This component is used to render close button inside of another component" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { CloseButton } from "altrone-ui";
+
+<CloseButton onClick={() => null} />
+`}>
+    <CloseButton />
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={CloseButtonProps} />
+  This component doesn't contain any special properties
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={CloseButtonCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="closeButton." />
+</Text.Section>

@@ -1,0 +1,58 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Text, Breadcrumbs, Icon, Flex} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {BluePrint} from "@/components/BluePrint";
+import {BreadcrumbsItemProps, BreadcrumbsProps} from "@/app/components/breadcrumbs/properties";
+import {BreadcrumbsCSSVariables} from "@/app/components/breadcrumbs/variables";
+
+<BluePrint title="Breadcrumbs" description="This component is used to indicate current page location" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Breadcrumbs, Icon } from "altrone-ui";
+
+<Breadcrumbs>
+  <Breadcrumbs.Item href="#" icon={<Icon i="home" />} label="Home" />
+  <Breadcrumbs.Item href="#" label="Library" />
+  <Breadcrumbs.Item label="J.K. Rowling" />
+</Breadcrumbs>
+`}>
+    <Flex style={{ paddingTop: 10, paddingBottom: 10 }}>
+      <Breadcrumbs>
+        <Breadcrumbs.Item href="#" icon={<Icon i="home" />} label="Home" />
+        <Breadcrumbs.Item href="#" label="Library" />
+        <Breadcrumbs.Item label="J.K. Rowling" />
+      </Breadcrumbs>
+    </Flex>
+    </Playground>
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Properties
+
+  <PropertiesTable title="Properties" data={BreadcrumbsProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Subcomponents
+
+  ## Item
+
+  This component is used to render item inside of Breadcrumbs
+
+  <PropertiesTable title="Properties" data={BreadcrumbsItemProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={BreadcrumbsCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="breadcrumbs." />
+</Text.Section>
