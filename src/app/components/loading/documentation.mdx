@@ -1,0 +1,41 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Loading, Text} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {BluePrint} from "@/components/BluePrint";
+import {LoadingProps} from "@/app/components/loading/properties";
+import {LoadingCSSVariables} from "@/app/components/loading/variables";
+
+<BluePrint title="Loading" description="This component is used to show pending state" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Loading } from "altrone-ui";
+
+<CloseButton onClick={() => null} />
+`}>
+    <div style={{ height: 24 }}>
+      <Loading size="20px" strokeWidth="1.5px" />
+    </div>
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={LoadingProps} />
+  This component doesn't contain any special properties
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={LoadingCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="loading." />
+</Text.Section>
