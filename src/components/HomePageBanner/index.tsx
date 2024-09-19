@@ -10,7 +10,6 @@ import {
   DatePickerCard, MessageCard, ProgressCard, SpoilerCard
 } from "@/components/HomePageBanner/cards";
 import Masonry from "react-responsive-masonry";
-import {Button} from "altrone-ui";
 
 export const HomePageBanner = React.memo(() => {
   return <div className={s.Wrapper}>
@@ -31,3 +30,4 @@ export const HomePageBanner = React.memo(() => {
     </Masonry>
   </div>
 });
+HomePageBanner.displayName = 'HomePageBanner';

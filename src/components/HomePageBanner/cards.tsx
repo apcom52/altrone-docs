@@ -26,6 +26,7 @@ export const ButtonCard = React.memo(() => {
     </Flex>
   </div>
 });
+ButtonCard.displayName = 'ButtonCard';
 
 export const CheckboxCard = React.memo(() => {
   const [check1, setCheck1] = useState(false);
@@ -44,6 +45,7 @@ export const CheckboxCard = React.memo(() => {
     </Flex>
   </div>
 });
+CheckboxCard.displayName = 'CheckboxCard';
 
 export const BreadcrumbsCard = React.memo(() => {
   return <div className={s.Card}>
@@ -54,6 +56,7 @@ export const BreadcrumbsCard = React.memo(() => {
     </Breadcrumbs>
   </div>
 });
+BreadcrumbsCard.displayName = 'BreadcrumbsCard';
 
 export const DatePickerCard = React.memo(() => {
   const [date, setDate] = useState<Dayjs | undefined>(dayjs('2024-09-17'))
@@ -66,6 +69,7 @@ export const DatePickerCard = React.memo(() => {
     </Form>
   </div>
 });
+DatePickerCard.displayName = 'DatePickerCard';
 
 export const CommentCard = React.memo(() => {
   const [comment, setComment] = useState<string>()
@@ -89,6 +93,7 @@ export const CommentCard = React.memo(() => {
     </Form>
   </div>
 });
+CommentCard.displayName = 'CommentCard';
 
 export const SpoilerCard = React.memo(() => {
   const [comment, setComment] = useState<string>()
@@ -97,7 +102,7 @@ export const SpoilerCard = React.memo(() => {
     <Flex direction="vertical" gap="m">
       <Spoiler title="The Beauty of Nature">
         <Text.Paragraph>
-          Nature's beauty is a profound source of inspiration and solace.
+          Nature&apos;s beauty is a profound source of inspiration and solace.
           From the majestic mountains standing tall against the sky to the
           serene beaches where the waves kiss the shore, every element of
           nature is a masterpiece. The vibrant colors of a sunset, the
@@ -115,7 +120,7 @@ export const SpoilerCard = React.memo(() => {
           Music has an unparalleled ability to evoke emotions and create
           connections across cultures and generations. Its melodies can
           transport us to different times and places, while its rhythms can
-          energize or soothe our spirits. Whether it's the harmonious
+          energize or soothe our spirits. Whether it&apos;s the harmonious
           strains of a symphony, the raw energy of a rock concert, or the
           heartfelt lyrics of a folk song, music speaks a universal language
           that transcends words. It has the power to unite people, providing
@@ -127,6 +132,7 @@ export const SpoilerCard = React.memo(() => {
     </Flex>
   </div>
 });
+SpoilerCard.displayName = 'SpoilerCard';
 
 export const BottomNavigationCard = React.memo(() => {
   return <div className={s.Card}>
@@ -155,6 +161,7 @@ export const BottomNavigationCard = React.memo(() => {
     </BottomNavigation>
   </div>
 });
+BottomNavigationCard.displayName = 'BottomNavigationCard';
 
 export const ProgressCard = React.memo(() => {
   return <div className={s.Card}>
@@ -163,6 +170,7 @@ export const ProgressCard = React.memo(() => {
     </Progress>
   </div>
 });
+ProgressCard.displayName = 'ProgressCard';
 
 export const MessageCard = React.memo(() => {
   return <div className={s.Card}>
@@ -175,3 +183,4 @@ export const MessageCard = React.memo(() => {
     </Message>
   </div>
 });
+MessageCard.displayName = 'MessageCard';
