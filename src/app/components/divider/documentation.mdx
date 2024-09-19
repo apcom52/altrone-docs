@@ -1,0 +1,59 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {Button, Divider, Flex, Loading, Text} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {BluePrint} from "@/components/BluePrint";
+import {LoadingProps} from "@/app/components/loading/properties";
+import {LoadingCSSVariables} from "@/app/components/loading/variables";
+import {DividerProps} from "@/app/components/divider/properties";
+import {DividerCSSVariables} from "@/app/components/divider/variables";
+
+<BluePrint title="Divider" description="This component is used to visually separate interface elements" />
+
+<Text.Section gap='xl'>
+  # Usage
+
+  <Playground code={`import { Divider, Flex, Button } from "altrone-ui";
+
+<Flex direction="vertical" gap="m" align="start">
+  <Button size="large" onClick={() => null} label="Action 1" />
+  <Button size="large" onClick={() => null} label="Action 2" />
+  <Divider />
+  <Button size="large" onClick={() => null} label="Action 3" />
+</Flex>
+`}>
+    <Flex direction="vertical" gap="m" align="start">
+      <Button size="large" onClick={() => null} label="Action 1" />
+      <Button size="large" onClick={() => null} label="Action 2" />
+      <Divider />
+      <Button size="large" onClick={() => null} label="Action 3" />
+    </Flex>
+  </Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={DividerProps} />
+  This component doesn't contain any special properties
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={DividerCSSVariables} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="divider." />
+</Text.Section>
+
+<Text.Section gap='l'>
+  # Known issues
+
+  <Text.List>
+    <Text.ListItem>Sometimes vertical `Divider` is not visible when parent container height is not set</Text.ListItem>
+  </Text.List>
+</Text.Section>

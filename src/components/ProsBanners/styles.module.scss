@@ -1,0 +1,44 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 32px;
+  margin: 32px 16px;
+}
+
+.Card {
+  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-primary-rgb: 13,110,253;
+  --bd-accent-rgb: 255,228,132;
+  --bd-violet-rgb: 112,44,249;
+  --bd-pink-rgb: 214,51,132;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 12px;
+  padding: 24px;
+  background-image: radial-gradient(ellipse at top left, rgba(var(--bs-primary-rgb), 0.1), transparent 50%),radial-gradient(ellipse at top right, rgba(var(--bd-accent-rgb), 0.1), transparent 50%),radial-gradient(ellipse at bottom right, rgba(var(--bd-violet-rgb), 0.1), transparent 50%),radial-gradient(ellipse at bottom left, rgba(var(--bd-pink-rgb), 0.1), transparent 50%);
+  box-shadow: inset 0 0 0 1px rgba(167, 189, 234, 0.1);
+}
+
+.Icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+  color: #1e0096;
+  font-weight: 700;
+}
+
+.Header {
+
+}
+
+.Body {
+
+}
+
+:global(.AltroneDark) {
+  .Icon {
+    color: #a6a6e1;
+  }
+}
