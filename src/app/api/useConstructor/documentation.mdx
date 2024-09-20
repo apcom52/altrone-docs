@@ -1,0 +1,17 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useConstructor" />
+
+<Text.Section>
+  # Usage
+
+  You can use this hook when you to run an effect only once when the component is mounted.
+
+
+  <CodeBlock children={`import { useConstructor } from "altrone-ui"
+
+useConstructor(() => {
+  console.log('This effect runs only once');
+});
+`} />
+</Text.Section>

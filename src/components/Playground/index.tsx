@@ -6,6 +6,7 @@ import {PropsWithChildren, useState} from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { default as lightTheme } from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-light"
 import { default as darkTheme } from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-dark"
+import {CodeBlock} from "@/components/CodeBlock";
 
 interface PlaygroundProps extends PropsWithChildren {
   code: string;
@@ -27,9 +28,7 @@ export const Playground = ({ children, code }: PlaygroundProps) => {
     </Toolbar>
     <Scrollable className={s.Preview} maxHeight="300px">
       {tab === 'preview' ? children : null}
-      {tab === 'code' ? <SyntaxHighlighter wrapLines wrapLongLines language="javascript" style={theme === 'dark' ? darkTheme : lightTheme} customStyle={{ borderRadius: 4, background: theme === 'dark' ? 'var(--default-700)' : 'var(--default-200)' }}>
-        {code}
-      </SyntaxHighlighter> : null}
+      {tab === 'code' ? <CodeBlock>{code}</CodeBlock> : null}
     </Scrollable>
     <Text.Paragraph className={s.Warning} size="s">This example is built on the latest version of Altrone UI. If you have an older version selected,
       your result may be different from this one.</Text.Paragraph>

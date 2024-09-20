@@ -1,0 +1,17 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useMutationObserver" />
+
+<Text.Section>
+  # Usage
+
+  This hook detects DOM changes of the target element and run callback parameter every time when something is changed.
+  Read more about MutationObserver and how to configure it: [MDN about MutationObserver](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)
+
+  This hook returns object with the properties `stop` to disable observing.
+
+  <CodeBlock children={`import { useMutationObserver } from "altrone-ui"
+
+const { stop } = useMutationObserver(targetElement, callback, options);
+`} />
+</Text.Section>

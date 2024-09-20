@@ -1,0 +1,16 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useDidUpdate" />
+
+<Text.Section>
+  # Usage
+
+  This hook works like usual `useEffect` but it skips the effect on the initial render
+
+  <CodeBlock children={`import { useDidUpdate } from "altrone-ui"
+
+useDidUpdate(() => {
+  console.log('This effect runs only when the component is updated, not mounted');
+}, [dep1, dep2]);
+`} />
+</Text.Section>

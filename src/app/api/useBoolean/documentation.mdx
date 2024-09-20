@@ -1,0 +1,32 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useBoolean" />
+
+<Text.Section>
+  # Usage
+
+  You can use this hook when you need a state with two possible states - positive or negative.
+
+  This hooks accepts only one optional parameter - the initial value of the state. The default value is `false`.
+
+  The hook returns an object with the
+  properties `value`, `setValue`, `enable` (change the value into `true`), `disable` (to change the value into `false`),
+  and `toggle` (to change the value into opposite value).
+
+
+  <CodeBlock children={`import { useBoolean } from "altrone-ui"
+
+const {
+  value,
+  setValue,
+  enable,
+  disable,
+  toggle
+} = useBoolean(true);
+
+console.log(value); // true
+disable(); // value = false
+toggle(); // value = true
+setValue(false); // value = false
+`} />
+</Text.Section>

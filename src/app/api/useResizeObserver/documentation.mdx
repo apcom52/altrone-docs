@@ -1,0 +1,22 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useResizeObserver" />
+
+<Text.Section>
+  # Usage
+
+  This hook detects changes in the size of the element and returns an object with the size and position properties
+
+
+  <CodeBlock children={`import { useResizeObserver } from "altrone-ui"
+
+const {
+  top,
+  left,
+  right,
+  bottom,
+  width,
+  height
+} = useResizeObserver(elementRef);
+`} />
+</Text.Section>

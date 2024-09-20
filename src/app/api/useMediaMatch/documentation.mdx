@@ -1,0 +1,16 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useMediaMatch" />
+
+<Text.Section>
+  # Usage
+
+  This hook requires query string as a parameter and returns a boolean value indicating whether the media query matches
+  the current device.
+
+
+  <CodeBlock children={`import { useMediaMatch } from "altrone-ui"
+
+const isPhone = useMediaMatch('(max-width: 600px)');
+`} />
+</Text.Section>

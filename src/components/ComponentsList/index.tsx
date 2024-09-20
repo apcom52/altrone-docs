@@ -4,11 +4,12 @@ import {useRainbowEffect} from "altrone-ui";
 import {ComponentInstance} from "@/constants/api";
 
 interface PageNavigationProps {
+  section: string;
   group: string;
   items: ComponentInstance[];
 }
 
-export const ComponentsList = ({ group, items = [] }: PageNavigationProps) => {
+export const ComponentsList = ({ section, group, items = [] }: PageNavigationProps) => {
   const components = items.filter(item => item.group === group);
 
   const rainbowProps = useRainbowEffect(true, {
@@ -18,7 +19,7 @@ export const ComponentsList = ({ group, items = [] }: PageNavigationProps) => {
 
   return <div className={s.Grid}>
     {components.map((component) => (
-      <Link href={`/components/${component.name}`} key={component.name} className={s.ComponentCard} {...rainbowProps}>
+      <Link href={`/${section}/${component.name}`} key={component.name} className={s.ComponentCard} {...rainbowProps}>
         {component.title}
       </Link>
     ))}

@@ -1,0 +1,15 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useDebouncedMemo" />
+
+<Text.Section>
+  # Usage
+
+  This hook works like usual `useMemo`, but the passed function is debounced. If `skipInitialEffect` is `true` then
+  the effect will not be called on the first render.
+
+  <CodeBlock children={`import { useDebouncedMemo } from "altrone-ui"
+
+useDebouncedMemo(callback, dependencies, debounceTime);
+`} />
+</Text.Section>

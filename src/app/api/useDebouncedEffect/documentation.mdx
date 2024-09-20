@@ -1,0 +1,15 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useDebouncedEffect" />
+
+<Text.Section>
+  # Usage
+
+  This hook works like usual `useEffect`, but the passed function is debounced. If `skipInitialEffect` is `true` then
+  the effect will not be called on the first render.
+
+  <CodeBlock children={`import { useDebouncedEffect } from "altrone-ui"
+
+useDebouncedEffect(callback, dependencies, debounceTime, skipInitialEffect = false);
+`} />
+</Text.Section>

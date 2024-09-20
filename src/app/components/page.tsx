@@ -9,7 +9,7 @@ export default function Home() {
     {COMPONENT_GROUPS.map((componentGroup) => (
       <Text.Section key={componentGroup.name}>
         <Text.Heading role="heading">{componentGroup.title}</Text.Heading>
-        <ComponentsList group={componentGroup.name} items={COMPONENTS} />
+        <ComponentsList section="components" group={componentGroup.name} items={COMPONENTS} />
       </Text.Section>
     ))}
   </Text>);

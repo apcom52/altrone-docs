@@ -1,25 +1,3 @@
-/*
-export { useMediaMatch } from './useMediaMatch';
-export { useConstructor } from './useConstructor';
-export { useResizeObserver } from './useResizeObserver';
-export { useBoolean } from './useBoolean';
-export { useDebouncedMemo } from './useDebouncedMemo.ts';
-export { useNumber } from './useNumber.ts';
-export { useDebouncedEffect } from './useDebouncedEffect.ts';
-export { useMutationObserver } from './useMutationObserver.ts';
-export { useScrollObserver } from './useScrollObserver.ts';
-export { useDidUpdate } from './useDidUpdate.ts';
-
-export * from './ArrayUtils.ts';
-export * from './AsyncUtils.ts';
-export * from './Children.ts';
-export * from './DOMUtils.ts';
-export * from './FileUtils.ts';
-export * from './GlobalUtils.ts';
-
-Nested
- */
-
 import {ComponentInstance} from "@/constants/components";
 
 export interface ContainerGroup {
@@ -90,14 +68,14 @@ export const APIS: ComponentInstance[] = [
     version: 30
   },
   {
-    name: 'useDebouncedUpdate',
-    title: 'useDebounceUpdate',
+    name: 'useDebouncedEffect',
+    title: 'useDebouncedEffect',
     group: 'hooks',
     version: 30
   },
   {
-    name: 'useDebouncedEffect',
-    title: 'useDebouncedEffect',
+    name: 'useDebouncedMemo',
+    title: 'useDebouncedMemo',
     group: 'hooks',
     version: 30
   },
@@ -200,3 +178,5 @@ export const APIS: ComponentInstance[] = [
     version: 30
   },
 ]
+
+export { ComponentInstance };

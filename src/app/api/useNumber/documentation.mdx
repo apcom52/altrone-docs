@@ -1,0 +1,32 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useNumber" />
+
+<Text.Section>
+  # Usage
+
+  You can use this hook when you need a numeric state with ability to increment and decrement the value.
+
+  This hooks accepts one required parameter (initial value) and two optional parameters - minimum and maximum value.
+
+  The hook returns an object with the
+  properties `value`, `setValue`, `increment` and `decrement`.
+
+
+  <CodeBlock children={`import { useNumber } from "altrone-ui"
+
+const {
+  value,
+  setValue,
+  increment,
+  decrement,
+} = useNumber(5, 3, 7);
+
+console.log(value); // 5
+increment(); // 6
+increment(); // 7
+increment(); // 7
+setValue(2); // value = 3
+decrement(); // 3
+`} />
+</Text.Section>
