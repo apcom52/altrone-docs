@@ -26,6 +26,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
   }
 
   const isComponents = pathname.startsWith("/components");
+  const isAPI = pathname.startsWith("/api");
 
   return <TopNavigation className={s.Header}>
     <TopNavigation.Logo href='/' className={s.Logo}>
@@ -42,7 +43,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
         {({ opened }) => (<TopNavigation.Link selected={opened} label="v3.0" rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />} />)}
       </Dropdown>
       <TopNavigation.Link href='/components' selected={isComponents} leftIcon={<Icon i="view_carousel" />} label="Components" />
-      <TopNavigation.Link leftIcon={<Icon i="data_object" />} label="API" />
+      <TopNavigation.Link href='/api' selected={isAPI} leftIcon={<Icon i="data_object" />} label="API" />
       <TopNavigation.Link leftIcon={<Icon i="feed" />} label="Blog" />
       <Button onClick={changeTheme} size="l" leftIcon={<Icon i={sessionTheme === 'dark' ? "light_mode" : "dark_mode"} />} />
       <Button size="l" label="Getting started" />

@@ -4,7 +4,7 @@ import s from './layout.module.scss';
 import {Content} from "@/layout/Content";
 import {Navigation} from "@/layout/Navigation";
 import {Sidebar} from "@/layout/Sidebar";
-import {COMPONENT_GROUPS, COMPONENTS} from "@/constants/components";
+import {API_GROUPS, APIS} from "@/constants/api";
 
 export default function RootLayout({
   children,
@@ -12,11 +12,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (<div className={s.Layout}>
-    <title>Components - Altrone UI</title>
-    <Navigation items={COMPONENTS} groups={COMPONENT_GROUPS} />
+    <title>API - Altrone UI</title>
+    <Navigation items={APIS} groups={API_GROUPS}/>
     <Content>
       {children}
     </Content>
-    <Sidebar />
+    <Sidebar/>
   </div>);
 }
