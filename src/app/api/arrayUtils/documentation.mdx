@@ -1,0 +1,20 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="AsyncUtils" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This class provides a set of static methods to work with time and async actions. You don't need to create an instance of this class.
+
+  <CodeBlock children={`import { AsyncUtils } from "altrone-ui"`} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Methods
+
+    <CodeBlock children={`static timeout(time: number) => Promise`} />
+    Resolve a promise after the specified time.
+  </Text.Section>
+</Text.Section>

@@ -22,19 +22,19 @@ export const Footer = () => {
     <div>
       <div className="inner-header-text">Links</div>
       <nav className={s.Links}>
-        <a href="#" className={s.LinkItem}>Installation</a>
-        <a href="#" className={s.LinkItem}>Components</a>
-        <a href="#" className={s.LinkItem}>API</a>
-        <a href="#" className={s.LinkItem}>Blog</a>
-        <a href="#" className={s.LinkItem}>Altrone 2 Documentation</a>
+        <a href="/blog/installation" className={s.LinkItem}>Installation</a>
+        <a href="/components" className={s.LinkItem}>Components</a>
+        <a href="/api" className={s.LinkItem}>API</a>
+        <a href="/blog" className={s.LinkItem}>Blog</a>
+        <a href="https://apcom.gitbook.io/altrone-ui" className={s.LinkItem}>Altrone 2 Documentation</a>
       </nav>
     </div>
     <div>
       <div className="inner-header-text">Services</div>
       <nav className={s.Links}>
-        <a href="#" className={s.LinkItem}>Github</a>
-        <a href="#" className={s.LinkItem}>Issues</a>
-        <a href="#" className={s.LinkItem}>NPM</a>
+        <a href="https://github.com/apcom52/altrone-ui" className={s.LinkItem}>Github</a>
+        <a href="https://github.com/apcom52/altrone-ui/issues" className={s.LinkItem}>Issues</a>
+        <a href="https://www.npmjs.com/package/altrone-ui?activeTab=readme" className={s.LinkItem}>NPM</a>
       </nav>
     </div>
   </footer>

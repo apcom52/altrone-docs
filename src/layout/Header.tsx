@@ -7,6 +7,7 @@ import {usePathname} from "next/navigation";
 import lightLogo from '../../public/altrone-light.png';
 import darkLogo from '../../public/altrone-dark.png';
 import {Theme} from "altrone-ui/dist/src/components/application/AltroneApplication.types";
+import Link from "next/link";
 
 interface HeaderProps {
   selected?: string;
@@ -27,6 +28,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
 
   const isComponents = pathname.startsWith("/components");
   const isAPI = pathname.startsWith("/api");
+  const isBlog = pathname.startsWith("/blog");
 
   return <TopNavigation className={s.Header}>
     <TopNavigation.Logo href='/' className={s.Logo}>
@@ -44,9 +46,9 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
       </Dropdown>
       <TopNavigation.Link href='/components' selected={isComponents} leftIcon={<Icon i="view_carousel" />} label="Components" />
       <TopNavigation.Link href='/api' selected={isAPI} leftIcon={<Icon i="data_object" />} label="API" />
-      <TopNavigation.Link leftIcon={<Icon i="feed" />} label="Blog" />
+      <TopNavigation.Link href='/blog' selected={isBlog} leftIcon={<Icon i="feed" />} label="Blog" />
       <Button onClick={changeTheme} size="l" leftIcon={<Icon i={sessionTheme === 'dark' ? "light_mode" : "dark_mode"} />} />
-      <Button size="l" label="Getting started" />
+      <Link href="/blog/installation"><Button size="l" label="Getting started" /></Link>
     </TopNavigation.Group>
   </TopNavigation>
 }

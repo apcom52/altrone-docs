@@ -1,0 +1,20 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="ArrayUtils" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This class provides a set of static methods to work with arrays. You don't need to create an instance of this class.
+
+  <CodeBlock children={`import { ArrayUtils } from "altrone-ui"`} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Methods
+
+    <CodeBlock children={`static getSafeArray(elements: any) => any[]`} />
+    Always returns an array of elements (if you passed array it returns array, if you passed a single element it returns an array with this element).
+  </Text.Section>
+</Text.Section>

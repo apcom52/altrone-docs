@@ -1,0 +1,68 @@
+import {CodeBlock} from "@/components/CodeBlock";
+import {AltroneApplication} from "altrone-ui";
+
+<Text.Section gap="l">
+  # Introduction
+
+  In the third version, Altrone was rewritten from the scratch. A new design system, new methods of working with components,
+  and new component properties were introduced.
+
+  To migrate to a new version you need to replace old components with new ones and change the logic of working with components in your application.
+
+  Below we describe the components, hooks and utility functions and what alternatives exist in the new version
+</Text.Section>
+
+<Text.Section gap="l">
+  # Components
+
+  - Altrone -> [AltroneApplication](/components/application)
+  - Altrone.options -> [Configuration](/components/configuration)
+  - Paragraph -> [Text](/components/text)
+  - Heading -> [Text](/components/text)
+  - Message -> [Message](/components/message)
+  - Blockquote -> no replacement
+  - Icon -> [Icon](/components/icon)
+  - ButtonContainer -> [Flex](/components/flex)
+  - FloatingBox -> [Popover](/components/popover)
+  - Form -> [Form](/components/form)
+  - Modal -> [Modal](/components/modal)
+  - PhotoViewer -> [PhotoViewer](/components/photoViewer)
+  - Spoiler -> [Spoiler](/components/spoiler)
+  - Toolbar -> [Toolbar](/components/toolbar)
+  - Carousel -> no replacement. Use different library like [react-slick](https://www.npmjs.com/package/react-slick)
+  - DataTable -> [DataTable](/components/dataTable)
+  - Calendar -> [Calendar](/components/calendar)
+  - Button -> [Button](/components/button)
+  - TextInput -> [TextInput](/components/textInput)
+  - TextInput suggestions -> [AutocompleteInput](/components/autocompleteInput)
+  - PasswordInput -> [PasswordInput](/components/passwordInput)
+  - NumberInput -> [NumberInput](/components/numberInput)
+  - Search -> [Search](/components/search)
+  - Textarea -> [Textarea](/components/textarea)
+  - Checkbox -> [Checkbox](/components/checkbox)
+  - CheckboxList -> [CollapsedList](/components/collapsedList)
+  - Switcher -> [Switcher](/components/switcher)
+  - RadioList -> [Radio](/components/radio)
+  - Select -> [Select](/components/select)
+  - ScrollableSelector -> no replacement
+  - DatePicker -> [DatePicker](/components/datePicker)
+  - FilePicker -> [FilePicker](/components/filePicker)
+  - Breadcrumbs -> [Breadcrumbs](/components/breadcrumbs)
+  - Chips -> no replacement
+  - ContextMenu -> [Dropdown](/components/dropdown)
+  - NavigationList -> [NavigationList](/components/navigationList)
+  - TabList -> [Tabs](/components/tabs)
+  - Loading -> [Loading](/components/loading)
+  - Pagination -> [Pagination](/components/pagination)
+  - Progress -> [Progress](/components/progress)
+</Text.Section>
+
+<Text.Section gap="l">
+  # Hooks
+
+  - useLocalization -> [useLocalization](/api/useLocalization)
+  - useMediaMatch -> [useMediaMatch](/api/useMediaMatch)
+  - useResizeObserver -> [useResizeObserver](/api/useResizeObserver)
+  - useWindowSize -> no replacement
+  - useToggledState -> [useBoolean](/api/useBoolean)
+</Text.Section>

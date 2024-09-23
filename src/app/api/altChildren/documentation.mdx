@@ -1,0 +1,42 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="AltChildren" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This class allows you to create a list with child elements and carry out their transformations
+
+  <CodeBlock children={`import { AltChildren } from "altrone-ui"
+
+const elements = new AltChildren(props.children);
+`} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Methods
+
+    <CodeBlock children={`constructor(childElements?: ReactNode)`} />
+    This is the constructor function of `AltChildren` class. This functions return `this` pointer.
+
+    <CodeBlock children={`toArray() => ReactNode[]`} />
+    This function returns array of all child elements
+
+    <CodeBlock children={`filter(fn: ((item?: ReactNode, index: number) => boolean)) => this`} />
+    Filters child elements using `fn` filter. Works like usual `.filter` method in `Array`. Returns `this` pointer.
+
+    <CodeBlock children={`filterNodes() => this`} />
+    Filters child elements to works only with valid React elements. Returns `this` pointer.
+
+    <CodeBlock children={`flatten(depth: number) => this`} />
+    This function creates a new array with all sub-array elements concatenated into it recursively up to the specified `depth`. Return `this` pointer.
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Properties
+
+    <CodeBlock children={`size: number`} />
+    Amount of child elements
+  </Text.Section>
+</Text.Section>

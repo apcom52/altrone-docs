@@ -1,0 +1,29 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="DOMUtils" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This class provides a set of static methods to work with DOM Tree nodes. You don't need to create an instance of this class.
+
+  <CodeBlock children={`import { DOMUtils } from "altrone-ui"`} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Methods
+
+    <CodeBlock children={`static isFragment(node: ReactNode) => boolean`} />
+    Returns `true` if `node` is React Fragment.
+
+    <CodeBlock children={`static replaceNode(source: ReactNode, replacement: ReactNode, props?: AnyObject) => ReactNode`} />
+    Returns a new React Node with the same type as `source` but with the same properties from `replacement`. You can also add new props using third optional `props` argument.
+
+    <CodeBlock children={`static cloneNode(element: ReactNode, props?: AnyObject) => ReactNode`} />
+    Returns a new React Node which is the copy of the `element`. You can also add new props using second optional `props` argument.
+
+    <CodeBlock children={`static triggerEvent({ element, value, eventType, senderObject, propertyName }) => void`} />
+    Triggers event with `eventType` on the `element` with passed `value`. You can also pass the `senderObject` (global prototype of the element, like `window.HTMLInputElement.prototype`) and `propertyName` (of this prototype) to simulate the event.
+  </Text.Section>
+</Text.Section>

@@ -1,0 +1,34 @@
+import {CodeBlock} from "@/components/CodeBlock";
+import {AltroneApplication} from "altrone-ui";
+
+<Text.Section gap="l">
+  # Default installation
+
+  Write next command to install Altrone UI in your project:
+
+  <CodeBlock lang="bash">{`npm install altrone-ui`}</CodeBlock>
+</Text.Section>
+
+<Text.Section gap="l">
+  # Usage
+
+  To use Altrone in your project you need to import necessary components from the library. Don't forget to wrap your application
+  into `<AltroneApplication>` wrapper. Without this wrapper your application can work incorrectly.
+  Read more about [AltroneApplication](/components/application) wrapper.
+
+  Here is an example of how to render button in your application:
+
+  <CodeBlock lang="javascript">{`import { AltroneApplication, Text, Button } from "altrone-ui";
+
+function App() {
+  return (
+    <AltroneApplication>
+      <Text.Heading role="title">Click on the button below</Text.Heading>
+      <Button label="Show magic" />
+    </AltroneApplication>
+  );
+}`}</CodeBlock>
+
+  You can import components, types, type utilites, hooks, utility functions and other things from the library.
+  Read more in [Components section](/components) and [API section](/api).
+</Text.Section>

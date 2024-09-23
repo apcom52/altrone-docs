@@ -1,0 +1,32 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useRainbowEffect" />
+
+<Text.Section>
+  # Usage
+
+  This hook is used to implement rainbow effect in your custom components. It returns object of properties which you need
+  to pass into your interactive element.
+
+  First argument of the hook is `enabled`. When you don't need this effect you can pass `false`. The default value is `true`.
+
+  In case when you need some custom event handlers for this interactive element you can pass them into the second hook's argument.
+  Also you can set custom opacity and blur for the effect.
+
+  <CodeBlock children={`import { useRainbowEffect } from "altrone-ui"
+
+const rainbowProps = useRainbowEffect(true, {
+  onMouseEnter: () => console.log('mouse enter'),
+  onMouseMove:  () => console.log('mouse move'),
+  onMouseLeave:  () => console.log('mouse leave'),
+  onWheel:  () => console.log('wheel'),
+  onFocus:  () => console.log('focus'),
+  opacity: 1,
+  blur: 11,
+});
+
+...
+
+<div {...rainbowProps} />
+`} />
+</Text.Section>

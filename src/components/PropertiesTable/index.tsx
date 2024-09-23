@@ -1,5 +1,5 @@
 import {DataTable, Text} from 'altrone-ui';
-import React, {memo} from "react";
+import React, {memo, ReactNode} from "react";
 import {ComponentDescription, ComponentType} from "@/types/ComponentProperties";
 import {TextHeadingRoles} from "altrone-ui/dist/src/components/text/Text.types";
 import {DataTableCellProps} from "altrone-ui/dist/src/components/dataTable/DataTableCell";
@@ -12,7 +12,29 @@ interface CheckAlsoProps {
 }
 
 const NameCell = ({ value, item }: DataTableCellProps<ComponentType>) => <div className={s.PropNameColumn}>{String(value)}{item.required ? <div className={s.Asterisk} title="Required property">*</div> : null}</div>
-const TypeCell = ({ value }: DataTableCellProps<ComponentType>) => <div className={s.TypeColumn}>{String(value)}</div>
+const TypeCell = ({ value }: DataTableCellProps<ComponentType>) => {
+  let valueElement: ReactNode = String(value);
+
+  if (valueElement === 'Align') {
+    valueElement = <Text.Link href="/api/align">Align</Text.Link>
+  } else if (valueElement === 'Direction') {
+    valueElement = <Text.Link href="/api/direction">Direction</Text.Link>
+  } else if (valueElement === 'Gap') {
+    valueElement = <Text.Link href="/api/gap">Gap</Text.Link>
+  } else if (valueElement === 'Offset') {
+    valueElement = <Text.Link href="/api/offset">Offset</Text.Link>
+  } else if (valueElement === 'Point') {
+    valueElement = <Text.Link href="/api/point">Point</Text.Link>
+  } else if (valueElement === 'Role') {
+    valueElement = <Text.Link href="/api/role">Role</Text.Link>
+  } else if (valueElement === 'Size') {
+    valueElement = <Text.Link href="/api/size">Size</Text.Link>
+  } else if (String(valueElement).startsWith('RenderFunc')) {
+    valueElement = <Text.Link href="/api/renderFunc">{valueElement}</Text.Link>
+  }
+
+  return <div className={s.TypeColumn}>{valueElement}</div>;
+}
 const DefaultValueCell = ({ value }: DataTableCellProps<ComponentType>) => <Text.Code>{String(value)}</Text.Code>
 
 export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', data }: CheckAlsoProps) => {

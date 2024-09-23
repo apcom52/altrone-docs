@@ -1,0 +1,16 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="RenderFuncProps" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This TypeScript generic returns renderFunc type.
+
+  <CodeBlock children={`type RenderFuncProp<HTMLElementType, ElementProperties> = (
+  ref: Ref<HTMLElementType>,
+  props: Omit<ElementProperties, 'renderFunc'>,
+) => JSX.Element`} />
+  </Text.Section>
+</Text.Section>

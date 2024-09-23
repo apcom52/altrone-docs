@@ -1,0 +1,26 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="NestedKeys" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This TypeScript generic returns intersection type of all keys (with nested keys) from the passed type.
+
+  <CodeBlock children={`import { NestedKeys } from "altrone-ui"
+
+type Person = {
+  fullName: string,
+  age: number,
+  address: {
+    city: string,
+    street: string,
+    zip: number
+  },
+  active: boolean
+}
+
+NestedKeys<Person> // 'fullName' | 'age' | 'address' | 'address.city' | 'address.street' | 'address.zip' | 'active'`} />
+  </Text.Section>
+</Text.Section>

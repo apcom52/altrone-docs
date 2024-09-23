@@ -1,0 +1,212 @@
+import Bento30Image from '../../../../public/bento30.png';
+import GifRainbow from '../../../../public/gifs/release30-rainbow.gif';
+import Image from "next/image";
+import s from '../layout.module.scss';
+import {CodeBlock} from "@/components/CodeBlock";
+import {ComponentParagraph} from "@/components/ComponentParagraph";
+
+<Text.Section gap="l">
+  Just look what cool features have added in new Altrone major release:
+  <Image src={Bento30Image} alt="Altrone 3.0" width={1920} height={972} className={s.ArticleImage} />
+</Text.Section>
+
+<Text.Section gap="l">
+  # New Design System
+
+  Altrone has been fully redesigned. Previous design system has some limitations and was not flexible enough, also some components
+  were not consistent with each other. In the third version, Altrone was rewritten from the scratch. A new design system, new methods
+  of working with components, and new component properties were introduced. Now Altrone is more flexible and powerful.
+
+  Now you can easily customize the appearance of components, change the color scheme, and create your own themes using new CSS variables.
+  In this release we have added the first set of CSS variables - colors, typography, and spacing. In the future, we plan to add more CSS variables.
+
+  Also, now you can pass custom className and styles to every component. This allows you to customize the appearance of components in a more flexible way.
+  Using new [Configuration](/components/configuration) wrapper you can pass custom classNames or styles to all child components.
+</Text.Section>
+
+<Text.Section gap="l">
+  # Rainbow Hover Effect
+
+  <div className={s.GifContainer}>
+    <Image src={GifRainbow} alt="Rainbow Hover Effect" width={366} height={206} className={s.Gif} />
+  </div>
+
+  As a part of the new design system, we have added a new feature - Rainbow Hover Effect. This effect allows you to add a rainbow hover effect
+  to interactive elements (like buttons or text fields). This effect is visible only when user hovers over the element.
+
+  You can also use this new effect in your custom components. To use this effect you need to import [useRainbowEffect](/api/useRainbowEffect) hook.
+  <CodeBlock>{`import { useRainbowEffect } from "altrone-ui";
+
+function MyComponent() {
+  const rainbowProps = useRainbowEffect();
+
+  return <div {...rainbowProps}>...</div>
+}`}</CodeBlock>
+</Text.Section>
+
+<Text.Section gap="l">
+  # React Subcomponents
+
+  We decided to transform some component props into subcomponents. This allows you to pass more complex data to components
+  and makes the code more readable. For example, TextInput islands were transformed into subcomponents. Look how it works:
+
+  This is how you can add an action to the TextInput component in the 2.0 version:
+  <CodeBlock>{`<TextInput
+  rightIsland={{
+    type: InputIslandType.icon,
+    content: <Icon i="search" />
+  }}
+  ...
+/>`}</CodeBlock>
+
+  And this is how you can add an action to the TextInput component in the 3.0 version:
+  <CodeBlock>{`<TextInput>
+  <TextInput.IconIsland icon={<Icon i="search" />} />
+</TextInput>`}</CodeBlock>
+
+  This change opens up new possibilities for working with components: you can wrap child subcomponents into [Popover](/components/popover),
+  [Tooltip](/components/tooltip) (or any other component) or use conditional rendering.
+</Text.Section>
+
+<Text.Section gap="l">
+  # New Layout Components
+
+  In the new version we have added new layout components.
+
+  <ComponentParagraph component="flex">
+    <Text.Section gap="l">
+      This component solves the problem of aligning elements in a row or column. You can set the alignment of elements,
+      the direction of the container, the gap between elements. This is one of the basic container in Altrone.
+
+      This component is replacement of some old components, like ButtonContainer.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="scrollable">
+    <Text.Section gap="l">
+      When you have a very big amount of data and you need to scroll it, you can use Scrollable component. This component provides
+      a container with scrollbar (if needed) and also shows a special fancy shadow when scrolling is available.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="list">
+    <Text.Section gap="l">
+      This component is used to render a list of items. You can pass any collection of items to this component and it will render using
+      passed renderItem prop. This component is very flexible and allows you to customize the appearance of items.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="collapsedList">
+    <Text.Section gap="l">
+      This component is used to render a list of items with a special "Show more" button. When user clicks on this button, the list expands.
+      This component is very useful when you have a big list of items and you want to show only a few of them.
+
+      This component is replacement of old CheckboxList component, but now it can work with any type of items.
+    </Text.Section>
+  </ComponentParagraph>
+</Text.Section>
+
+<Text.Section gap="l">
+  # New Navigation Components
+
+  In this release we have added new variants of navigation for your applications. Every new components are more flexible than
+  old ways to create navigation and allows you to customize the appearance of items.
+
+  <ComponentParagraph component="navigationList">
+    <Text.Section gap="l">
+      This is a fully redesigned old NavigationList component. Now it supports subcomponents so it is very flexible and
+      allows you to customize the appearance of items.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="topNavigation">
+    <Text.Section gap="l">
+      This component is used to build header navigation for your application. It contains some useful subcomponents like Logo,
+      Group and Link to built any header you want.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="sideNavigation">
+    This type of navigation is used to build additional navigation among the current page. It detects scroll position and highlights
+    current section in the navigation.
+  </ComponentParagraph>
+  <ComponentParagraph component="bottomNavigation">
+    This component is used to build footer navigation for your application. It is very useful when you built mobile application.
+  </ComponentParagraph>
+</Text.Section>
+
+<Text.Section gap="l">
+  # New Popover Components
+
+  In this version components which are responsible for showing floating containers were redesigned. Now they use more
+  modern libraries and provide more functionality for customization.
+
+  <ComponentParagraph component="popover">
+    <Text.Section gap="l">
+      This component is used to show floating container with any content. This is the replacement of FloatingBox component but
+      with improved functionality. Now you can add title and close button to any popover, manage focus state, choose any type of
+      trigger and etc.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="dropdown">
+    <Text.Section gap="l">
+      This component is used to show a floating container with a list of actions. This is the replacement of old ContextMeny component.
+      Now you can create dropdown with infinite nesting, add custom components to dropdown and etc.
+    </Text.Section>
+  </ComponentParagraph>
+  <ComponentParagraph component="tooltip">
+    <Text.Section gap="l">
+      This component is a variant of Popover to make tooltips faster and easier
+    </Text.Section>
+  </ComponentParagraph>
+</Text.Section>
+
+<Text.Section gap="l">
+  # New Text Component
+
+  This release contains new Text component. It is a replacement of old Typography components (Paragraph, Heading, Blockquote).
+  Using this component and its subcomponents you can easily create any text structure you want.
+
+  This component has a lot of subcomponents for different purposes. Use ScreenName, Heading for titles, Paragraph for text,
+  Inline for inline text formatting, Link for links, and etc.
+
+  Read more about this component and its subcomponents in the [Text documentation](/components/text).
+</Text.Section>
+
+<Text.Section gap="l">
+  # New features in components
+
+  A lot of Altrone components were improved in this release. Not only the design was changed, but also new features were added.
+
+  There are some more significant changes:
+  - DataTable filters were improved. User can build very complex filter queries using string,
+  number or array filters!
+  - User can use sorting feature in DataTable just clicking on the column header
+  - Select component earned multi-select feature
+  - Indeterminate state for Checkbox
+  - Improved islands for TextInput (also you can use islands in PasswordInput, NumberInput, Textarea and etc.)
+  - Custom labels in Progress
+  - and a lot of other improvements
+</Text.Section>
+
+<Text.Section gap="l">
+  # Extended component configuration
+
+  Component configuration were presented in Altrone 2.1, but now this feature is more powerful. You can pass custom classNames, style or other component parameter
+  to all nested components using new [Configuration](/components/configuration) wrapper.
+  This feature allows you to customize the appearance of components in a more flexible way.
+
+  Every page of components documentation contains a section with configuration examples.
+</Text.Section>
+
+<Text.Section gap="l">
+  # New localization features
+
+  Altrone still supports only two languages - English and Russian. But now you can override localized label or pass your
+  own custom localization using new `customLabels` prop in [AltroneApplication](/components/application) wrapper.
+</Text.Section>
+
+<Text.Section gap="l">
+  # What's next?
+
+  This is not the last release of Altrone. We have a lot of plans for the future. In near feature we are going to release
+  some small updates for 3rd generation of Altrone. We are going to add more CSS variables, add new features for existing components,
+  and improve the documentation.
+
+  And of course we're thinking about new features for Altrone 4. Keep your finger on the pulse!
+</Text.Section>

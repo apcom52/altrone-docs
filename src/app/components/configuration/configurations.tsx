@@ -9,7 +9,6 @@ export interface ConfigurationOption {
 }
 
 export const CONFIGS: (ConfigurationOption)[] = [
-  { path: 'language', type: 'string', availableSince: 30, description: "Current language of the application. Default value is EN" },
   { path: 'locale.dateFormat', type: 'string', availableSince: 30, description: "Date format. Default value is 'DD.MM.YYYY'" },
   { path: 'locale.numberGrouping', type: 'string', availableSince: 30, description: "Number grouping delimiter. Default value is ' ' (space)" },
   { path: 'locale.numberDecimal', type: 'string', availableSince: 30, description: "Number decimal delimiter. Default value is '.'" },

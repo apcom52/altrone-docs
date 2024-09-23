@@ -1,0 +1,20 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="GlobalUtils" />
+
+<Text.Section gap="xl">
+  <Text.Section gap="l">
+  # Usage
+
+  This class provides a set of static methods with global utilities. You don't need to create an instance of this class.
+
+  <CodeBlock children={`import { GlobalUtils } from "altrone-ui"`} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    # Methods
+
+    <CodeBlock children={`static uuid() => string`} />
+    Returns unique string id
+  </Text.Section>
+</Text.Section>

@@ -26,44 +26,32 @@ export const API_GROUPS: ContainerGroup[] = [
 
 export const APIS: ComponentInstance[] = [
   {
+    name: 'useAltroneTheme',
+    title: 'useAltroneTheme',
+    group: 'hooks',
+    version: 30
+  },
+  {
+    name: 'useLocalization',
+    title: 'useLocalization',
+    group: 'hooks',
+    version: 30
+  },
+  {
+    name: 'useRainbowEffect',
+    title: 'useRainbowEffect',
+    group: 'hooks',
+    version: 30
+  },
+  {
     name: 'useBoolean',
     title: 'useBoolean',
     group: 'hooks',
     version: 30
   },
   {
-    name: 'useNumber',
-    title: 'useNumber',
-    group: 'hooks',
-    version: 30
-  },
-  {
     name: 'useConstructor',
     title: 'useConstructor',
-    group: 'hooks',
-    version: 30
-  },
-  {
-    name: 'useMediaMatch',
-    title: 'useMediaMatch',
-    group: 'hooks',
-    version: 30
-  },
-  {
-    name: 'useResizeObserver',
-    title: 'useResizeObserver',
-    group: 'hooks',
-    version: 30
-  },
-  {
-    name: 'useMutationObserver',
-    title: 'useMutationObserver',
-    group: 'hooks',
-    version: 30
-  },
-  {
-    name: 'useDidUpdate',
-    title: 'useDidUpdate',
     group: 'hooks',
     version: 30
   },
@@ -79,17 +67,41 @@ export const APIS: ComponentInstance[] = [
     group: 'hooks',
     version: 30
   },
-
-  //----
   {
-    name: 'children',
-    title: 'Children',
-    group: 'utils',
+    name: 'useDidUpdate',
+    title: 'useDidUpdate',
+    group: 'hooks',
     version: 30
   },
   {
-    name: 'globalUtils',
-    title: 'GlobalUtils',
+    name: 'useMediaMatch',
+    title: 'useMediaMatch',
+    group: 'hooks',
+    version: 30
+  },
+  {
+    name: 'useMutationObserver',
+    title: 'useMutationObserver',
+    group: 'hooks',
+    version: 30
+  },
+  {
+    name: 'useNumber',
+    title: 'useNumber',
+    group: 'hooks',
+    version: 30
+  },
+  {
+    name: 'useResizeObserver',
+    title: 'useResizeObserver',
+    group: 'hooks',
+    version: 30
+  },
+
+  //----
+  {
+    name: 'altChildren',
+    title: 'AltChildren',
     group: 'utils',
     version: 30
   },
@@ -117,6 +129,12 @@ export const APIS: ComponentInstance[] = [
     group: 'utils',
     version: 30
   },
+  {
+    name: 'globalUtils',
+    title: 'GlobalUtils',
+    group: 'utils',
+    version: 30
+  },
 
   // -----
 
@@ -136,32 +154,14 @@ export const APIS: ComponentInstance[] = [
   // -----
 
   {
-    name: 'point',
-    title: 'Point',
+    name: 'align',
+    title: 'Align',
     group: 'types',
     version: 30
   },
   {
-    name: 'offset',
-    title: 'Offset',
-    group: 'types',
-    version: 30
-  },
-  {
-    name: 'size',
-    title: 'Size',
-    group: 'types',
-    version: 30
-  },
-  {
-    name: 'role',
-    title: 'Role',
-    group: 'types',
-    version: 30
-  },
-  {
-    name: 'gap',
-    title: 'Gap',
+    name: 'anyObject',
+    title: 'AnyObject',
     group: 'types',
     version: 30
   },
@@ -172,11 +172,39 @@ export const APIS: ComponentInstance[] = [
     version: 30
   },
   {
-    name: 'align',
-    title: 'Align',
+    name: 'gap',
+    title: 'Gap',
+    group: 'types',
+    version: 30
+  },
+  {
+    name: 'offset',
+    title: 'Offset',
+    group: 'types',
+    version: 30
+  },
+  {
+    name: 'point',
+    title: 'Point',
+    group: 'types',
+    version: 30
+  },
+  {
+    name: 'role',
+    title: 'Role',
+    group: 'types',
+    version: 30
+  },
+  {
+    name: 'size',
+    title: 'Size',
+    group: 'types',
+    version: 30
+  },
+  {
+    name: 'theme',
+    title: 'Theme',
     group: 'types',
     version: 30
   },
 ]
-
-export { ComponentInstance };

@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (<div className={s.Layout}>
     <title>API - Altrone UI</title>
-    <Navigation items={APIS} groups={API_GROUPS}/>
+    <Navigation section="api" items={APIS} groups={API_GROUPS}/>
     <Content>
       {children}
     </Content>

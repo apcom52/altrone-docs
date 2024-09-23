@@ -4,10 +4,14 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import {PropsWithChildren} from "react";
 import {useAltroneTheme} from "altrone-ui";
 
-export const CodeBlock = ({ children }: PropsWithChildren) => {
+interface CodeBlockProps {
+  lang?: string;
+}
+
+export const CodeBlock = ({ children, lang = 'typescript' }: PropsWithChildren<CodeBlockProps>) => {
   const { theme } = useAltroneTheme();
 
-  return <SyntaxHighlighter wrapLines wrapLongLines language="javascript" style={theme === 'dark' ? darkTheme : lightTheme} customStyle={{ borderRadius: 4, background: theme === 'dark' ? 'var(--default-700)' : 'var(--default-200)' }}>
+  return <SyntaxHighlighter wrapLines wrapLongLines language={lang} style={theme === 'dark' ? darkTheme : lightTheme} customStyle={{ borderRadius: 4, background: theme === 'dark' ? 'var(--default-700)' : 'var(--default-200)' }}>
     {children}
   </SyntaxHighlighter>
 }

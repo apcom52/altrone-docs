@@ -1,0 +1,34 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useLocalization" />
+
+<Text.Section gap="xl">
+  # Usage
+
+  This hook is used to get localized string from localizated object (it is object combined from default localized object
+  and user localized object).
+
+  <CodeBlock children={`import { useLocalization } from "altrone-ui"
+
+const t = useLocalization();
+console.log(t('common.apply')); //"Apply" in English, "Применить" in Russian
+`} />
+</Text.Section>
+
+<Text.Section gap="xl">
+  # Labels with plural numbers
+
+  The callback returned by the `useLocalization` hook also has the second optional parameter - object of options.
+  Inside of this object you can pass variables to make the string work with plural numbers properly.
+
+  <CodeBlock children={`import { useLocalization } from "altrone-ui"
+
+const t = useLocalization();
+t('common.apply', {
+  defaultValue?: string; // this parameter works when Altrone cannot find any localized string by the passed path
+  value?: number; // numeric value to determine the plural form
+  plural?: boolean; // activates plural form
+  vars?: Record<string, any>; // variables for the localized string (like "Photo {{current}} of {{total}}")
+});
+`} />
+</Text.Section>

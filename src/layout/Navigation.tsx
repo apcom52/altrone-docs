@@ -10,11 +10,12 @@ import {ComponentInstance, ContainerGroup} from "@/constants/api";
 const linkRenderer = (ref, props) => <Link ref={ref} {...props}>{props.label}</Link>;
 
 interface NavigationProps {
+  section: string;
   groups?: ContainerGroup[];
   items?: ComponentInstance[];
 }
 
-export const Navigation = ({ groups = [], items = [] }: NavigationProps) => {
+export const Navigation = ({ section, groups = [], items = [] }: NavigationProps) => {
   const path = usePathname();
 
   return <NavigationList className={s.Navigation}>
@@ -28,7 +29,7 @@ export const Navigation = ({ groups = [], items = [] }: NavigationProps) => {
 
         return <NavigationList.Group key={groupIndex} title={group.title}>
           {components.map((component, componentIndex) => {
-            return <NavigationList.Link key={componentIndex} href={`/components/${component.name}`} label={component.title} selected={path.includes(`/${component.name}`)} renderFunc={linkRenderer} />
+            return <NavigationList.Link key={componentIndex} href={`/${section}/${component.name}`} label={component.title} selected={path.includes(`/${component.name}`)} renderFunc={linkRenderer} />
           })}
         </NavigationList.Group>
       })}
