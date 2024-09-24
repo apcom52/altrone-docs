@@ -11,7 +11,19 @@ interface CheckAlsoProps {
   data: ComponentDescription;
 }
 
+interface GlobalClassTableProps {
+  data: {
+    class: string;
+    version: number;
+    description: string;
+  }[];
+}
+
 const NameCell = ({ value, item }: DataTableCellProps<ComponentType>) => <div className={s.PropNameColumn}>{String(value)}{item.required ? <div className={s.Asterisk} title="Required property">*</div> : null}</div>
+const MainCell = ({ value }: DataTableCellProps<{
+  class: string;
+  description: string;
+}>) => <div className={s.PropNameColumn}>{String(value)}</div>
 const TypeCell = ({ value }: DataTableCellProps<ComponentType>) => {
   let valueElement: ReactNode = String(value);
 
@@ -53,3 +65,20 @@ export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', d
 });
 
 PropertiesTable.displayName = 'PropertiesTable';
+
+export const GlobalClassTable = memo(({ data }: GlobalClassTableProps) => {
+  return <Text.Section>
+    <DataTable<{
+      class: string;
+      version: number;
+      description: string;
+    }> data={data} showFooter={false} columns={[
+      { accessor: 'class', label: 'Class Name', Component: MainCell },
+      { accessor: 'version', label: 'Version', Component: ({ value }) => {
+          return `${Math.floor(Number(value) / 10)}.${Number(value) % 10}`;
+      }},
+      { accessor: 'description', label: 'Description' },
+    ]} />
+  </Text.Section>
+});
+GlobalClassTable.displayName = 'GlobalClassTable';

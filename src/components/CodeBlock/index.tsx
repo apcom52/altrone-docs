@@ -1,3 +1,5 @@
+'use client';
+
 import {default as darkTheme} from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-dark";
 import {default as lightTheme} from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-light";
 import SyntaxHighlighter from "react-syntax-highlighter";

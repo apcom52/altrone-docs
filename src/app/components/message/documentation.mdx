@@ -3,6 +3,8 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {Icon, Message, Text} from "altrone-ui";
 import {MessageProps} from "@/app/components/message/properties";
+import {MessagesCSSVariables} from "@/app/components/message/variables";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <BluePrint title="Message" description="This component is used to show important information for user" />
 
@@ -28,6 +30,11 @@ import {MessageProps} from "@/app/components/message/properties";
 <Text.Section gap='xl'>
   # Properties
   <PropertiesTable title="Properties" data={MessageProps} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={MessagesCSSVariables} />
 </Text.Section>
 
 <Text.Section gap="xl">

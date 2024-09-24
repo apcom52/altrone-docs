@@ -1,3 +1,5 @@
+'use client';
+
 import React, {PropsWithChildren, useMemo} from "react";
 import {useAltroneTheme} from "altrone-ui";
 import Image from "next/image";

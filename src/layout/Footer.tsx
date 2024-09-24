@@ -1,3 +1,5 @@
+'use client';
+
 import s from './Footer.module.scss';
 import lightLogo from "../../public/altrone-light.png";
 import Image from "next/image";

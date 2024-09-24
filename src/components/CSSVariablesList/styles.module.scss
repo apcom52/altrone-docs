@@ -69,6 +69,45 @@
   }
 }
 
+.LevelPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FontSizePreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LineHeightPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  div {
+    font-size: 12px;
+    background-color: var(--primary-100);
+    border-radius: 4px;
+  }
+}
+
+.RoundingPreview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    width: 28px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-400);
+  }
+}
+
 .Name {
   font-family: 'JetBrains Mono';
   font-weight: var(--labelFontWeight);

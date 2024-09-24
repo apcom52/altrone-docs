@@ -1,3 +1,9 @@
+import {GlobalClassTable, PropertiesTable} from "@/components/PropertiesTable";
+import {AltroneApplicationProperties} from "@/app/components/application/properties";
+import {DataTable} from "altrone-ui";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {ApplicationVariables} from "@/app/components/application/globalVariables";
+
 <BluePrint title="Altrone Application" description="Main wrapper for your application" />
 
 <Text.Section>
@@ -22,5 +28,37 @@
   Each Altrone component adapts its colors according to the selected theme.
 
   To implement theming feature for your own components you can use `.AltroneDark` selector in your css styles
-  (this class is applied to your `<AltroneApplication>` wrapper when the dark theme is selected).
+  (this class is applied to your `&lt;AltroneApplication&gt;` wrapper when the dark theme is selected).
+</Text.Section>
+
+<Text.Section>
+  # Application Properties
+
+  <PropertiesTable data={AltroneApplicationProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Global CSS classes
+
+  <GlobalClassTable data={[
+    { class: 'screen-text', version: 30, description: 'CSS class for headings' },
+    { class: 'title-text', version: 30, description: 'CSS class for headings' },
+    { class: 'heading-text', version: 30, description: 'CSS class for headings' },
+    { class: 'subheader-text', version: 30, description: 'CSS class for headings' },
+    { class: 'inner-header-text', version: 30, description: 'CSS class for headings' },
+    { class: 'group-heading-text', version: 30, description: 'CSS class for headings' },
+    { class: 'label-heading-text', version: 30, description: 'CSS class for headings' },
+    { class: 'label-text', version: 30, description: 'CSS class for text blocks' },
+    { class: 'small-label-text', version: 30, description: 'CSS class for text blocks' },
+    { class: 'big-paragraph-text', version: 30, description: 'CSS class for text blocks' },
+    { class: 'paragraph-text', version: 30, description: 'CSS class for text blocks' },
+    { class: 'small-paragraph-text', version: 30, description: 'CSS class for text blocks' },
+    { class: 'code-text', version: 30, description: 'CSS class for code blocks' }
+  ]} />
+</Text.Section>
+
+<Text.Section>
+  # Global CSS variables
+
+  <CSSVariablesList data={ApplicationVariables} />
 </Text.Section>
