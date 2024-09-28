@@ -34,9 +34,9 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
     <TopNavigation.Logo href='/' className={s.Logo}>
       <Image width={324} height={96} src={theme === 'dark' ? darkLogo : lightLogo} alt="Altrone UI logo" />
     </TopNavigation.Logo>
-    <TopNavigation.Group>
-      <Search getSuggestions={() => []} />
-    </TopNavigation.Group>
+    {/*<TopNavigation.Group>*/}
+    {/*  <Search getSuggestions={() => []} />*/}
+    {/*</TopNavigation.Group>*/}
     <TopNavigation.Group align="end">
       <Dropdown content={<Dropdown.Menu>
         <Dropdown.Action label="3.0 Curious CatZilla" icon={<Icon i="check" />} hintText="Latest" />
