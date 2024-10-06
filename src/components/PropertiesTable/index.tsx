@@ -1,9 +1,10 @@
-import {DataTable, Text} from 'altrone-ui';
+import {DataTable, Flex, Icon, Text} from 'altrone-ui';
 import React, {memo, ReactNode} from "react";
 import {ComponentDescription, ComponentType} from "@/types/ComponentProperties";
 import {TextHeadingRoles} from "altrone-ui/dist/src/components/text/Text.types";
 import {DataTableCellProps} from "altrone-ui/dist/src/components/dataTable/DataTableCell";
 import s from './styles.module.scss';
+import {VERSION} from "@/constants/common";
 
 interface CheckAlsoProps {
   title?: string;
@@ -19,7 +20,14 @@ interface GlobalClassTableProps {
   }[];
 }
 
-const NameCell = ({ value, item }: DataTableCellProps<ComponentType>) => <div className={s.PropNameColumn}>{String(value)}{item.required ? <div className={s.Asterisk} title="Required property">*</div> : null}</div>
+const NameCell = ({ value, item }: DataTableCellProps<ComponentType>) => {
+  const deprecatedLabel = item.deprecated ? <div className={s.DeprecatedLabel}>deprecated</div> : null;
+  const newLabel = item.version === VERSION ? <div className={s.NewLabel}><Icon i="stars" /><i>NEW</i></div> : null;
+
+  return <div className={s.PropNameColumn}>{String(value)}{item.required ? <div className={s.Asterisk} title="Required property">*</div> : null}
+    {newLabel}{deprecatedLabel}
+  </div>
+}
 const MainCell = ({ value }: DataTableCellProps<{
   class: string;
   description: string;
@@ -59,7 +67,9 @@ export const PropertiesTable = memo(({ title = 'Properties', role = 'heading', d
       { accessor: 'version', label: 'Version', Component: ({ value }) => {
           return `${Math.floor(Number(value) / 10)}.${Number(value) % 10}`;
       }},
-      { accessor: 'description', label: 'Description' },
+      { accessor: 'description', label: 'Description', width: "300px", Component: ({ value }) => {
+          return <div className={s.DescriptionColumn}>{String(value)}</div>
+      }},
     ]} />
   </Text.Section>
 });

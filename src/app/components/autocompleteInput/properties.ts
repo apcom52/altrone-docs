@@ -55,6 +55,13 @@ export const AutocompleteInputProps: ComponentDescription = {
       defaultValue: 'undefined',
       version: 30,
       description: 'Custom render function for suggestion'
+    },
+    {
+      name: 'showControls',
+      type: 'boolean',
+      defaultValue: 'true',
+      version: 31,
+      description: 'This prop shows default additional controls for AutocompleteInput'
     }
   ]
 }

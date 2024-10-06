@@ -17,6 +17,8 @@ import {AutocompleteInputDemo} from "@/app/components/autocompleteInput/example"
 
   Using this component you can build input with autocomplete. It is useful when you need to provide a list of suggestions to the user.
 
+  In Altrone 3.1 this component gained a new feature - it shows LoadingIsland when fetching suggestions. To disable this behaviour use new `showControls` prop.
+
   <Playground code={`import { AutocompleteInput, Form } from 'altrone-ui';
 
 const [country, setCountry] = useState('');

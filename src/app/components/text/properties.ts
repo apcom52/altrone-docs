@@ -65,8 +65,16 @@ export const TextHeadingProps: ComponentDescription = {
       type: 'title | heading | subheading | inner',
       defaultValue: 'title',
       version: 30,
-      description: 'Visual role of the heading. Doesn’t change tag name.'
-    }
+      description: 'Visual role of the heading. Doesn’t change tag name. Due to conflict with aria role attribute we decided to use new variant prop',
+      deprecated: true
+    },
+    {
+      name: 'variant',
+      type: 'title | heading | subheading | inner',
+      defaultValue: 'title',
+      version: 31,
+      description: 'Visual role of the heading. Doesn’t change tag name. Use this prop instead of deprecated role prop',
+    },
   ]
 }
 

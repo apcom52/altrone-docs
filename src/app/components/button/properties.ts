@@ -29,7 +29,15 @@ export const ButtonProps: ComponentDescription = {
       type: 'Role',
       defaultValue: 'default',
       version: 30,
-      description: 'Role of the button'
+      description: 'Role of the button. Due to conflict with aria role attribute we decided to rename this property to a new severity prop',
+      deprecated: true
+    },
+    {
+      name: 'severity',
+      type: 'Role',
+      defaultValue: 'default',
+      version: 31,
+      description: 'New property for role of the button. Use this prop instead of the deprecated role prop',
     },
     {
       name: 'size',
@@ -46,6 +54,13 @@ export const ButtonProps: ComponentDescription = {
       description: 'Removes background and border styles from the button.'
     },
     {
+      name: 'loading',
+      type: 'boolean',
+      defaultValue: 'false',
+      version: 31,
+      description: 'Hides the label and shows a loading spinner',
+    },
+    {
       name: 'rainbowEffect',
       type: 'boolean',
       defaultValue: 'true',
@@ -58,6 +73,13 @@ export const ButtonProps: ComponentDescription = {
       defaultValue: 'undefined',
       version: 30,
       description: 'Custom render function'
-    }
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      defaultValue: 'undefined',
+      version: 31,
+      description: 'Temporary solution for aria-label attribute',
+    },
   ]
 }
