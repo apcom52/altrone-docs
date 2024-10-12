@@ -16,7 +16,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'autocompleteInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for AutocompleteInput component' },
   { path: 'autocompleteInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for AutocompleteInput component' },
   { path: 'autocompleteInput.showControls', type: 'boolean', availableSince: 31, description: 'Shows additional controls for AutocompleteInput' },
-
+  
   { path: 'bottomNavigation.className', type: 'string', availableSince: 30, description: 'Additional custom className for BottomNavigation component' },
   { path: 'bottomNavigation.style', type: 'string', availableSince: 30, description: 'Additional custom style object for BottomNavigation component' },
   { path: 'bottomNavigation.selectedItemClassName', type: 'string', availableSince: 30, description: 'Additional custom className for selected BottomNavigation.Item' },
@@ -193,6 +193,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'textInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput component' },
   { path: 'textInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput component' },
   { path: 'textInput.rainbowEffect', type: 'boolean', availableSince: 30, description: 'Additional custom style object for TextInput component' },
+  
   { path: 'textInput.textIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.TextIsland subcomponent' },
   { path: 'textInput.textIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.TextIsland subcomponent' },
   { path: 'textInput.iconIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.IconIsland subcomponent' },
@@ -201,6 +202,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'textInput.actionIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.ActionIsland subcomponent' },
   { path: 'textInput.loadingIsland.className', type: 'string', availableSince: 31, description: 'Additional custom className for TextInput.LoadingIsland subcomponent' },
   { path: 'textInput.loadingIsland.style', type: 'string', availableSince: 31, description: 'Additional custom style object for TextInput.LoadingIsland subcomponent' },
+
   { path: 'textInput.customIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.CustomIsland subcomponent' },
   { path: 'textInput.customIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.CustomIsland subcomponent' },
 
