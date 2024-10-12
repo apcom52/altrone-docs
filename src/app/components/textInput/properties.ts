@@ -133,6 +133,11 @@ export const IconIslandProps: ComponentDescription = {
   ]
 }
 
+export const LoadingIslandProps: ComponentDescription = {
+  extends: '<React.HTMLAttributes<HTMLDivElement>',
+  properties: []
+}
+
 
 export const ActionIslandProps: ComponentDescription = {
   extends: '<React.ButtonHTMLAttributes<HTMLButtonElement>',

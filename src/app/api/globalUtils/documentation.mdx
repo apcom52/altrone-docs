@@ -16,5 +16,14 @@ import {CodeBlock} from "@/components/CodeBlock";
 
     <CodeBlock children={`static uuid() => string`} />
     Returns unique string id
+
+    <CodeBlock children={`static formatConsoleMessage(message: string) => string`} />
+    Returns message for console with formatted substrings. Wrap some pieces of message in [[...]] braces to make them bold.
+
+    <CodeBlock children={`static deprecatedMessage(component: string, deprecatedProp: string, instead: string, removedIn: string) => void`} />
+    Shows console warning message about deprecated prop in component.
+
+    <CodeBlock children={`static isTestEnvironment() => boolean`} />
+    Returns `true` if the current environment is a test environment (it checks special global variable in Vitest).
   </Text.Section>
 </Text.Section>

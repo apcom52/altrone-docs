@@ -25,5 +25,14 @@ import {CodeBlock} from "@/components/CodeBlock";
 
     <CodeBlock children={`static triggerEvent({ element, value, eventType, senderObject, propertyName }) => void`} />
     Triggers event with `eventType` on the `element` with passed `value`. You can also pass the `senderObject` (global prototype of the element, like `window.HTMLInputElement.prototype`) and `propertyName` (of this prototype) to simulate the event.
+
+    <CodeBlock children={`static getValidChildren(element: ReactNode) => ReactElement[]`} />
+    Available only in 3.1 and newer. Returns the list of valid elements (which are returns positive isValidElement ) from the `element`.
+
+    <CodeBlock children={`static hasValidChildren(element: ReactNode) => boolean`} />
+    Available only in 3.1 and newer. Returns `true` if there is at least one valid child element (which are returns positive isValidElement ) in the `element`.
+
+    <CodeBlock children={`static containsElementType(element: ReactNode, types: React.ElementType[]) => boolean`} />
+    Available only in 3.1 and newer. Returns `true` if there is at least one nested element with type from `types` in the `element`.
   </Text.Section>
 </Text.Section>

@@ -5,12 +5,13 @@ import {Button, Icon, TextInput,} from "altrone-ui";
 import {BluePrint} from "@/components/BluePrint";
 import {
   ActionIslandProps, CustomIslandProps,
-  IconIslandProps,
+  IconIslandProps, LoadingIslandProps,
   TextInputProps,
   TextIslandProps
 } from "@/app/components/textInput/properties";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
 import {TextInputCSSVariables} from "@/app/components/textInput/variables";
+import {NewLabel} from "@/components/NewLabel";
 
 <BluePrint title="Text Input" description="This component is used to enter user information" />
 
@@ -41,7 +42,7 @@ import {TextInputCSSVariables} from "@/app/components/textInput/variables";
 <Text.Section>
   # Islands
 
-  Islands - it is a TextInput addons. Islands can be either dynamic (like actions and custom) or static (text and icon).
+  Islands - it is a TextInput addons. Islands can be either dynamic (like actions and custom) or static (text, icon and loading).
   When you use islands, TextInput control automatically has the appropriate indents to prevent content overlapping.
 
   <Text.Section gap="l">
@@ -58,6 +59,17 @@ import {TextInputCSSVariables} from "@/app/components/textInput/variables";
     This island is used to add icons for TextInput
 
     <PropertiesTable title="Properties" data={IconIslandProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## Loading Island
+
+    <NewLabel version={31} />
+
+    This island is used to add loading spinner for your TextInput
+
+    <PropertiesTable title="Properties" data={LoadingIslandProps} />
+    This island hasn't got any special properties
   </Text.Section>
 
   <Text.Section gap="l">

@@ -17,11 +17,13 @@
 .PropNameColumn {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-size: var(--smallParagraphFontSize);
   line-height: var(--smallParagraphLineHeight);
   font-weight: 600;
   font-family: 'JetBrains Mono', monospace;
   color: var(--default-900);
+  gap: 2px;
 }
 
 .TypeColumn {
@@ -30,12 +32,43 @@
   font-weight: 400;
   font-family: 'JetBrains Mono', monospace;
   color: var(--default-600);
+  max-width: 240px;
+  min-width: 80px;
+  word-break: break-all;
+}
+
+.DescriptionColumn {
+  word-break: break-word;
 }
 
 .Asterisk {
   color: var(--danger-600);
-  margin-left: 2px;
   transform: translateY(-4px);
+}
+
+.DeprecatedLabel {
+  display: inline-block;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 10px !important;
+  background-color: var(--danger-600);
+  color: var(--buttonDangerTextColor);
+}
+
+.NewLabel {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #7E57C2;
+  color: var(--buttonDangerTextColor);
+  gap: 2px;
+
+  i {
+    font-size: 10px;
+    font-style: normal;
+  };
 }
 
 :global(.AltroneDark) {
@@ -45,5 +78,13 @@
 
   .TypeColumn {
     color: var(--default-400);
+  }
+
+  .DeprecatedLabel {
+    background-color: var(--danger-900);
+  }
+
+  .NewLabel {
+    background-color: #4527A0;
   }
 }

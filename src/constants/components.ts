@@ -20,6 +20,32 @@ import SideNavigationIconLight from '../../public/components/sideNavigation-ligh
 import SideNavigationIconDark from '../../public/components/sideNavigation-dark.png';
 import BottomNavigationIconLight from '../../public/components/bottomNavigation-light.png';
 import BottomNavigationIconDark from '../../public/components/bottomNavigation-dark.png';
+import TextInputIconLight from '../../public/components/textInput-light.png';
+import TextInputIconDark from '../../public/components/textInput-dark.png';
+import PasswordInputIconLight from '../../public/components/passwordInput-light.png';
+import PasswordInputIconDark from '../../public/components/passwordInput-dark.png';
+import NumberInputIconLight from '../../public/components/numberInput-light.png';
+import NumberInputIconDark from '../../public/components/numberInput-dark.png';
+import AutocompleteInputIconLight from '../../public/components/autocompleteInput-light.png';
+import AutocompleteInputIconDark from '../../public/components/autocompleteInput-dark.png';
+import SearchIconLight from '../../public/components/search-light.png';
+import SearchIconDark from '../../public/components/search-dark.png';
+import ButtonIconLight from '../../public/components/button-light.png';
+import ButtonIconDark from '../../public/components/button-dark.png';
+import MessageIconLight from '../../public/components/message-light.png';
+import MessageIconDark from '../../public/components/message-dark.png';
+import LoadingIconLight from '../../public/components/loading-light.png';
+import LoadingIconDark from '../../public/components/loading-dark.png';
+import IconIconLight from '../../public/components/icon-light.png';
+import IconIconDark from '../../public/components/icon-dark.png';
+import CloseButtonIconLight from '../../public/components/closeButton-light.png';
+import CloseButtonIconDark from '../../public/components/closeButton-dark.png';
+import ModalIconLight from '../../public/components/modal-light.png';
+import ModalIconDark from '../../public/components/modal-dark.png';
+import DataTableIconLight from '../../public/components/dataTable-light.png';
+import DataTableIconDark from '../../public/components/dataTable-dark.png';
+import TextIconLight from '../../public/components/text-light.png';
+import TextIconDark from '../../public/components/text-dark.png';
 
 export interface ComponentInstance {
   name: string;
@@ -85,13 +111,17 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'text',
     title: 'Text',
     group: 'typography',
-    version: 30
+    version: 30,
+    lightIcon: TextIconLight,
+    darkIcon: TextIconDark
   },
   {
     name: 'icon',
     title: 'Icon',
     group: 'typography',
-    version: 30
+    version: 30,
+    lightIcon: IconIconLight,
+    darkIcon: IconIconDark
   },
   {
     name: 'flex',
@@ -159,7 +189,9 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'modal',
     title: 'Modal',
     group: 'containers',
-    version: 30
+    version: 30,
+    lightIcon: ModalIconLight,
+    darkIcon: ModalIconDark
   },
   {
     name: 'toolbar',
@@ -178,37 +210,49 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'button',
     title: 'Button',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: ButtonIconLight,
+    darkIcon: ButtonIconDark
   },
   {
     name: 'textInput',
     title: 'Text Input',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: TextInputIconLight,
+    darkIcon: TextInputIconDark
   },
   {
     name: 'passwordInput',
     title: 'Password Input',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: PasswordInputIconLight,
+    darkIcon: PasswordInputIconDark
   },
   {
     name: 'numberInput',
     title: 'Number Input',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: NumberInputIconLight,
+    darkIcon: NumberInputIconDark
   },
   {
     name: 'autocompleteInput',
     title: 'Autocomplete Input',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: AutocompleteInputIconLight,
+    darkIcon: AutocompleteInputIconDark
   },
   {
     name: 'search',
     title: 'Search',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: SearchIconLight,
+    darkIcon: SearchIconDark
   },
   {
     name: 'textarea',
@@ -262,13 +306,17 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'dataTable',
     title: 'DataTable',
     group: 'display',
-    version: 30
+    version: 30,
+    lightIcon: DataTableIconLight,
+    darkIcon: DataTableIconDark
   },
   {
     name: 'message',
     title: 'Message',
     group: 'display',
-    version: 30
+    version: 30,
+    lightIcon: MessageIconLight,
+    darkIcon: MessageIconDark
   },
   {
     name: 'photoViewer',
@@ -348,7 +396,9 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'closeButton',
     title: 'Close Button',
     group: 'atoms',
-    version: 30
+    version: 30,
+    lightIcon: CloseButtonIconLight,
+    darkIcon: CloseButtonIconDark
   },
   {
     name: 'divider',
@@ -360,6 +410,8 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'loading',
     title: 'Loading',
     group: 'atoms',
-    version: 30
+    version: 30,
+    lightIcon: LoadingIconLight,
+    darkIcon: LoadingIconDark
   }
 ]

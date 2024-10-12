@@ -3,12 +3,14 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
 import {Playground} from "@/components/Playground";
 import {Icon, NavigationList, Text} from "altrone-ui";
 import {
+  NavigationListGroupActionProps,
   NavigationListGroupProps,
   NavigationListLinkProps,
   NavigationListProps
 } from "@/app/components/navigationList/properties";
 import {NavigationListCSSVariables} from "@/app/components/navigationList/variables";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {NewLabel} from "@/components/NewLabel";
 
 <BluePrint title="NavigationList" description="This component is used to render a navigation throughout your application" />
 
@@ -46,11 +48,19 @@ import {CSSVariablesList} from "@/components/CSSVariablesList";
 
 <Text.Section gap='xl'>
   # Subcomponents
-  This component has two subcomponents - to render a single link and group of them.
+  This component has some subcomponents - to render a single link, group of them or render group action.
 
   <Text.Section gap="l">
     ## Group
     <PropertiesTable title="Properties" data={NavigationListGroupProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## GroupAction
+
+    <NewLabel version={31} />
+
+    <PropertiesTable title="Properties" data={NavigationListGroupActionProps} />
   </Text.Section>
 
   <Text.Section gap="l">

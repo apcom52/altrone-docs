@@ -35,6 +35,28 @@ export const NavigationListGroupProps: ComponentDescription = {
   ]
 }
 
+export const NavigationListGroupActionProps: ComponentDescription = {
+  extends: 'Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">',
+  properties: [
+    {
+      name: 'label',
+      required: true,
+      type: 'string',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Label of the action. This label is hidden and shown only when user hover on the action'
+    },
+    {
+      name: 'icon',
+      required: true,
+      type: 'JSX.Element',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Icon of the action'
+    },
+  ]
+}
+
 export const NavigationListLinkProps: ComponentDescription = {
   extends: 'React.AnchorHTMLAttributes<HTMLAnchorElement>',
   properties: [

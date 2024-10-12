@@ -1,17 +1,21 @@
 import {CONFIGS, ConfigurationOption} from "@/app/components/configuration/configurations";
-import {DataTable} from "altrone-ui";
+import {DataTable, Icon} from "altrone-ui";
 import {DataTableCellProps} from "altrone-ui/dist/src/components/dataTable/DataTableCell";
 import s from "@/app/components/configuration/styles.module.scss";
-import {isValidElement, useMemo} from "react";
+import styles from './styles.module.scss';
+import React, {isValidElement, useMemo} from "react";
+import {VERSION} from "@/constants/common";
 
-const configCellRenderer = ({ value }: DataTableCellProps<ConfigurationOption>) => {
+const configCellRenderer = ({ value, item }: DataTableCellProps<ConfigurationOption>) => {
   const path = String(value).split('.');
 
+  const newLabel = item.availableSince === VERSION ? <div className={styles.NewLabel}><Icon i="stars" /><i>NEW</i></div> : null;
+
   if (path.length > 1) {
-    return <div className={s.ConfigCell}>{path.slice(0, path.length - 1).join('.')}.<span className={s.LastLeaf}>{path.at(-1)}</span></div>
+    return <div className={s.ConfigCell}>{path.slice(0, path.length - 1).join('.')}.<span className={s.LastLeaf}>{path.at(-1)}</span>{newLabel}</div>
   }
 
-  return <div className={s.ConfigCell}><span className={s.LastLeaf}>{path[0]}</span></div>
+  return <div className={s.ConfigCell}><span className={s.LastLeaf}>{path[0]}</span>{newLabel} </div>
 }
 
 const typeCellRenderer = ({ value }: DataTableCellProps<ConfigurationOption>) => {

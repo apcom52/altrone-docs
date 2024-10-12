@@ -5,6 +5,7 @@ export type ComponentType = {
   defaultValue: string;
   description: string;
   required?: boolean;
+  deprecated?: boolean;
 }
 
 export interface ComponentDescription {

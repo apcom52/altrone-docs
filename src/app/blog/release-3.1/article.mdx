@@ -1,0 +1,149 @@
+import Image from "next/image";
+import Picture31 from '../../../../public/picture-31.png';
+import s from '../layout.module.scss';
+import {ComponentParagraph} from "@/components/ComponentParagraph";
+import {CodeBlock} from "@/components/CodeBlock";
+import GifNavigationGroupAction from '../../../../public/gifs/release31-navigationGroupAction.gif';
+import Link from "next/link";
+import { Text } from 'altrone-ui';
+
+<Text.Section gap="l">
+  <Image src={Picture31} alt="Altrone 3.0" width={1920} height={972} className={s.ArticleImage} />
+</Text.Section>
+
+<Text.Section gap="l">
+  # New LoadingIsland for TextInput
+
+  Using the new `LoadingIsland` you can show a loading spinner inside the `TextInput` component. This feature is useful when
+  you need to show that the component is in loading state. This is necessary when you implement a search component or
+  when you need to show that the component is waiting for some data.
+
+  <CodeBlock>{`import { TextInput } from "altrone-ui";
+
+return <TextInput placeholder="Input with spinner">
+  <TextInput.LoadingIsland />
+</TextInput>`}</CodeBlock>
+</Text.Section>
+
+<Text.Section gap="l">
+  # New GroupAction subcomponent for NavigationList
+
+  <div className={s.GifContainer}>
+    <Image src={GifNavigationGroupAction} alt="Rainbow Hover Effect" width={367} height={224} className={s.Gif} />
+  </div>
+
+  To build a more complex navigation list we added a new `GroupAction` subcomponent. This subcomponent allows you to add additional
+  action buttons to the header of group. To implement dropdown or popup you can wrap this subcomponent into
+  <Text.Link href="/components/popover">Popover</Text.Link> or <Text.Link href="/components/dropdown">Dropdown</Text.Link> containers.
+</Text.Section>
+
+<Text.Section gap="l">
+  # All changelog
+
+  <ComponentParagraph component="textInput">
+    <Text.Section gap="l">
+      - added new `LoadingIsland` subcomponent
+      - added new configuration options for new `LoadingIsland` subcomponent
+      - improved island detection algorithm
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="autocompleteInput">
+    <Text.Section gap="l">
+      - using new `LoadingIsland` subcomponent (when component is in loading state)
+      - added new `showControls` property
+      - added new configuration properties related to new `showControls` property
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="search">
+    <Text.Section gap="l">
+      - `showControls` prop now disables `LoadingIsland` subcomponent as well
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="button">
+    <Text.Section gap="l">
+      - added new `loading` prop
+      - added new `severity` prop (old `role` prop marked as deprecated. Use this prop instead)
+      - added new `showLabel` prop
+      - added new `ariaRole` prop
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="navigationList">
+    <Text.Section gap="l">
+      - added new `GroupAction` subcomponent
+      - added new configuration options for `Group`, `Link` and new `GroupAction` subcomponents
+      - added new CSS variables
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="dataTable">
+    <Text.Section gap="l">
+      - added filter support for boolean fields
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="message">
+    <Text.Section gap="l">
+      - added new `severity` prop (old `role` prop marked as deprecated. Use this prop instead)
+      - added new `ariaRole` prop
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="text">
+    <Text.Section gap="l">
+      - added new `variant` prop for Text.Heading subcomponent (old `role` prop marked as deprecated. Use this prop instead)
+      - added new `ariaRole` prop
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="modal">
+    <Text.Section gap="l">
+      - fixed issue with modal backdrop color in Safari
+
+      - accessibility improvements
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="tooltip">
+    <Text.Section gap="l">
+      - accessibility improvements
+      - fixed issue with wrong type of `children` prop
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="icon">
+    <Text.Section gap="l">
+      - accessibility improvements
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="loading">
+    <Text.Section gap="l">
+      - component loading optimization
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="closeButton">
+    <Text.Section gap="l">
+      - accessibility improvements
+    </Text.Section>
+  </ComponentParagraph>
+
+  - static fonts were replaced with variable fonts
+  - added new methods for DOMUtils: `getValidChildren`, `hasValidChildren`, and `containsElementType`
+  - added new methods for GlobalUtils: `deprecatedMessage`, `formatConsoleMessage`, and `isTestEnvironment`
+  - removed `ldrs` library from dependency list
+  - added `focus-trap-react` dependency
+  - bundle size optimizations
+</Text.Section>
+
+<Text.Section gap="l">
+  # Migration to v3.1
+
+  - due to conflicts with ARIA tags we decided to mark `role` prop in **Button** as deprecated (it will be removed in 4.0). Currently you can replace this prop with new `severity` prop and use new `ariaRole` prop to override default role of the component.
+  - due to conflicts with ARIA tags we decided to mark `role` prop in **Message** as deprecated (it will be removed in 4.0). Currently you can replace this prop with new `severity` prop and use new `ariaRole` prop to override default role of the component.
+  - due to conflicts with ARIA tags we decided to mark `role` prop in **Text.Heading** as deprecated (it will be removed in 4.0). Currently you can replace this prop with new `variant` prop and use new `ariaRole` prop to override default role of the component.
+</Text.Section>

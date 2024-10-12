@@ -30,7 +30,22 @@ export const MessageProps: ComponentDescription = {
       type: 'Role',
       defaultValue: 'default',
       version: 30,
-      description: 'Color of the message'
+      deprecated: true,
+      description: 'Role of the message. Due to conflict with aria role attribute we decided to rename this property to a new severity prop'
+    },
+    {
+      name: 'severity',
+      type: 'Role',
+      defaultValue: 'default',
+      version: 31,
+      description: 'New property for role of the message. Use this prop instead of the deprecated role prop',
+    },
+    {
+      name: 'ariaLabel',
+      type: 'string',
+      defaultValue: 'undefined',
+      version: 31,
+      description: 'Temporary solution for aria-label attribute',
     },
   ]
 }

@@ -1,14 +1,18 @@
 .ConfigCell {
+  display: flex;
+  align-items: center;
   font-size: var(--smallParagraphFontSize);
   line-height: var(--smallParagraphLineHeight);
   font-weight: var(--smallParagraphFontWeight);
   color: var(--default-500);
   font-family: "JetBrains Mono", monospace;
+  gap: 4px;
 }
 
 .LastLeaf {
   color: var(--default-900);
   font-weight: 600;
+  margin-left: -4px;
 }
 
 .TypeCell {
