@@ -15,6 +15,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
 
   { path: 'autocompleteInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for AutocompleteInput component' },
   { path: 'autocompleteInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for AutocompleteInput component' },
+  { path: 'autocompleteInput.showControls', type: 'boolean', availableSince: 31, description: 'Shows additional controls for AutocompleteInput' },
 
   { path: 'bottomNavigation.className', type: 'string', availableSince: 30, description: 'Additional custom className for BottomNavigation component' },
   { path: 'bottomNavigation.style', type: 'string', availableSince: 30, description: 'Additional custom style object for BottomNavigation component' },
@@ -103,19 +104,25 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'navigationList.className', type: 'string', availableSince: 30, description: 'Additional custom className for NavigationList component' },
   { path: 'navigationList.style', type: 'string', availableSince: 30, description: 'Additional custom style object for NavigationList component' },
   { path: 'navigationList.group.titleClassName', type: 'string', availableSince: 30, description: 'Additional custom className for NavigationList.Group title' },
+  { path: 'navigationList.group.className', type: 'string', availableSince: 31, description: 'Additional custom className for NavigationList.Group subcomponent' },
+  { path: 'navigationList.group.style', type: 'string', availableSince: 31, description: 'Additional custom style object for NavigationList.Group subcomponent' },
+  { path: 'navigationList.groupAction.className', type: 'string', availableSince: 31, description: 'Additional custom className for NavigationList.GroupAction subcomponent' },
+  { path: 'navigationList.groupAction.style', type: 'string', availableSince: 31, description: 'Additional custom style object for NavigationList.GroupAction subcomponent' },
+  { path: 'navigationList.link.className', type: 'string', availableSince: 31, description: 'Additional custom className for NavigationList.Link subcomponent' },
+  { path: 'navigationList.link.style', type: 'string', availableSince: 31, description: 'Additional custom style object for NavigationList.Link subcomponent' },
 
   { path: 'numberInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for NumberInput component' },
   { path: 'numberInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for NumberInput component' },
-  { path: 'numberInput.showControl', type: 'string', availableSince: 30, description: 'Shows spinner in NumberInput component' },
-  { path: 'numberInput.allowLeadingZeros', type: 'string', availableSince: 30, description: 'Allows leading zeros in NumberInput component' },
-  { path: 'numberInput.digitsAfterPoint', type: 'string', availableSince: 30, description: 'Number of points after decimal delimiter in NumberInput component' },
+  { path: 'numberInput.showControl', type: 'boolean', availableSince: 30, description: 'Shows spinner in NumberInput component' },
+  { path: 'numberInput.allowLeadingZeros', type: 'boolean', availableSince: 30, description: 'Allows leading zeros in NumberInput component' },
+  { path: 'numberInput.digitsAfterPoint', type: 'number', availableSince: 30, description: 'Number of points after decimal delimiter in NumberInput component' },
 
   { path: 'pagination.className', type: 'string', availableSince: 30, description: 'Additional custom className for Pagination component' },
   { path: 'pagination.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Pagination component' },
 
   { path: 'passwordInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for PasswordInput component' },
   { path: 'passwordInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for PasswordInput component' },
-  { path: 'passwordInput.showControl', type: 'string', availableSince: 30, description: 'Shows password mode toggle in PasswordInput component' },
+  { path: 'passwordInput.showControl', type: 'boolean', availableSince: 30, description: 'Shows password mode toggle in PasswordInput component' },
 
   { path: 'photoViewer.className', type: 'string', availableSince: 30, description: 'Additional custom className for PhotoViewer component' },
   { path: 'photoViewer.style', type: 'string', availableSince: 30, description: 'Additional custom style object for PhotoViewer component' },
@@ -136,7 +143,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
 
   { path: 'search.className', type: 'string', availableSince: 30, description: 'Additional custom className for Search component' },
   { path: 'search.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Search component' },
-  { path: 'search.showControl', type: 'string', availableSince: 30, description: 'Shows additional control in Search component' },
+  { path: 'search.showControl', type: 'boolean', availableSince: 30, description: 'Shows additional control in Search component' },
 
   { path: 'select.className', type: 'string', availableSince: 30, description: 'Additional custom className for Scrollable component' },
   { path: 'select.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Scrollable component' },
@@ -154,7 +161,7 @@ export const CONFIGS: (ConfigurationOption)[] = [
 
   { path: 'tabs.className', type: 'string', availableSince: 30, description: 'Additional custom className for Tabs component' },
   { path: 'tabs.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Tabs component' },
-  { path: 'tabs.rainbowEffect', type: 'string', availableSince: 30, description: 'Enables rainbow effect for Tabs component. Default value is true' },
+  { path: 'tabs.rainbowEffect', type: 'boolean', availableSince: 30, description: 'Enables rainbow effect for Tabs component. Default value is true' },
 
   { path: 'tags.className', type: 'string', availableSince: 30, description: 'Additional custom className for Tags component' },
   { path: 'tags.style', type: 'string', availableSince: 30, description: 'Additional custom style object for Tags component' },
@@ -185,13 +192,15 @@ export const CONFIGS: (ConfigurationOption)[] = [
 
   { path: 'textInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput component' },
   { path: 'textInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput component' },
-  { path: 'textInput.rainbowEffect', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput component' },
+  { path: 'textInput.rainbowEffect', type: 'boolean', availableSince: 30, description: 'Additional custom style object for TextInput component' },
   { path: 'textInput.textIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.TextIsland subcomponent' },
   { path: 'textInput.textIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.TextIsland subcomponent' },
   { path: 'textInput.iconIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.IconIsland subcomponent' },
   { path: 'textInput.iconIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.IconIsland subcomponent' },
   { path: 'textInput.actionIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.ActionIsland subcomponent' },
   { path: 'textInput.actionIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.ActionIsland subcomponent' },
+  { path: 'textInput.loadingIsland.className', type: 'string', availableSince: 31, description: 'Additional custom className for TextInput.LoadingIsland subcomponent' },
+  { path: 'textInput.loadingIsland.style', type: 'string', availableSince: 31, description: 'Additional custom style object for TextInput.LoadingIsland subcomponent' },
   { path: 'textInput.customIsland.className', type: 'string', availableSince: 30, description: 'Additional custom className for TextInput.CustomIsland subcomponent' },
   { path: 'textInput.customIsland.style', type: 'string', availableSince: 30, description: 'Additional custom style object for TextInput.CustomIsland subcomponent' },
 

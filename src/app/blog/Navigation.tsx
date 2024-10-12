@@ -18,7 +18,6 @@ export const Navigation = () => {
 
       <NavigationList.Group title="Blog">
         <NavigationList.Link href={`/blog/release-3.1`} label="3.1 Release" selected={path.includes(`/blog/release-3.1`)}  renderFunc={linkRenderer} />
-        <NavigationList.Link href={`/blog/text-input-islands`} label="Enhancing TextInput with islands" selected={path.includes(`/blog/text-input-islands`)}  renderFunc={linkRenderer} />
         <NavigationList.Link href={`/blog/release-3.0`} label="3.0 Release" selected={path.includes(`/blog/release-3.0`)}  renderFunc={linkRenderer} />
         <NavigationList.Link href={`/blog/migrating-to-3.0`} label="Migrating to 3.0" selected={path.includes(`/blog/migrating-to-3.0`)} renderFunc={linkRenderer} />
         <NavigationList.Link href={`/blog/installation`} label="Installation" selected={path.includes(`/blog/installation`)} renderFunc={linkRenderer} />

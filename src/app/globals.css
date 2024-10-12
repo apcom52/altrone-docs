@@ -30,3 +30,9 @@ a {
     color-scheme: dark;
   }
 }
+
+time {
+  font-size: 12px;
+  margin-top: -12px !important;
+  margin-bottom: -24px !important;
+}
