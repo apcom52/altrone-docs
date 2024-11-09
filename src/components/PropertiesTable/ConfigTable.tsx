@@ -34,9 +34,9 @@ export const ConfigTable = ({ filter = '' }) => {
   }, [filter]);
 
   return <DataTable data={filteredData} showFooter={false} rowsPerPage={1000} columns={[
-    { accessor: 'path', label: 'Path', Component: configCellRenderer },
-    { accessor: 'type', label: 'Type', Component: typeCellRenderer },
-    { accessor: 'availableSince', label: 'Version', Component: ({ value }) => {
+    { accessor: 'path', label: 'Path', Component: configCellRenderer, width: '200px' },
+    { accessor: 'type', label: 'Type', Component: typeCellRenderer, width: '70px' },
+    { accessor: 'availableSince', label: 'Version', width: '60px', Component: ({ value }) => {
         return `${Math.floor(Number(value) / 10)}.${Number(value) % 10}`;
       }},
     { accessor: 'description', label: 'Description', width: '200px', Component: ({ value }) => String(value)},

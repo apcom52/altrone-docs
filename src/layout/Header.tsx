@@ -39,10 +39,10 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
     {/*</TopNavigation.Group>*/}
     <TopNavigation.Group align="end">
       <Dropdown content={<Dropdown.Menu>
-        <Dropdown.Action label="3.1 Curious CatZilla" icon={<Icon i="check" />} hintText="Latest" />
+        <Dropdown.Action label="3.2 Curious CatZilla" icon={<Icon i="check" />} hintText="Latest" />
         <Dropdown.Action label="2.2 Blind Basilisk" hintText="Legacy" onClick={() => window.location.href = 'https://apcom.gitbook.io/altrone-ui'} />
       </Dropdown.Menu>}>
-        {({ opened }) => (<TopNavigation.Link selected={opened} label="v3.1" rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />} />)}
+        {({ opened }) => (<TopNavigation.Link selected={opened} label="v3.2" rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />} />)}
       </Dropdown>
       <TopNavigation.Link href='/components' selected={isComponents} leftIcon={<Icon i="view_carousel" />} label="Components" />
       <TopNavigation.Link href='/api' selected={isAPI} leftIcon={<Icon i="data_object" />} label="API" />

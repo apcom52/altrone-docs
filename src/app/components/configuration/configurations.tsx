@@ -9,7 +9,10 @@ export interface ConfigurationOption {
 }
 
 export const CONFIGS: (ConfigurationOption)[] = [
-  { path: 'locale.dateFormat', type: 'string', availableSince: 30, description: "Date format. Default value is 'DD.MM.YYYY'" },
+  { path: 'locale.locale', type: 'string', availableSince: 32, description: "User locale. Default value is en-US. This parameter specifies how some data will be displayed in the application" },
+  { path: 'locale.dateFormat', type: 'string', availableSince: 30, description: "Custom date format. If set it overrides locale settings. For better user experience we recommend to set correct locale instead of custom formatting" },
+  { path: 'locale.monthFormat', type: 'string', availableSince: 32, description: "Custom month format. If set it overrides locale settings. For better user experience we recommend to set correct locale instead of custom formatting" },
+  { path: 'locale.yearFormat', type: 'string', availableSince: 32, description: "Custom year format. If set it overrides locale settings. For better user experience we recommend to set correct locale instead of custom formatting" },
   { path: 'locale.numberGrouping', type: 'string', availableSince: 30, description: "Number grouping delimiter. Default value is ' ' (space)" },
   { path: 'locale.numberDecimal', type: 'string', availableSince: 30, description: "Number decimal delimiter. Default value is '.'" },
 
@@ -110,6 +113,8 @@ export const CONFIGS: (ConfigurationOption)[] = [
   { path: 'navigationList.groupAction.style', type: 'string', availableSince: 31, description: 'Additional custom style object for NavigationList.GroupAction subcomponent' },
   { path: 'navigationList.link.className', type: 'string', availableSince: 31, description: 'Additional custom className for NavigationList.Link subcomponent' },
   { path: 'navigationList.link.style', type: 'string', availableSince: 31, description: 'Additional custom style object for NavigationList.Link subcomponent' },
+  { path: 'navigationList.linkAction.className', type: 'string', availableSince: 32, description: 'Additional custom className for NavigationList.LinkAction subcomponent' },
+  { path: 'navigationList.linkAction.style', type: 'string', availableSince: 32, description: 'Additional custom style object for NavigationList.LinkAction subcomponent' },
 
   { path: 'numberInput.className', type: 'string', availableSince: 30, description: 'Additional custom className for NumberInput component' },
   { path: 'numberInput.style', type: 'string', availableSince: 30, description: 'Additional custom style object for NumberInput component' },

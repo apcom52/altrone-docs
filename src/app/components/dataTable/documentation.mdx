@@ -11,6 +11,8 @@ import {Text} from "altrone-ui";
 import {DataTableDemo} from "@/app/components/dataTable/example";
 import {DataTableCSSVariables} from "@/app/components/dataTable/variables";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {NewLabel} from "@/components/NewLabel";
+import {CodeBlock} from "@/components/CodeBlock";
 
 <BluePrint title="Data Table" description="This component is used to render big amount of table data" />
 
@@ -111,6 +113,42 @@ return <DataTable
 </Text.Section>
 
 <Text.Section>
+  # Column types
+
+  <NewLabel version={32} />
+
+  In 3.2 release was added new `type` property to DataTableColumn. This property allows to set column type. Even this property is optional,
+  (Altrone tries to guess the value if the property is not set), we recommend to set it explicitly to avoid unexpected behavior.
+
+  Value of the property defines how the column will be rendered (if it is currency, it will be aligned to the right, if it is date, it will be formatted as date, etc.).
+  Also it affects filtering and sorting behavior.
+
+  Available types:
+  <CodeBlock>{`type DataTableColumnType =
+| 'text'
+| 'number'
+| 'boolean'
+| 'array'
+| 'currency'
+| 'date'
+| 'month'
+| 'year';`}
+  </CodeBlock>
+
+  In case when default renderer for the type is not suitable, you can provide custom renderer using `renderFunc` (recommended) or `Component` property.
+
+  Also some types support additional options. For example, you can set delimiter for `array` type or currency code for `currency` type.
+
+  <CodeBlock>{`{
+  currency: string; // currency code (e.g. 'USD')
+  currencyAccessor: keyof T; // accessor for currency code
+  arrayDelimiter: string; // delimiter for array type
+  arrayAccessor: string; // accessor for array type when array item is a complex object
+};`}
+  </CodeBlock>
+</Text.Section>
+
+<Text.Section>
   # Subcomponents
 
   <Text.Section>
@@ -125,7 +163,7 @@ return <DataTable
 <Text.Section>
   # Data filtering
 
-  User can create custom filter rules using "Filters" button. Type of the filter depends on object field type. To activate filtering
+  User can create custom filter rules using "Filters" button. Type of the filter depends on `type` property and object field type. To activate filtering
   at least one of the columns should have enabled `filtering` flag.
 
   User can create unlimited number of filter rules

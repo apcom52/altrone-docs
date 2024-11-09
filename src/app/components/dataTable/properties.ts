@@ -60,6 +60,13 @@ export const DataTableColumnProperties: ComponentDescription = {
       description: 'Field name of the dataset object'
     },
     {
+      name: 'type',
+      type: 'DataTableColumnType',
+      defaultValue: 'text',
+      version: 32,
+      description: 'Value type of the column. When this property is not set Altrone tries to guess the type'
+    },
+    {
       name: 'labels',
       type: 'string',
       defaultValue: 'undefined',
@@ -74,11 +81,19 @@ export const DataTableColumnProperties: ComponentDescription = {
       description: 'Custom column width'
     },
     {
+      name: 'renderFunc',
+      type: 'RenderFuncProp<HTMLDivElement, DataTableCellProps<T>>',
+      defaultValue: 'undefined',
+      version: 32,
+      description: 'Custom render function for cell content',
+    },
+    {
       name: 'Component',
       type: 'React.FC<DataTableCellProps>',
-      defaultValue: '20',
+      defaultValue: 'undefined',
       version: 30,
-      description: 'Custom cell content component'
+      description: 'Custom cell content component. Better to use renderFunc instead',
+      deprecated: true
     },
     {
       name: 'visible',
@@ -100,6 +115,13 @@ export const DataTableColumnProperties: ComponentDescription = {
       defaultValue: 'false',
       version: 30,
       description: 'Allows to change sort order by clicking on cell header cell'
+    },
+    {
+      name: 'options',
+      type: 'DataTableColumnOptions',
+      defaultValue: 'undefined',
+      version: 32,
+      description: 'Configuration options for specific column types. See "Column types" sections for more details'
     }
   ]
 }

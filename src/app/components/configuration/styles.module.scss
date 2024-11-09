@@ -1,6 +1,7 @@
 .ConfigCell {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   font-size: var(--smallParagraphFontSize);
   line-height: var(--smallParagraphLineHeight);
   font-weight: var(--smallParagraphFontWeight);
