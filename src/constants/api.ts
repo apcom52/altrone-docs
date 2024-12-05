@@ -97,6 +97,12 @@ export const APIS: ComponentInstance[] = [
     group: 'hooks',
     version: 30
   },
+  {
+    name: 'useLocale',
+    title: 'useLocale',
+    group: 'hooks',
+    version: 32
+  },
 
   //----
   {

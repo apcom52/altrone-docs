@@ -53,4 +53,46 @@ export const NavigationListCSSVariables: CSSVariable[] = [
     type: 'color',
     version: 30
   },
+  {
+    name: 'navigationListGroupActionBackgroundColor',
+    variant: 'surface',
+    type: 'color',
+    version: 31
+  },
+  {
+    name: 'navigationListGroupActionTextColor',
+    variant: 'text',
+    type: 'color',
+    version: 31
+  },
+  {
+    name: 'navigationListGroupActionHoveredBackgroundColor',
+    variant: 'surface',
+    type: 'color',
+    version: 31
+  },
+  {
+    name: 'navigationListGroupActionPressedBackgroundColor',
+    variant: 'surface',
+    type: 'color',
+    version: 31
+  },
+  {
+    name: 'navigationListLinkActionTextColor',
+    variant: 'text',
+    type: 'color',
+    version: 32
+  },
+  {
+    name: 'navigationListLinkActionHoveredTextColor',
+    variant: 'text',
+    type: 'color',
+    version: 32
+  },
+  {
+    name: 'navigationListLinkActionPressedTextColor',
+    variant: 'text',
+    type: 'color',
+    version: 32
+  },
 ]

@@ -91,3 +91,25 @@ export const NavigationListLinkProps: ComponentDescription = {
     },
   ]
 }
+
+export const NavigationListLinkActionProps: ComponentDescription = {
+  extends: 'Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "children">',
+  properties: [
+    {
+      name: 'label',
+      required: true,
+      type: 'string',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Label of the action. This label is hidden and shown only when user hover on the action'
+    },
+    {
+      name: 'icon',
+      required: true,
+      type: 'JSX.Element',
+      defaultValue: 'undefined',
+      version: 30,
+      description: 'Icon of the action'
+    },
+  ]
+}

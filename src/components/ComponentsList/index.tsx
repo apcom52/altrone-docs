@@ -1,7 +1,9 @@
 import s from './styles.module.scss';
 import Link from "next/link";
 import {useRainbowEffect} from "altrone-ui";
-import {ComponentInstance} from "@/constants/api";
+import {VERSION} from "@/constants/common";
+import {ComponentInstance} from "@/constants/components";
+import clsx from "clsx";
 
 interface PageNavigationProps {
   section: string;
@@ -21,6 +23,7 @@ export const ComponentsList = ({ section, group, items = [] }: PageNavigationPro
     {components.map((component) => (
       <Link href={`/${section}/${component.name}`} key={component.name} className={s.ComponentCard} {...rainbowProps}>
         {component.title}
+        {component.version === VERSION && <span className={clsx(s.Version, 'small-label-text')}>NEW</span>}
       </Link>
     ))}
   </div>

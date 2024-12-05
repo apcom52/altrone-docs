@@ -4,7 +4,7 @@ import {Playground} from "@/components/Playground";
 import {Icon, NavigationList, Text} from "altrone-ui";
 import {
   NavigationListGroupActionProps,
-  NavigationListGroupProps,
+  NavigationListGroupProps, NavigationListLinkActionProps,
   NavigationListLinkProps,
   NavigationListProps
 } from "@/app/components/navigationList/properties";
@@ -66,6 +66,12 @@ import {NewLabel} from "@/components/NewLabel";
   <Text.Section gap="l">
     ## Link
     <PropertiesTable title="Properties" data={NavigationListLinkProps} />
+  </Text.Section>
+
+  <Text.Section gap="l">
+    ## LinkAction
+    <NewLabel version={32} />
+    <PropertiesTable title="Properties" data={NavigationListLinkActionProps} />
   </Text.Section>
 </Text.Section>
 

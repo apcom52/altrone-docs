@@ -14,7 +14,7 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
     "@types/mdx": "^2.0.13",
-    "altrone-ui": "3.1.0-beta",
+    "altrone-ui": "3.2.0-beta",
     "marked": "^12.0.2",
     "next": "14.2.3",
     "react": "^18",

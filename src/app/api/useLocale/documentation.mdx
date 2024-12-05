@@ -1,0 +1,32 @@
+import {CodeBlock} from "@/components/CodeBlock";
+
+<BluePrint title="useLocale" />
+
+<Text.Section>
+  # Usage
+
+  This hook was introduced in 3.2 and provides some useful data for values that are locale dependent. The values depend
+  on which locale was set in the `Configuration` wrapper. You can also provide your own locale settings in the `localeValues` argument
+  of the `useLocale` hook.
+
+  <CodeBlock children={`import { useLocale } from "altrone-ui"
+
+const {
+  locale,
+  dateFormat,
+  monthFormat,
+  yearFormat,
+  numberGrouping,
+  numberDecimal,
+} = useLocale({
+  dateFormat: 'DD.MM.YYYY',
+});
+
+console.log(locale); //en-US
+console.log(dateFormat); //DD.MM.YYYY
+console.log(monthFormat); //MMMM YYYY
+console.log(yearFormat); //YYYY
+console.log(numberGrouping); //,
+console.log(numberDecimal); //.
+`} />
+</Text.Section>

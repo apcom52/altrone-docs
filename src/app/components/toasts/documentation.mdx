@@ -2,9 +2,10 @@ import {PropertiesTable} from "@/components/PropertiesTable";
 import {Playground} from "@/components/Playground";
 import {Text} from "altrone-ui";
 import {ToastsDemo} from "@/app/components/toasts/example";
-import {ToastFunctionParameters} from "@/app/components/toasts/properties";
+import {NotificationFunctionParameters, ToastFunctionParameters} from "@/app/components/toasts/properties";
+import {NewLabel} from "@/components/NewLabel";
 
-<BluePrint title="Tags" description="This component is used to show notification" />
+<BluePrint title="Toasts" description="This component is used to show notification" />
 
 <Text.Section gap='xl'>
   # Usage
@@ -47,4 +48,14 @@ return <Flex gap="s">
   Every function accepts next arguments
 
   <PropertiesTable title="Properties" data={ToastFunctionParameters} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # Notifications
+
+  <NewLabel version={32} />
+
+  You can also send rich notifications using the `sendNotification` function. This function accepts an object with the following properties:
+
+  <PropertiesTable title="Properties" data={NotificationFunctionParameters} />
 </Text.Section>

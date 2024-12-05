@@ -1,0 +1,87 @@
+import Image from "next/image";
+import Picture32 from '../../../../public/picture-32.png';
+import s from '../layout.module.scss';
+import {ComponentParagraph} from "@/components/ComponentParagraph";
+import {CodeBlock} from "@/components/CodeBlock";
+import GifNotification from '../../../../public/gifs/release32-notification.gif';
+import { Text } from 'altrone-ui';
+
+<Text.Section gap="l">
+  <Image src={Picture32} alt="Altrone 3.2" width={1920} height={972} className={s.ArticleImage} />
+</Text.Section>
+
+<Text.Section gap="l">
+  # More easy way to build human-friendly tables
+
+  Now you can specify the type of the column in the `DataTableColumn` interface. This property is used to determine the type of the column and to apply the appropriate filter.
+  For example, if you set the type to `date`, the filter will be a date picker. If you set the type to `number`, the filter will be a number input and etc.
+  Also this property is used to determine the default renderer for the column. If you use `currency` type, the number will be formatted as a currency.
+
+</Text.Section>
+<Text.Section gap="l">
+  # Send notification messages with rich content
+
+  <div className={s.GifContainer}>
+    <Image src={GifNotification} alt="Notification example" width={400} height={245} className={s.Gif} />
+  </div>
+
+  Although you can send a simple message using the `toast` function, in some cases you may need to send a message with rich content.
+  For example, you may need to add a button or an icon to the message. For this purpose, we have added a new `sendNotification` function.
+  Using this function you can show notification in different positions, set a custom icon and title and also add a button with a custom action.
+</Text.Section>
+
+<Text.Section gap="l">
+  # All changelog
+
+  <ComponentParagraph component="dataTable">
+    <Text.Section gap="l">
+      - added new `type` property for `DataTableColumn` interface
+      - filters now use `type` property to determine the type of the column
+      - added new `renderFunc` property as an alternative to `Component` property
+      - now you can set parameters for default column renderer using new `options` property
+      - some default renderers (like date) uses new locale configuration settings to format the value
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="navigationList">
+    <Text.Section gap="l">
+      - added new `LinkAction` subcomponent
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="datePicker">
+    <Text.Section gap="l">
+      - better locale support (for example, you can set the first day of the week)
+      - improved accessibility
+      - improved keyboard navigation
+      - fixed incorrect work of `minDate` and `maxDate` properties when you open MonthPicker and YearPicker
+    </Text.Section>
+  </ComponentParagraph>
+
+  <ComponentParagraph component="toasts">
+    <Text.Section gap="l">
+      - added new `sendNotification` function to show a rich notification messages
+      - updated the appearance of the toast notifications
+    </Text.Section>
+  </ComponentParagraph>
+
+  - added locale configuration settings (locale, monthFormat and yearFormat)
+  - added new useLocale hook to get current locale settings
+  - added new CSS variables
+  - added new GlobalUtils.getNumberDelimitersByLocale method
+  - dependency updates
+</Text.Section>
+
+<Text.Section gap="l">
+  # Migration to v3.2
+
+  Altrone 3.2 is fully compatible with Altrone 3.0 and Altrone 3.1. But we recommend you to make some updates in your code
+  to use new features and improvements.
+
+  - If you use `DataTable` component, we highly recommend you to set the `type` property to the `DataTableColumn` interface.
+  It will improve filtering, sorting and rendering of the column.
+
+  - Also don't forget to set `locale` prop to provide better rendering of the date and number values.
+
+  - Old `Component` prop of `DataTableColumn` interface is marked as deprecated. We recommend to use new `renderFunc` property instead.
+</Text.Section>

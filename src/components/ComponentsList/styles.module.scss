@@ -5,6 +5,9 @@
 }
 
 .ComponentCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   font-size: var(--bigParagraphFontSize);
   line-height: var(--bigParagraphLineHeight);
   font-weight: 400;
@@ -15,9 +18,21 @@
   cursor: pointer;
 }
 
+.Version {
+  margin-left: 8px;
+  border-radius: 4px;
+  padding: 2px 4px;
+  background: #B39DDB;
+  color: white;
+}
+
 :global(.AltroneDark) {
   .ComponentCard {
     background-color: var(--default-800);
     border: 1px solid var(--default-700);
+  }
+
+  .Version {
+    background: #512DA8;
   }
 }
