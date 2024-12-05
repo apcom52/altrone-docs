@@ -1,4 +1,5 @@
 import {CodeBlock} from "@/components/CodeBlock";
+import {NewLabel} from "@/components/NewLabel";
 
 <BluePrint title="GlobalUtils " />
 
@@ -25,5 +26,9 @@ import {CodeBlock} from "@/components/CodeBlock";
 
     <CodeBlock children={`static isTestEnvironment() => boolean`} />
     Returns `true` if the current environment is a test environment (it checks special global variable in Vitest).
+
+    <CodeBlock children={`static getNumberDelimitersByLocale(locale: string) => { decimal: string, grouping: string }`} />
+    <NewLabel version={32} />
+    Returns decimal and grouping delimiters for the specified locale.
   </Text.Section>
 </Text.Section>
