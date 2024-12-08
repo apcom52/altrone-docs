@@ -46,6 +46,10 @@ import DataTableIconLight from '../../public/components/dataTable-light.png';
 import DataTableIconDark from '../../public/components/dataTable-dark.png';
 import TextIconLight from '../../public/components/text-light.png';
 import TextIconDark from '../../public/components/text-dark.png';
+import ToastsIconLight from '../../public/components/toasts-light.png';
+import ToastsIconDark from '../../public/components/toasts-dark.png';
+import DatePickerIconLight from '../../public/components/datePicker-light.png';
+import DatePickerIconDark from '../../public/components/datePicker-dark.png';
 
 export interface ComponentInstance {
   name: string;
@@ -288,7 +292,9 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'datePicker',
     title: 'Date Picker',
     group: 'forms',
-    version: 30
+    version: 30,
+    lightIcon: DatePickerIconLight,
+    darkIcon: DatePickerIconDark
   },
   {
     name: 'filePicker',
@@ -340,7 +346,9 @@ export const COMPONENTS: ComponentInstance[] = [
     name: 'toasts',
     title: 'Toast Notifications',
     group: 'display',
-    version: 30
+    version: 30,
+    lightIcon: ToastsIconLight,
+    darkIcon: ToastsIconDark
   },
   {
     name: 'navigationList',
