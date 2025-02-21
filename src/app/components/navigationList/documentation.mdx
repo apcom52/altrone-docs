@@ -61,11 +61,17 @@ import {NewLabel} from "@/components/NewLabel";
     <NewLabel version={31} />
 
     <PropertiesTable title="Properties" data={NavigationListGroupActionProps} />
+
   </Text.Section>
 
   <Text.Section gap="l">
     ## Link
+
+    In Altrone 3.3 you can create nested links (just put another `<NavigationList.Link>` inside `<NavigationList.Link>`).
+    Nested links have some differences - they are indented and have a different design.
+
     <PropertiesTable title="Properties" data={NavigationListLinkProps} />
+
   </Text.Section>
 
   <Text.Section gap="l">

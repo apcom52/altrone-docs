@@ -1,25 +1,31 @@
-import {PropertiesTable} from "@/components/PropertiesTable";
-import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
-import {Playground} from "@/components/Playground";
-import {BluePrint} from "@/components/BluePrint";
+import { PropertiesTable } from "@/components/PropertiesTable";
+import { ConfigTable } from "@/components/PropertiesTable/ConfigTable";
+import { Playground } from "@/components/Playground";
+import { BluePrint } from "@/components/BluePrint";
 import {
-  DataTableActionProperties, DataTableColumnProperties,
+  DataTableActionProperties,
+  DataTableColumnProperties,
   DataTableProperties,
-  DataTableRenderContextProperties
+  DataTableRenderContextProperties,
 } from "@/app/components/dataTable/properties";
-import {Text} from "altrone-ui";
-import {DataTableDemo} from "@/app/components/dataTable/example";
-import {DataTableCSSVariables} from "@/app/components/dataTable/variables";
-import {CSSVariablesList} from "@/components/CSSVariablesList";
-import {NewLabel} from "@/components/NewLabel";
-import {CodeBlock} from "@/components/CodeBlock";
+import { Text } from "altrone-ui";
+import { DataTableDemo } from "@/app/components/dataTable/example";
+import { DataTableCSSVariables } from "@/app/components/dataTable/variables";
+import { CSSVariablesList } from "@/components/CSSVariablesList";
+import { NewLabel } from "@/components/NewLabel";
+import { CodeBlock } from "@/components/CodeBlock";
 
-<BluePrint title="Data Table" description="This component is used to render big amount of table data" />
+<BluePrint
+  title="Data Table"
+  description="This component is used to render big amount of table data"
+/>
 
 <Text.Section>
 # Usage
 
-  You need to provide API request to the component to upload file automatically
+You need to provide API request to the component to upload file automatically
+
+{/* prettier-ignore-start */}
 
   <Playground code={`import { FilePicker } from 'altrone-ui';
 
@@ -37,64 +43,65 @@ const EMPLOYEES = [
 ]
 
 return <DataTable
-    data={EMPLOYEES}
-    rowsPerPage={6}
-    selectable
-    columns={[
-      {
-        accessor: 'firstName',
-        label: 'Employee',
-        Component: ({ item }) => (
-          <Text.Paragraph>{item.firstName item.lastName}</Text.Paragraph>
-        ),
-      },
-      {
-        accessor: 'role',
-        label: 'Position',
-        filterable: true,
-        searchable: true,
-      },
-      {
-        accessor: 'age',
-        label: 'Age',
-        width: '100px',
-        filterable: true,
-        sortable: true,
-      },
-      {
-        accessor: 'salary',
-        label: 'Salary',
-        width: '150px',
-        filterable: true,
-        sortable: true,
-        Component: ({ value }) => (
-          <Text.Paragraph style={{ width: '100%', textAlign: 'right' }}>
-            {new Intl.NumberFormat('en-US', {
-              style: 'currency',
-              currency: 'USD',
-            }).format(Number(value))}
-          </Text.Paragraph>
-        ),
-      },
-      { accessor: 'phoneNumber', label: 'Phone' },
-      {
-        accessor: 'skills',
-        label: 'Skills',
-        filterable: true,
-        searchable: true,
-        Component: ({ value }) => (
-          <Flex gap="s" wrap>
-            {value.map((skill, skillIndex) => (
-              <Text.Code key={skillIndex}>{skill}</Text.Code>
-            ))}
-          </Flex>
-        ),
-      },
-    ]}
-  />
+  data={EMPLOYEES}
+  rowsPerPage={6}
+  selectable
+  columns={[
+    {
+      accessor: 'firstName',
+      label: 'Employee',
+      Component: ({ item }) => (
+        <Text.Paragraph>{item.firstName} {item.lastName}</Text.Paragraph>
+      ),
+    },
+    {
+      accessor: 'role',
+      label: 'Position',
+      filterable: true,
+      searchable: true,
+    },
+    {
+      accessor: 'age',
+      label: 'Age',
+      width: '100px',
+      filterable: true,
+      sortable: true,
+    },
+    {
+      accessor: 'salary',
+      label: 'Salary',
+      width: '150px',
+      filterable: true,
+      sortable: true,
+      Component: ({ value }) => (
+        <Text.Paragraph style={{ width: '100%', textAlign: 'right' }}>
+        {new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        }).format(Number(value))}
+        </Text.Paragraph>
+      ),
+    },
+    { accessor: 'phoneNumber', label: 'Phone' },
+    {
+      accessor: 'skills',
+      label: 'Skills',
+      filterable: true,
+      searchable: true,
+      Component: ({ value }) => (
+        <Flex gap="s" wrap>
+          {value.map((skill, skillIndex) => (
+            <Text.Code key={skillIndex}>{skill}</Text.Code>
+          ))}
+        </Flex>
+      ),
+    },
+  ]}
+/>
 `}>
-    <DataTableDemo />
+<DataTableDemo />
 </Playground>
+{/* prettier-ignore-end */}
 </Text.Section>
 
 <Text.Section>
@@ -106,25 +113,32 @@ return <DataTable
 <Text.Section>
   # Column configuration
 
-  To render DataTable you need to set columns.
+To render DataTable you need to set columns.
 
-  ## DataTableColumn
+## DataTableColumn
+
   <PropertiesTable title="Properties" data={DataTableColumnProperties} />
 </Text.Section>
 
 <Text.Section>
   # Column types
 
-  <NewLabel version={32} />
+{" "}
 
-  In 3.2 release was added new `type` property to DataTableColumn. This property allows to set column type. Even this property is optional,
-  (Altrone tries to guess the value if the property is not set), we recommend to set it explicitly to avoid unexpected behavior.
+<NewLabel version={32} />
 
-  Value of the property defines how the column will be rendered (if it is currency, it will be aligned to the right, if it is date, it will be formatted as date, etc.).
-  Also it affects filtering and sorting behavior.
+In 3.2 release was added new `type` property to DataTableColumn. This property allows to set column type. Even this property is optional,
+(Altrone tries to guess the value if the property is not set), we recommend to set it explicitly to avoid unexpected behavior.
 
-  Available types:
-  <CodeBlock>{`type DataTableColumnType =
+Value of the property defines how the column will be rendered (if it is currency, it will be aligned to the right, if it is date, it will be formatted as date, etc.).
+Also it affects filtering and sorting behavior.
+
+Available types:
+
+{" "}
+
+<CodeBlock>
+  {`type DataTableColumnType =
 | 'text'
 | 'number'
 | 'boolean'
@@ -133,18 +147,42 @@ return <DataTable
 | 'date'
 | 'month'
 | 'year';`}
-  </CodeBlock>
+</CodeBlock>
 
-  In case when default renderer for the type is not suitable, you can provide custom renderer using `renderFunc` (recommended) or `Component` property.
+In case when default renderer for the type is not suitable, you can provide custom renderer using `renderFunc` (recommended) or `Component` property.
 
-  Also some types support additional options. For example, you can set delimiter for `array` type or currency code for `currency` type.
+Also some types support additional options. For example, you can set delimiter for `array` type or currency code for `currency` type.
 
   <CodeBlock>{`{
   currency: string; // currency code (e.g. 'USD')
   currencyAccessor: keyof T; // accessor for currency code
   arrayDelimiter: string; // delimiter for array type
   arrayAccessor: string; // accessor for array type when array item is a complex object
+  locale: string; // locale for formatting (only in Altrone 3.3+)
 };`}
+  </CodeBlock>
+
+
+  <CodeBlock lang="typescript">{`import { abc } from 'foobar';
+  
+var a = 123;
+let b = 'hello!'!
+const c = a;
+let d: string = 'hello!';
+
+function test(a: number, b: number) {
+  return a + b * 15;
+}
+
+/* big comment section */
+
+const d = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const e = d.a;`}
   </CodeBlock>
 </Text.Section>
 
@@ -157,16 +195,17 @@ return <DataTable
     This subcomponent is used to create custom actions in DataTable header
 
     <PropertiesTable title="Properties" data={DataTableActionProperties} />
+
   </Text.Section>
 </Text.Section>
 
 <Text.Section>
   # Data filtering
 
-  User can create custom filter rules using "Filters" button. Type of the filter depends on `type` property and object field type. To activate filtering
-  at least one of the columns should have enabled `filtering` flag.
+User can create custom filter rules using "Filters" button. Type of the filter depends on `type` property and object field type. To activate filtering
+at least one of the columns should have enabled `filtering` flag.
 
-  User can create unlimited number of filter rules
+User can create unlimited number of filter rules
 
   <Text.Section>
     ## String data filtering
@@ -175,6 +214,7 @@ return <DataTable
     - empty or not empty
     - contains or not contains substring
     - equals or not equals to string
+
   </Text.Section>
 
   <Text.Section>
@@ -185,6 +225,7 @@ return <DataTable
     - equals or not equals to a specific number
     - less, less or equals, greater, greater or equals than specific number
     - between (or not between) two numbers
+
   </Text.Section>
 
   <Text.Section>
@@ -192,6 +233,7 @@ return <DataTable
 
     When the value of the column is array, user can create following filters:
     - has got or hasn't got one of the items
+
   </Text.Section>
 
   <Text.Section>
@@ -200,22 +242,36 @@ return <DataTable
     This feature is available only in Altrone 3.1 or newer.
     When the value of the column is boolean, user can create following filters.:
     - value is positive or negative
+
+  </Text.Section>
+
+  <Text.Section>
+    ## Date data filtering
+
+    This feature is available only in Altrone 3.3 or newer.
+    When the value of the column is date (or month or year), user can create following filters.:
+    - empty or not empty
+    - equals or not equals to a specific date
+    - less, less or equals, greater, greater or equals than specific date
+    - between (or beyond) two dates
+
   </Text.Section>
 </Text.Section>
 
 <Text.Section>
   # Actions
 
-  By default DataTable provides two actions: selectable mode switcher and filtering. But you can create custom actions by providing
-  child elements.
+By default DataTable provides two actions: selectable mode switcher and filtering. But you can create custom actions by providing
+child elements.
 
-  If you want to show some actions only in selectable mode, you need to use function in children prop, where the argument have next values:
+If you want to show some actions only in selectable mode, you need to use function in children prop, where the argument have next values:
 
-  ## DataTableRenderContext
+## DataTableRenderContext
+
   <PropertiesTable data={DataTableRenderContextProperties} />
 </Text.Section>
 
-<Text.Section gap='xl'>
+<Text.Section gap="xl">
   # CSS Variables
   <CSSVariablesList data={DataTableCSSVariables} />
 </Text.Section>

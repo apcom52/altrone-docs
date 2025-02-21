@@ -1,4 +1,4 @@
-import {CSSVariable} from "@/types/Variables";
+import { CSSVariable } from "@/types/Variables";
 
 /*
 --buttonTextColor: var(--default-700);
@@ -81,455 +81,473 @@ import {CSSVariable} from "@/types/Variables";
 
 export const ButtonCSSVariables: CSSVariable[] = [
   {
-    name: 'buttonTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTransparentTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentHoverTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTransparentHoverTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentPressTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTransparentPressTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
 
   // -----
   {
-    name: 'buttonBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonHoverBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonHoverBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPressBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonPressBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonTransparentPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonTransparentPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryHoverBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryHoverBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryPressBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryPressBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonPrimaryTransparentPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonPrimaryTransparentPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessHoverBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessHoverBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessPressBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessPressBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonSuccessTransparentPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonSuccessTransparentPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonWarningBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningHoverBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonWarningHoverBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningPressBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonWarningPressBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonWarningTransparentPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonWarningTransparentPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonDangerBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonDangerBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonDangerHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerHoverBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonDangerHoverBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonDangerPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerPressBorderColor',
-    variant: 'border',
-    type: 'color',
-    version: 30
+    name: "buttonDangerPressBorderColor",
+    variant: "border",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTransparentBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentHoverBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "buttonDangerTransparentHoverBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'buttonDangerTransparentPressBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
-  }
-]
+    name: "buttonDangerTransparentPressBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
+  },
+  {
+    name: "button-disabled-background-color",
+    variant: "surface",
+    type: "color",
+    version: 33,
+  },
+  {
+    name: "button-disabled-border-color",
+    variant: "border",
+    type: "color",
+    version: 33,
+  },
+  {
+    name: "button-disabled-text-color",
+    variant: "text",
+    type: "color",
+    version: 33,
+  },
+];

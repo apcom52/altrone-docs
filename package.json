@@ -14,8 +14,9 @@
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
     "@types/mdx": "^2.0.13",
-    "altrone-ui": "3.2.0-beta",
+    "altrone-ui": "3.3.0-rc",
     "marked": "^12.0.2",
+    "motion": "^12.0.1",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
@@ -31,8 +32,11 @@
     "@types/react-dom": "^18",
     "@types/react-responsive-masonry": "^2.1.3",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "css-loader": "^7.1.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "prettier": "^3.4.2",
+    "style-loader": "^4.0.0",
     "typescript": "^5"
   }
 }

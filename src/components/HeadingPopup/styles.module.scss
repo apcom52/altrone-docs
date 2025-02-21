@@ -1,0 +1,96 @@
+.ComponentsPopup {
+  --topGradient: #ffdde1;
+  --bottomGradient: #ee9ca7;
+  --textColor: black;
+
+  display: flex;
+  align-items: stretch;
+  width: 450px;
+  margin: -8px;
+  border-radius: 6px;
+}
+
+.SidebarStrip {
+  position: relative;
+  width: 54px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  background: linear-gradient(
+    to bottom,
+    var(--topGradient) 0%,
+    var(--bottomGradient) 100%
+  );
+}
+
+.TealColor {
+  --topGradient: #b2dfdb;
+  --bottomGradient: #009688;
+}
+
+.StripLabel {
+  position: absolute;
+  transform-origin: center left;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--textColor);
+  mix-blend-mode: overlay;
+  letter-spacing: 2px;
+  rotate: -90deg;
+  bottom: -2px;
+  line-height: 36px;
+  left: 24px;
+}
+
+.StripIcon {
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  font-size: 32px;
+  color: var(--textColor);
+  mix-blend-mode: overlay;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 16px 32px;
+}
+
+.Group {
+  margin: 16px 0;
+}
+
+.LinkList {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ComponentLink {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  color: var(--default-500);
+  line-height: 12px;
+  cursor: pointer;
+  transition: color 0.2s linear;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--bottomGradient);
+  }
+}
+
+:global(.AltroneDark) {
+  .ComponentsPopup {
+    --topGradient: #880e4f;
+    --bottomGradient: #d81b60;
+    --textColor: black;
+  }
+
+  .TealColor {
+    --topGradient: #00695c;
+    --bottomGradient: #009688;
+    --textColor: black;
+  }
+}

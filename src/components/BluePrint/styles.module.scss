@@ -32,7 +32,9 @@
   mix-blend-mode: color-burn;
 }
 
-.FirstCircle, .SecondCircle, .ThirdCircle {
+.FirstCircle,
+.SecondCircle,
+.ThirdCircle {
   border-radius: 50%;
   position: absolute;
   filter: blur(64px);
@@ -69,7 +71,8 @@
     background-color: #103783;
   }
 
-  .Title, .Description {
+  .Title,
+  .Description {
     color: var(--default-50);
     mix-blend-mode: overlay;
   }

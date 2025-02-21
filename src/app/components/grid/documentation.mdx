@@ -1,0 +1,68 @@
+import {PropertiesTable} from "@/components/PropertiesTable";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {Playground} from "@/components/Playground";
+import {BluePrint} from "@/components/BluePrint";
+import {GridProperties, GridColumnProperties} from "@/app/components/grid/properties";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {Grid} from 'altrone-ui';
+import s from './styles.module.scss';
+
+<BluePrint title="Grid" description="This component is used to make application layout" />
+
+<Text.Section> 
+# Usage
+
+This component is available only in Altrone 3.3 and above.
+
+In Altrone we use 12 column grid system. When you set `size` prop to `12` it will take 100% of the width.
+If total sum of all columns is more than 12, it will be wrapped into additional row. You can also create gaps
+between columns by using `offset` prop.
+
+Using this component you can create complex layouts with ease.
+
+  <Playground code={`import { Grid } from 'altrone-ui';
+
+return <Grid>
+  <Grid.Column size={12}>Header</Grid.Column>
+  <Grid.Column size={4}>Sidebar</Grid.Column>
+  <Grid.Column size={8}>Content</Grid.Column>
+  <Grid.Column size={12}>Footer</Grid.Column>
+</Grid>`}>
+<Grid>
+  <Grid.Column size={12}>
+    <div className={s.GridCell}>Header</div>
+  </Grid.Column>
+  <Grid.Column size={4}>
+    <div className={s.GridCell}>Sidebar</div>
+  </Grid.Column>
+  <Grid.Column size={8}>
+    <div className={s.GridCell}>Content</div>
+  </Grid.Column>
+  <Grid.Column size={12}>
+    <div className={s.GridCell}>Footer</div>
+  </Grid.Column>
+</Grid>
+</Playground>
+</Text.Section>
+
+<Text.Section>
+  # Properties
+
+  <PropertiesTable title="Properties" data={GridProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Subcomponents
+
+## Grid.Column
+
+  <PropertiesTable title="Properties" data={GridColumnProperties} />
+</Text.Section>
+
+<Text.Section>
+# Configuration
+
+This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+
+<ConfigTable filter="grid." />
+</Text.Section>
