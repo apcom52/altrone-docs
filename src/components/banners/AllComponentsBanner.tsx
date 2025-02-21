@@ -3,6 +3,7 @@ import s from "./styles.module.scss";
 import banner from "../../../public/banners/search-banner.webp";
 import clsx from "clsx";
 import Image from "next/image";
+
 export const AllComponentsBanner = memo(() => {
   return (
     <div className={s.Banner}>
@@ -18,3 +19,4 @@ export const AllComponentsBanner = memo(() => {
     </div>
   );
 });
+AllComponentsBanner.displayName = "AllComponentsBanner";

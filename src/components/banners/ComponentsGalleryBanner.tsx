@@ -27,8 +27,6 @@ export const ComponentsGalleryBanner = memo(() => {
     ];
   }, []);
 
-  console.log(components);
-
   return (
     <div className={clsx(s.Banner, s.ComponentsGalleryBanner)}>
       <div className={clsx(s.BannerHeading, "subheader-text")}>

@@ -18,3 +18,4 @@ export const AutocompleteBanner = memo(() => {
     </div>
   );
 });
+AutocompleteBanner.displayName = "AutocompleteBanner";

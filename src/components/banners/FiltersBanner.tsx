@@ -3,6 +3,7 @@ import s from "./styles.module.scss";
 import banner from "../../../public/banners/filters-banner.webp";
 import clsx from "clsx";
 import Image from "next/image";
+
 export const FiltersBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.FiltersBanner)}>
@@ -17,3 +18,4 @@ export const FiltersBanner = memo(() => {
     </div>
   );
 });
+FiltersBanner.displayName = "FiltersBanner";

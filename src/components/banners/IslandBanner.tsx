@@ -3,6 +3,7 @@ import s from "./styles.module.scss";
 import banner from "../../../public/banners/islands-banner.webp";
 import clsx from "clsx";
 import Image from "next/image";
+
 export const IslandBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.IslandBanner)}>
@@ -16,3 +17,4 @@ export const IslandBanner = memo(() => {
     </div>
   );
 });
+IslandBanner.displayName = "IslandBanner";
