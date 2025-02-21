@@ -2,14 +2,7 @@ import { memo, useState } from "react";
 import s from "./styles.module.scss";
 import clsx from "clsx";
 import { motion } from "motion/react";
-import {
-  AltroneApplication,
-  Button,
-  Flex,
-  Form,
-  Icon,
-  Search,
-} from "altrone-ui";
+import { Icon } from "altrone-ui";
 
 export const LightAndDarkThemeBanner = memo(() => {
   const [theme, setTheme] = useState<"light" | "dark">("light");

@@ -1,6 +1,5 @@
 import { memo, useMemo, CSSProperties } from "react";
 import s from "./styles.module.scss";
-import banner from "../../../public/banners/islands-banner.webp";
 import clsx from "clsx";
 import { COMPONENTS } from "@/constants/components";
 import { Button } from "altrone-ui";
@@ -32,7 +31,6 @@ export const ComponentsGalleryBanner = memo(() => {
 
   return (
     <div className={clsx(s.Banner, s.ComponentsGalleryBanner)}>
-      {/* <img src={banner.src} alt="" className={s.Background} /> */}
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         {COMPONENTS.length} components to serve your needs
       </div>

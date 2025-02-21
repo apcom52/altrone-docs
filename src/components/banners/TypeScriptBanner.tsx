@@ -2,11 +2,12 @@ import { memo } from "react";
 import s from "./styles.module.scss";
 import banner from "../../../public/banners/typescript-banner.webp";
 import clsx from "clsx";
+import Image from "next/image";
 
 export const TypeScriptBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.TypescriptBanner, s.BottomBanner)}>
-      <img src={banner.src} alt="" className={s.Background} />
+      <Image src={banner.src} alt="" className={s.Background} />
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         Typified. Totally.
       </div>
