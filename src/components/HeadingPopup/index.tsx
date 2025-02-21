@@ -1,11 +1,6 @@
 import { Flex, Icon, Text } from "altrone-ui";
 import s from "./styles.module.scss";
-import {
-  COMPONENT_GROUPS,
-  ComponentInstance,
-  COMPONENTS,
-  ContainerGroup,
-} from "@/constants/components";
+import { ComponentInstance, ContainerGroup } from "@/constants/components";
 import Link from "next/link";
 import { memo } from "react";
 import clsx from "clsx";

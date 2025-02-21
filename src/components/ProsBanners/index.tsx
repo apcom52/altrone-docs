@@ -1,18 +1,17 @@
 import s from "./styles.module.scss";
-import { Icon, Text } from "altrone-ui";
-import Link from "next/link";
-import { COMPONENTS } from "@/constants/components";
 import { AutocompleteBanner } from "@/components/banners/AutocompleteBanner";
-import { ConfigurableComponents } from "@/components/banners/ConfigurableComponents";
+import { LightAndDarkThemeBanner } from "@/components/banners/LightAndDarkThemeBanner";
 import { TypeScriptBanner } from "@/components/banners/TypeScriptBanner";
-import { AllComponentsBanner } from "@/components/banners/AllComponentsBanner";
+import { IslandBanner } from "../banners/IslandBanner";
+import { ComponentsGalleryBanner } from "../banners/ComponentsGalleryBanner";
+import { FiltersBanner } from "../banners/FiltersBanner";
 
 export const ProsBanners = () => {
   return (
     <div className={s.Wrapper}>
       <div className={s.BannersGrid}>
         <div className={s.LargeBanner}>
-          <ConfigurableComponents />
+          <LightAndDarkThemeBanner />
         </div>
         <div className={s.SmallBanner}>
           <AutocompleteBanner />
@@ -21,13 +20,13 @@ export const ProsBanners = () => {
           <TypeScriptBanner />
         </div>
         <div className={s.SmallBanner}>
-          <ConfigurableComponents />
+          <FiltersBanner />
         </div>
         <div className={s.SmallBanner}>
-          <AutocompleteBanner />
+          <IslandBanner />
         </div>
         <div className={s.LargeBanner}>
-          <AllComponentsBanner />
+          <ComponentsGalleryBanner />
         </div>
       </div>
     </div>

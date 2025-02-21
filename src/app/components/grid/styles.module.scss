@@ -1,0 +1,10 @@
+.GridCell {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+:global(.AltroneDark) .GridCell {
+  background-color: var(--default-900);
+}

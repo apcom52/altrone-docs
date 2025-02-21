@@ -1,6 +1,7 @@
 .ComponentsPopup {
   --topGradient: #ffdde1;
   --bottomGradient: #ee9ca7;
+  --textColor: black;
 
   display: flex;
   align-items: stretch;
@@ -14,11 +15,15 @@
   width: 54px;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
-  background: linear-gradient(to bottom, var(--topGradient) 0% , var(--bottomGradient) 100%);
+  background: linear-gradient(
+    to bottom,
+    var(--topGradient) 0%,
+    var(--bottomGradient) 100%
+  );
 }
 
 .TealColor {
-  --topGradient: #B2DFDB;
+  --topGradient: #b2dfdb;
   --bottomGradient: #009688;
 }
 
@@ -27,7 +32,7 @@
   transform-origin: center left;
   font-size: 24px;
   font-weight: 700;
-  color: black;
+  color: var(--textColor);
   mix-blend-mode: overlay;
   letter-spacing: 2px;
   rotate: -90deg;
@@ -38,10 +43,10 @@
 
 .StripIcon {
   position: absolute;
-  top: 8px;
+  top: 12px;
   left: 8px;
   font-size: 32px;
-  color: black;
+  color: var(--textColor);
   mix-blend-mode: overlay;
 }
 
@@ -70,7 +75,22 @@
   cursor: pointer;
   transition: color 0.2s linear;
 
-  &:hover, &:focus-visible {
+  &:hover,
+  &:focus-visible {
     color: var(--bottomGradient);
+  }
+}
+
+:global(.AltroneDark) {
+  .ComponentsPopup {
+    --topGradient: #880e4f;
+    --bottomGradient: #d81b60;
+    --textColor: black;
+  }
+
+  .TealColor {
+    --topGradient: #00695c;
+    --bottomGradient: #009688;
+    --textColor: black;
   }
 }

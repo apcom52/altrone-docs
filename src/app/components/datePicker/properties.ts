@@ -1,97 +1,111 @@
-import {ComponentDescription} from "@/types/ComponentProperties";
+import { ComponentDescription } from "@/types/ComponentProperties";
 
 export const DatePickerProperties: ComponentDescription = {
-  extends: '<TextInput>',
+  extends: "<TextInput>",
   properties: [
     {
-      name: 'value',
-      type: 'Dayjs',
-      defaultValue: 'undefined',
+      name: "value",
+      type: "Dayjs",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Selected date'
+      description: "Selected date",
     },
     {
-      name: 'onChange',
-      type: '(value?: Dayjs) => void',
-      defaultValue: 'undefined',
+      name: "onChange",
+      type: "(value?: Dayjs) => void",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Callback fires every time when user select a new date'
+      description: "Callback fires every time when user select a new date",
     },
     {
-      name: 'clearable',
-      type: 'boolean',
-      defaultValue: 'false',
+      name: "clearable",
+      type: "boolean",
+      defaultValue: "false",
       version: 30,
-      description: 'Shows "Clear" button when the popover is opened'
+      description: 'Shows "Clear" button when the popover is opened',
     },
     {
-      name: 'format',
-      type: 'string',
-      defaultValue: 'DD.MM.YYYY',
+      name: "format",
+      type: "string",
+      defaultValue: "DD.MM.YYYY",
       version: 30,
-      description: 'Date string format'
+      description: "Date string format",
     },
     {
-      name: 'minDate',
-      type: 'Dayjs',
-      defaultValue: 'undefined',
+      name: "minDate",
+      type: "Dayjs",
+      defaultValue: "undefined",
       version: 30,
-      description: 'User cannot choose any date earlier that this date'
+      description: "User cannot choose any date earlier that this date",
     },
     {
-      name: 'maxDate',
-      type: 'Dayjs',
-      defaultValue: 'undefined',
+      name: "maxDate",
+      type: "Dayjs",
+      defaultValue: "undefined",
       version: 30,
-      description: 'User cannot choose any date later that this date'
-    }
-  ]
-}
+      description: "User cannot choose any date later that this date",
+    },
+    {
+      name: "autoClose",
+      type: "boolean",
+      defaultValue: "true",
+      version: 33,
+      description: "Automatically close the popover when a date is selected",
+    },
+  ],
+};
 
 export const DatePickerRangeProperties: ComponentDescription = {
-  extends: '<TextInput>',
+  extends: "<TextInput>",
   properties: [
     {
-      name: 'value',
-      type: '[Dayjs | undefined, Dayjs | undefined]',
-      defaultValue: 'undefined',
+      name: "value",
+      type: "[Dayjs | undefined, Dayjs | undefined]",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Selected dates'
+      description: "Selected dates",
     },
     {
-      name: 'onChange',
-      type: '(value: [Dayjs | undefined, Dayjs | undefined]) => void',
-      defaultValue: 'undefined',
+      name: "onChange",
+      type: "(value: [Dayjs | undefined, Dayjs | undefined]) => void",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Callback fires every time when user select a new date'
+      description: "Callback fires every time when user select a new date",
     },
     {
-      name: 'clearable',
-      type: 'boolean',
-      defaultValue: 'false',
+      name: "clearable",
+      type: "boolean",
+      defaultValue: "false",
       version: 30,
-      description: 'Shows "Clear" button when the popover is opened'
+      description: 'Shows "Clear" button when the popover is opened',
     },
     {
-      name: 'format',
-      type: 'string',
-      defaultValue: 'DD.MM.YYYY',
+      name: "format",
+      type: "string",
+      defaultValue: "DD.MM.YYYY",
       version: 30,
-      description: 'Date string format'
+      description: "Date string format",
     },
     {
-      name: 'minDate',
-      type: 'Dayjs',
-      defaultValue: 'undefined',
+      name: "minDate",
+      type: "Dayjs",
+      defaultValue: "undefined",
       version: 30,
-      description: 'User cannot choose any date earlier that this date'
+      description: "User cannot choose any date earlier that this date",
     },
     {
-      name: 'maxDate',
-      type: 'Dayjs',
-      defaultValue: 'undefined',
+      name: "maxDate",
+      type: "Dayjs",
+      defaultValue: "undefined",
       version: 30,
-      description: 'User cannot choose any date later that this date'
-    }
-  ]
-}
+      description: "User cannot choose any date later that this date",
+    },
+    {
+      name: "autoClose",
+      type: "boolean",
+      defaultValue: "true",
+      version: 33,
+      description: "Automatically close the popover when a date is selected",
+    },
+  ],
+};

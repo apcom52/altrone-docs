@@ -1,13 +1,10 @@
-'use client';
+"use client";
 
-import 'altrone-ui/dist/style.css';
+import "altrone-ui/dist/style.css";
 import dynamic from "next/dynamic";
 import "./globals.css";
 
-const DynamicLayout = dynamic(
-  () => import("./rootLayout"),
-  { ssr: false }
-)
+const DynamicLayout = dynamic(() => import("./rootLayout"), { ssr: false });
 
 export default function RootLayout({
   children,

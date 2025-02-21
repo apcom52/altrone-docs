@@ -56,7 +56,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           content={
             <Dropdown.Menu>
               <Dropdown.Action
-                label="3.2 Curious CatZilla"
+                label="3.3 Curious CatZilla"
                 icon={<Icon i="check" />}
                 hintText="Latest"
               />
@@ -73,7 +73,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           {({ opened }) => (
             <TopNavigation.Link
               selected={opened}
-              label="v3.2"
+              label="v3.3"
               rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />}
             />
           )}
@@ -122,6 +122,12 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           selected={isBlog}
           leftIcon={<Icon i="feed" />}
           label="Blog"
+        />
+        <TopNavigation.Link
+          href="/roadmap"
+          selected={isBlog}
+          leftIcon={<Icon i="view_agenda" />}
+          label="Roadmap"
         />
         <Button
           onClick={changeTheme}

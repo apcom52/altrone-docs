@@ -1,9 +1,15 @@
 .Banner {
+  --headingTextColor: var(--default-900);
+  --bodyTextColor: var(--default-800);
+
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   height: 100%;
   padding: 32px;
   user-select: none;
+  border-radius: 28px;
 }
 
 .Background {
@@ -16,17 +22,181 @@
   pointer-events: none;
 }
 
+.BottomBanner {
+  justify-content: flex-end;
+}
+
 .BannerHeading {
-  color: var(--default-900);
+  color: var(--headingTextColor);
   margin-bottom: 16px;
 }
 
 .BannerText {
-  color: var(--default-800);
+  color: var(--bodyTextColor);
+}
+
+.TypescriptBanner {
+  --headingTextColor: var(--default-50);
+  --bodyTextColor: var(--default-100);
+}
+
+.FiltersBanner {
+  --headingTextColor: var(--default-50);
+  --bodyTextColor: var(--default-100);
+
+  .BannerHeading,
+  .BannerText {
+    mix-blend-mode: overlay;
+  }
+}
+
+.IslandBanner {
+  justify-content: flex-end;
+}
+
+.ComponentsGalleryBanner {
+  background: linear-gradient(
+    to bottom,
+    var(--default-900) 0%,
+    rgb(14, 19, 75) 100%
+  );
+  --headingTextColor: var(--default-50);
+  --bodyTextColor: var(--default-100);
+  overflow: hidden;
+}
+
+.GalleryGrid {
+  margin-top: 24px;
+}
+
+.GalleryRow {
+  --duration: 3s;
+  --fill-mode: normal;
+
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  animation: scroll-animation var(--duration) linear infinite;
+  animation-direction: var(--direction);
+}
+
+.GalleryIcon {
+  display: flex;
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(32px);
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.1);
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.GalleryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.ThemeBanner {
+  position: relative;
+  --headingTextColor: var(--default-50);
+  --bodyTextColor: var(--default-100);
+  background: radial-gradient(circle at top left, #203a43 0%, #0f2027 100%);
+
+  .BannerHeading,
+  .BannerText {
+    // mix-blend-mode: overlay;
+    text-align: center;
+  }
 }
 
 :global(.AltroneDark) {
   .Banner {
     filter: brightness(0.8);
+  }
+}
+
+.Surface {
+  position: absolute;
+  width: 90%;
+  height: 75%;
+  top: calc(50% - 20px);
+  left: 5%;
+  background-color: var(--glassBackground);
+  border-radius: 24px;
+  backdrop-filter: blur(32px);
+  padding: 80px 48px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.05);
+}
+
+.ThemeSwitcher {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.1);
+  top: 250px;
+  left: calc(50% - 100px);
+  cursor: pointer;
+}
+
+.ThemeSwitcherThumb {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 5px;
+  left: calc(100% - 75px);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(32px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 3px 15px 0 rgba(255, 255, 255, 0.1);
+  z-index: 2;
+}
+
+.ThemeSwitcherDarkIcon {
+  position: absolute;
+  height: 48px;
+  font-size: 48px;
+  left: 40px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(92, 107, 192, 1);
+  text-shadow: 0 0 32px rgba(92, 107, 192, 0.75);
+}
+
+.ThemeSwitcherLightIcon {
+  position: absolute;
+  height: 48px;
+  font-size: 48px;
+  left: calc(100% - 40px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 236, 179, 1);
+  text-shadow: 0 0 32px rgba(255, 236, 179, 0.75);
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
