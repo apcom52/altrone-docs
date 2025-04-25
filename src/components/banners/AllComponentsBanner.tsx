@@ -7,7 +7,13 @@ import Image from "next/image";
 export const AllComponentsBanner = memo(() => {
   return (
     <div className={s.Banner}>
-      <Image src={banner.src} alt="" className={s.Background} />
+      <Image
+        src={banner.src}
+        alt=""
+        className={s.Background}
+        width={1176}
+        height={1024}
+      />
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         48 components to serve you
       </div>

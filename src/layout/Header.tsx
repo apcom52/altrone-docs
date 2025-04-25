@@ -56,7 +56,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           content={
             <Dropdown.Menu>
               <Dropdown.Action
-                label="3.3 Curious CatZilla"
+                label="3.4 Curious CatZilla"
                 icon={<Icon i="check" />}
                 hintText="Latest"
               />
@@ -73,7 +73,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           {({ opened }) => (
             <TopNavigation.Link
               selected={opened}
-              label="v3.3"
+              label="v3.4"
               rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />}
             />
           )}
@@ -87,6 +87,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
               groups={COMPONENT_GROUPS}
               items={COMPONENTS}
               icon="view_carousel"
+              rootHref="components"
             />
           }
         >
@@ -107,6 +108,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
               groups={API_GROUPS}
               items={APIS}
               icon="data_object"
+              rootHref="api"
             />
           }
         >

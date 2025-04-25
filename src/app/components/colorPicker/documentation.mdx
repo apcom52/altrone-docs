@@ -1,0 +1,76 @@
+import {ColorPickerProperties, ColorPresetProperties} from "@/app/components/colorPicker/properties";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
+import {ColorPickerDemo} from "./demo";
+
+<BluePrint 
+  title="ColorPicker" 
+  description="This component is used to pick a color from a palette" 
+  group="Form controls"
+  version={34}
+/>
+
+<Text.Section>
+# Usage
+
+This component could be used in two modes: pick a color from the gallery (set of predefined colors) or pick a color from the RGB palette. 
+You can choose only one mode or both.
+
+In gallery mode you need to provide a list of colors. When color picker is opened, it will show a list of colors and user can pick one of them.
+
+In RGB mode (we call it "palette" mode) you don't need to provide any colors. When color picker is opened, it will show a palette, where user can pick a color by clicking on it.
+User can also pick a color by typing a value in the input field. Also user can set opacity of the color.
+
+<Playground code={`import { ColorPicker, ColorPreset } from 'altrone-ui';
+
+export const COLORS: ColorPreset[] = [
+  {
+    name: "Crimson",
+    title: "Crimson",
+    value: "#DC143C",
+  },
+  {
+    name: "Turquoise",
+    title: "Turquoise",
+    value: "#40E0D0",
+  },
+  ...
+]
+
+function App() {
+  const [color, setColor] = useState<string | undefined>(undefined);
+
+  return <ColorPicker
+    placeholder="Pick a color here"
+    colorPresets={COLORS}
+    value={color}
+    onChange={setColor}
+  />
+}`}>
+  <ColorPickerDemo />
+</Playground>
+</Text.Section>
+
+<Text.Section>
+# Properties
+<PropertiesTable title="Properties" data={ColorPickerProperties} />
+</Text.Section>
+
+<Text.Section>
+# Using ColorPreset
+This type is used to define a color preset (for `colorPresets` prop). Here is the type definition:
+<PropertiesTable title="Properties" data={ColorPresetProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="icon." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - component created
+  </HistoryItem>
+</Text.Section>

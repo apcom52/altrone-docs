@@ -7,7 +7,13 @@ import Image from "next/image";
 export const TypeScriptBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.TypescriptBanner, s.BottomBanner)}>
-      <Image src={banner.src} alt="" className={s.Background} />
+      <Image
+        src={banner.src}
+        alt=""
+        className={s.Background}
+        width={564}
+        height={1024}
+      />
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         Typified. Totally.
       </div>

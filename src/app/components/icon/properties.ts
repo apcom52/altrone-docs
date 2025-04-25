@@ -1,29 +1,35 @@
-import {ComponentDescription} from "@/types/ComponentProperties";
+import { ComponentDescription } from "@/types/ComponentProperties";
 
 export const IconProperties: ComponentDescription = {
-  extends: 'React.HTMLAttributes<HTMLSpanElement>',
+  extends: "React.HTMLAttributes<HTMLSpanElement>",
   properties: [
     {
-      name: 'i',
+      name: "i",
       required: true,
-      type: 'string',
-      defaultValue: 'undefined',
+      type: "string",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Name of the icon'
+      description: "Name of the icon",
     },
     {
-      name: 'size',
-      type: 'string | number',
-      defaultValue: 'undefined',
+      name: "size",
+      type: "string | number",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Custom size of the icon'
+      description: "Custom size of the icon",
+      example: `function App() {
+  return <>
+    <Icon i="check" size={24} />
+    <Icon i="done_all" size="1.25em" />
+  </>
+}`,
     },
     {
-      name: 'iconStyle',
-      type: 'outlined | rounded | sharp',
-      defaultValue: 'outlined',
+      name: "iconStyle",
+      type: "outlined | rounded | sharp",
+      defaultValue: "outlined",
       version: 30,
-      description: 'Style of the icon'
+      description: "Style of the icon",
     },
-  ]
-}
+  ],
+};

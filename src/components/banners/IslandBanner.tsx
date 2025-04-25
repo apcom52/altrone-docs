@@ -7,7 +7,13 @@ import Image from "next/image";
 export const IslandBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.IslandBanner)}>
-      <Image src={banner.src} alt="" className={s.Background} />
+      <Image
+        src={banner.src}
+        alt=""
+        className={s.Background}
+        width={564}
+        height={1024}
+      />
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         Dynamic islands for inputs
       </div>

@@ -1,3 +1,31 @@
+:root {
+  --property-divider: var(--default-200);
+  --property-color: #2f265f;
+  --property-description-color: var(--default-600);
+  --property-type-bg-color: #f4f0fe;
+  --property-type-color: #6e56cf;
+  --property-required-bg-color: #feebe7;
+  --property-required-color: #e54d2e;
+  --property-version-bg-color: #e0f8f3;
+  --property-version-color: #0d9b8a;
+  --property-default-bg-color: #f0f0f0;
+  --property-default-color: #8e8c99;
+}
+
+.AltroneDark {
+  --property-divider: var(--default-700);
+  --property-color: #e2ddfe;
+  --property-description-color: var(--default-200);
+  --property-type-bg-color: #291f43;
+  --property-type-color: #baa7ff;
+  --property-required-bg-color: #391714;
+  --property-required-color: #ff977d;
+  --property-version-bg-color: #0d2d2a;
+  --property-version-color: #0bd8b6;
+  --property-default-bg-color: #222222;
+  --property-default-color: #b4b4b4;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,6 +36,7 @@ html,
 body {
   max-width: 100vw;
   min-height: 100vh;
+  font-family: "Inter Variable", sans-serif;
 }
 
 body {

@@ -366,6 +366,12 @@ export const COMPONENTS: ComponentInstance[] = [
     darkIcon: FilePickerIconDark,
   },
   {
+    name: "colorPicker",
+    title: "Color Picker",
+    group: "forms",
+    version: 34,
+  },
+  {
     name: "calendar",
     title: "Calendar",
     group: "display",
@@ -476,6 +482,18 @@ export const COMPONENTS: ComponentInstance[] = [
     version: 30,
     lightIcon: PaginationIconLight,
     darkIcon: PaginationIconDark,
+  },
+  {
+    name: "avatar",
+    title: "Avatar",
+    group: "atoms",
+    version: 34,
+  },
+  {
+    name: "dummyBox",
+    title: "Dummy Box",
+    group: "atoms",
+    version: 34,
   },
   {
     name: "closeButton",

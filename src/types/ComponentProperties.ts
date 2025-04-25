@@ -6,7 +6,9 @@ export type ComponentType = {
   description: string;
   required?: boolean;
   deprecated?: boolean;
-}
+  richDescription?: string;
+  example?: string;
+};
 
 export interface ComponentDescription {
   extends?: string;

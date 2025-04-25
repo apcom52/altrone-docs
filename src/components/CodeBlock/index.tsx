@@ -3,9 +3,10 @@
 // import { default as darkTheme } from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-dark";
 // import { default as lightTheme } from "react-syntax-highlighter/dist/cjs/styles/hljs/a11y-light";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useMemo, useState } from "react";
 import { useAltroneTheme } from "altrone-ui";
-
+import { codeToHtml } from "shiki";
+import styles from "./styles.module.css";
 interface CodeBlockProps {
   lang?: string;
 }
@@ -58,23 +59,24 @@ export const CodeBlock = ({
   children,
   lang = "typescript",
 }: PropsWithChildren<CodeBlockProps>) => {
+  const [code, setCode] = useState<string>("");
+
   const { theme } = useAltroneTheme();
 
+  useEffect(() => {
+    (async () => {
+      const html = await codeToHtml(String(children), {
+        lang,
+        theme: theme === "dark" ? "github-dark" : "github-light",
+      });
+      setCode(html);
+    })();
+  }, [children, lang, theme]);
+
   return (
-    <SyntaxHighlighter
-      wrapLines
-      wrapLongLines
-      language={lang}
-      style={theme === "dark" ? darkTheme : lightTheme}
-      customStyle={{
-        borderRadius: 8,
-        padding: 16,
-        fontFamily: "JetBrains Mono",
-        background:
-          theme === "dark" ? "var(--default-700)" : "var(--default-100)",
-      }}
-    >
-      {children as string}
-    </SyntaxHighlighter>
+    <div
+      className={styles.CodeBlock}
+      dangerouslySetInnerHTML={{ __html: code }}
+    />
   );
 };

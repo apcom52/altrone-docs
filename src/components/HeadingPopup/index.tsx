@@ -12,6 +12,7 @@ interface HeadingPopupProps {
   stripLabel: string;
   groups: ContainerGroup[];
   items: ComponentInstance[];
+  rootHref: string;
 }
 
 export const HeadingPopup = memo(
@@ -22,6 +23,7 @@ export const HeadingPopup = memo(
     stripLabel,
     groups = [],
     items = [],
+    rootHref,
   }: HeadingPopupProps) => {
     return (
       <div
@@ -52,7 +54,7 @@ export const HeadingPopup = memo(
                       <Link
                         key={component.name}
                         className={s.ComponentLink}
-                        href={`/components/${component.name}`}
+                        href={`/${rootHref}/${component.name}`}
                       >
                         {component.title}
                       </Link>
