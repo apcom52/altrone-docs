@@ -170,6 +170,12 @@
   font-weight: 400;
 }
 
+.PropertyDefault {
+  background-color: var(--property-default-bg-color);
+  color: var(--property-default-color);
+  font-weight: 400;
+}
+
 .PropertyValue {
   font-weight: 600;
 }

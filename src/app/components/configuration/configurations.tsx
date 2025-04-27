@@ -189,6 +189,18 @@ export const CONFIGS: ConfigurationOption[] = [
     description:
       'Custom label for "Show X hidden" button in CollapsedList component',
   },
+  {
+    path: "colorPicker.className",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for ColorPicker component",
+  },
+  {
+    path: "colorPicker.style",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom style object for ColorPicker component",
+  },
 
   {
     path: "dataTable.className",

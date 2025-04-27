@@ -2,6 +2,8 @@
   padding: 16px 12px;
   border-radius: 8px;
   background: var(--default-100);
+  overflow-x: auto;
+  width: 100%;
 }
 
 :global(.AltroneDark) .CodeBlock {

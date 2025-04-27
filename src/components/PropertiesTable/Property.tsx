@@ -45,6 +45,11 @@ export const Property = memo<ComponentType>((property) => {
                 <span className={s.PropertyValue}>{property.defaultValue}</span>
               </span>
             ) : null}
+            {property.deprecated ? (
+              <span className={clsx(s.PropertyMetaItem, s.PropertyRequired)}>
+                Deprecated
+              </span>
+            ) : null}
           </div>
         </div>
         <div className={s.PropertyDescription}>{property.description}</div>
