@@ -1,0 +1,55 @@
+{
+  "versions": [
+    {
+      "numeric": 30,
+      "human": "3.0",
+      "fullTitle": "3.0 Curious CatZilla"
+    },
+    {
+      "numeric": 31,
+      "human": "3.1",
+      "fullTitle": "3.1 Curious CatZilla"
+    },
+    {
+      "numeric": 32,
+      "human": "3.2",
+      "fullTitle": "3.2 Curious CatZilla"
+    },
+    {
+      "numeric": 33,
+      "human": "3.3",
+      "fullTitle": "3.3 Curious CatZilla"
+    },
+    {
+      "numeric": 34,
+      "human": "3.4",
+      "fullTitle": "3.4 Curious CatZilla"
+    },
+    {
+      "numeric": 35,
+      "human": "3.5",
+      "fullTitle": "3.5 Curious CatZilla"
+    }
+  ],
+  "currentVersion": 0,
+  "volumes": [
+    {
+      "id": "QuociX",
+      "title": "Theme",
+      "slug": "theme"
+    },
+    {
+      "id": "5ayZcG",
+      "title": "Components",
+      "slug": "components"
+    }
+  ],
+  "groups": [
+    {
+      "id": "tCMZZ3",
+      "title": "General",
+      "slug": "general",
+      "volumeId": "5ayZcG"
+    }
+  ]
+}
