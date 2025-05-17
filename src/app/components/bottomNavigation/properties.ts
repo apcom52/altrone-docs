@@ -1,51 +1,58 @@
-import {ComponentDescription} from "@/types/ComponentProperties";
+import { ComponentDescription } from "@/types/ComponentProperties";
 
 export const BottomNavigationProps: ComponentDescription = {
-  extends: 'React.HTMLProps<HTMLDivElement>',
+  extends: "React.HTMLProps<HTMLDivElement>",
   properties: [
     {
-      name: 'children',
+      name: "children",
       required: true,
-      type: 'JSX.Element[]',
-      defaultValue: 'undefined',
+      type: "JSX.Element[]",
+      defaultValue: "undefined",
       version: 30,
-      description: 'List of navigation links'
+      description: "List of navigation links",
     },
-  ]
-}
+  ],
+};
 
 export const BottomNavigationLinkProps: ComponentDescription = {
   extends: 'Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "children">',
   properties: [
     {
-      name: 'label',
+      name: "label",
       required: true,
-      type: 'string',
-      defaultValue: 'undefined',
+      type: "string",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Name of the link'
+      description: "Name of the link",
     },
     {
-      name: 'icon',
+      name: "icon",
       required: true,
-      type: 'JSX.Element',
-      defaultValue: 'undefined',
+      type: "JSX.Element",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Icon of the action'
+      description: "Icon of the action",
     },
     {
-      name: 'selected',
-      type: 'boolean',
-      defaultValue: 'false',
+      name: "selected",
+      type: "boolean",
+      defaultValue: "false",
       version: 30,
-      description: 'Shows the link as active'
+      description: "Shows the link as active",
     },
     {
-      name: 'renderFunc',
-      type: 'RenderFuncProp<HTMLAnchorElement, BottomNavigationItemProps>',
-      defaultValue: 'undefined',
-      version: 30,
-      description: 'Custom render func of the link'
+      name: "badge",
+      type: "string | number | JSX.Element",
+      defaultValue: "undefined",
+      version: 34,
+      description: "Shows the badge of the action",
     },
-  ]
-}
+    {
+      name: "renderFunc",
+      type: "RenderFuncProp<HTMLAnchorElement, BottomNavigationItemProps>",
+      defaultValue: "undefined",
+      version: 30,
+      description: "Custom render func of the link",
+    },
+  ],
+};

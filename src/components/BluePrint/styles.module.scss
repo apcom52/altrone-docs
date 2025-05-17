@@ -65,6 +65,30 @@
   top: 14%;
 }
 
+.Meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  z-index: 1;
+}
+
+.LabelContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: 550;
+}
+
+.Label {
+  color: black;
+  font-size: 12px;
+}
+
 :global(.AltroneDark) {
   .BluePrint {
     //background-color: var(--default-800);
@@ -90,5 +114,13 @@
   .ThirdCircle {
     background-color: #f9c58d;
     opacity: 0.65;
+  }
+
+  .LabelContainer {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  .Label {
+    color: white;
   }
 }

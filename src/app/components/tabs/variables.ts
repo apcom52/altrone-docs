@@ -1,4 +1,4 @@
-import {CSSVariable} from "@/types/Variables";
+import { CSSVariable } from "@/types/Variables";
 
 /*
 --tabItemBackgroundColor: transparent;
@@ -11,39 +11,51 @@ import {CSSVariable} from "@/types/Variables";
 
 export const TabsCSSVariables: CSSVariable[] = [
   {
-    name: 'tabItemBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "tabItemBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'tabHoveredItemBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "tabHoveredItemBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'tabSelectedItemBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "tabSelectedItemBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'tabItemTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "tabItemTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'tabHoveredItemTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "tabHoveredItemTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'tabSelectedItemTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "tabSelectedItemTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
-]
+  {
+    name: "tabs-badge-background-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "tabs-badge-text-color",
+    variant: "text",
+    type: "color",
+    version: 34,
+  },
+];

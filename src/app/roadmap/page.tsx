@@ -1,6 +1,8 @@
 "use client";
 import "altrone-ui/dist/style.css";
 import { Text } from "altrone-ui";
+import s from "./layout.module.scss";
+
 export default function Home() {
   return (
     <Text>
@@ -8,12 +10,20 @@ export default function Home() {
       <Text.Section>
         <Text.Heading variant="subheading">In the near future</Text.Heading>
         <Text.List>
+          <Text.ListItem className={s.Finished}>
+            Message component design updates
+          </Text.ListItem>
+          <Text.ListItem className={s.Finished}>
+            New Avatar component
+          </Text.ListItem>
+          <Text.ListItem className={s.Finished}>
+            Allow to pass badges for some components
+          </Text.ListItem>
+          <Text.ListItem className={s.Finished}>
+            New ColorPicker component
+          </Text.ListItem>
           <Text.ListItem>Typography component design updates</Text.ListItem>
-          <Text.ListItem>Message component design updates</Text.ListItem>
-          <Text.ListItem>New Avatar component</Text.ListItem>
-          <Text.ListItem>New Badge component</Text.ListItem>
           <Text.ListItem>New ButtonGroup component</Text.ListItem>
-          <Text.ListItem>New ColorPicker component</Text.ListItem>
           <Text.ListItem>New Range component</Text.ListItem>
           <Text.ListItem>Fixes and other updates</Text.ListItem>
         </Text.List>

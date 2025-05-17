@@ -1,0 +1,57 @@
+import {DummyBoxProperties} from "@/app/components/dummyBox/properties";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
+import { Grid, DummyBox } from "altrone-ui";
+
+<BluePrint 
+  title="DummyBox" 
+  description="This component is used to be a placeholder for content" 
+  group="Atoms"
+  version={34}
+/>
+
+<Text.Section>
+# Usage
+
+When some parts of the page are not ready yet, you can use this component to be a placeholder for content. 
+
+<Playground code={`import { Grid, DummyBox } from 'altrone-ui';
+
+function App() {
+  return <Grid>
+    <Grid.Column size={4} style={{ padding: 8 }}>
+      <DummyBox height="100px" />
+    </Grid.Column>
+    <Grid.Column size={8} style={{ padding: 8 }}>
+      <DummyBox height="100px" />
+    </Grid.Column>
+  </Grid>
+}`}>
+  <Grid>
+    <Grid.Column size={4} style={{ padding: 8 }}>
+      <DummyBox height="100px" />
+    </Grid.Column>
+    <Grid.Column size={8} style={{ padding: 8 }}>
+      <DummyBox height="100px" />
+    </Grid.Column>
+  </Grid>
+</Playground>
+</Text.Section>
+
+<Text.Section>
+# Properties
+<PropertiesTable title="Properties" data={DummyBoxProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="dummyBox." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - component created
+  </HistoryItem>
+</Text.Section>

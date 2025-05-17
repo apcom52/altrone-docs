@@ -7,7 +7,13 @@ import Image from "next/image";
 export const FiltersBanner = memo(() => {
   return (
     <div className={clsx(s.Banner, s.FiltersBanner)}>
-      <Image src={banner.src} alt="" className={s.Background} />
+      <Image
+        src={banner.src}
+        alt=""
+        className={s.Background}
+        width={564}
+        height={1024}
+      />
       <div className={clsx(s.BannerHeading, "subheader-text")}>
         Make complex filters easy
       </div>

@@ -1,4 +1,4 @@
-import {Divider, Icon, Message} from "altrone-ui";
+import {Divider, Icon, Message, Flex} from "altrone-ui";
 import {
   TextCodeProperties, TextHeadingProps, TextInlineProps,
   TextKeyboardProperties,
@@ -11,8 +11,9 @@ import {Playground} from "@/components/Playground";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
 import {TextCSSVariables} from "@/app/components/text/variables";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Text" description="This component is used to render text" />
+<BluePrint title="Text" description="This component is used to render text" group="Typography" version={30} />
 
 <Text.Section>
   # Usage
@@ -24,10 +25,14 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
   into `<Text.Section>`. To render paragraph use `<Text.Paragraph>` component instead.
 </Text.Section>
 
-<Message role="primary">
-  If you want to render a big article, you need to wrap your content into &lt;Text&gt; component. Otherwise you can use
-  subcomponents without `<Text>` wrapper.
-</Message>
+<Flex gap="m" direction="vertical">
+  <Message severity="primary" header="Best practices." onClose={() => {}}>
+    {"If you want to render a big article, you need to wrap your content into &lt;Text&gt; component. Otherwise you can use subcomponents without <Text> wrapper."}
+  </Message>
+  <Message severity="danger" compact header="Upgrade your code." onClose={() => {}} icon={<Icon name="face" />}>
+    {"In Altrone 3.4 the `role` prop for Text.Heading subcomponent is deprecated. Use `ariaRole` prop instead."}
+  </Message>
+</Flex>
 
   <Playground code={`import { Text } from 'altrone-ui';
 
@@ -161,4 +166,16 @@ import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
   # Configuration
   This component has some configuration settings. Use `<Configuration>` component to override component configuration.
   <ConfigTable filter="text." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.1">
+    - added `variant` prop for Text.Heading subcomponent
+    - added `ariaRole` prop for Text.Heading subcomponent
+    - marked `role` prop as deprecated for Text.Heading subcomponent
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

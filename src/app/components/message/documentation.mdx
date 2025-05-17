@@ -5,21 +5,22 @@ import {Icon, Message, Text} from "altrone-ui";
 import {MessageProps} from "@/app/components/message/properties";
 import {MessagesCSSVariables} from "@/app/components/message/variables";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Message" description="This component is used to show important information for user" />
+<BluePrint title="Message" description="This component is used to show important information for user" version={30} group="Display" />
 
 <Text.Section gap='xl'>
   # Usage
 
   <Playground code={`import { Message, Icon } from "altrone-ui";
 
-<Message header="Welcome!" icon={<Icon i="waving_hand" />}>
+<Message header="Welcome!" severity="primary" icon={<Icon i="waving_hand" />}>
   Welcome to our platform! We're excited to have you join our community.
   Explore, learn, and engage with others. If you have any questions, don't
   hesitate to reach out to our support team.
 </Message>
 `}>
-      <Message header="Welcome!" icon={<Icon i="waving_hand" />}>
+      <Message header="Welcome!" severity="primary" icon={<Icon i="waving_hand" />}>
         Welcome to our platform! We're excited to have you join our community.
         Explore, learn, and engage with others. If you have any questions, don't
         hesitate to reach out to our support team.
@@ -41,4 +42,22 @@ import {CSSVariablesList} from "@/components/CSSVariablesList";
   # Configuration
   This component has some configuration settings. Use `<Configuration>` component to override component configuration.
   <ConfigTable filter="message." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - updated design
+    - added `actions` prop
+    - added `onClose` prop
+    - added `compact` prop
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - added `severity` prop
+    - added `ariaRole` prop
+    - marked `role` prop as deprecated
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

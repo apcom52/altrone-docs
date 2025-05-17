@@ -9,8 +9,14 @@ import {
 } from "@/app/components/dropdown/properties";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
 import {DropdownCSSVariables} from "@/app/components/dropdown/variables";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Dropdown" description="This component is used to show popover with menu options" />
+<BluePrint 
+  title="Dropdown" 
+  description="This component is used to show popover with menu options" 
+  version={30}
+  group="Containers"
+/>
 
 <Text.Section gap='xl'>
   # Usage
@@ -160,4 +166,14 @@ import {DropdownCSSVariables} from "@/app/components/dropdown/variables";
 This component has some configuration settings. Use `<Configuration>` component to override component configuration.
 
 <ConfigTable filter="dropdown." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - added `badge` prop for Action subcomponent
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

@@ -7,8 +7,9 @@ import {BluePrint} from "@/components/BluePrint";
 import {ButtonProps} from "@/app/components/button/properties";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
 import {ButtonCSSVariables} from "@/app/components/button/variables";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Button" description="This component is used to render action buttons" />
+<BluePrint title="Button" description="This component is used to render action buttons" group="Form controls" version={30} />
 
 <Text.Section>
 # Usage
@@ -18,24 +19,51 @@ import {ButtonCSSVariables} from "@/app/components/button/variables";
 
   <Playground code={`import { Button, Icon } from 'altrone-ui';
 
-<Button leftIcon={<Icon i="done_all" />} label="Complete all" />
+function App() {
+  return (
+    <Button leftIcon={<Icon i="done_all" />} label="Complete all" />
+  )
+}
 `}>
       <Button leftIcon={<Icon i="done_all" />} label="Complete all" />
     </Playground>
 
 </Text.Section>
 
-# Properties
-
-<PropertiesTable title="Properties" data={ButtonProps} />
+<Text.Section>
+  # Properties
+  <PropertiesTable title="Properties" data={ButtonProps} />
+</Text.Section>
 
 <Text.Section gap='xl'>
   # CSS Variables
   <CSSVariablesList data={ButtonCSSVariables} />
 </Text.Section>
 
-# Configuration
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="button." />
+</Text.Section>
 
-This component has some configuration settings. Use `<Configuration>` component to override component configuration.
-
-<ConfigTable filter="button." />
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - added `badge` prop
+    - added new CSS variables for badge customization
+  </HistoryItem>
+  <HistoryItem version="3.3">
+    - updated design for disabled state
+    - added new CSS variables for disabled state customization
+  </HistoryItem>
+  <HistoryItem version="3.1">
+    - added `severity` prop
+    - added `loading` prop
+    - added `showLabel` prop
+    - added `ariaLabel` prop
+    - marked `role` prop as deprecated
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
+</Text.Section>

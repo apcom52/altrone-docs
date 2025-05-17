@@ -5,8 +5,14 @@ import {BottomNavigation, Icon, Text} from "altrone-ui";
 import {BottomNavigationLinkProps, BottomNavigationProps} from "@/app/components/bottomNavigation/properties";
 import {BottomNavigationCSSVariables} from "@/app/components/bottomNavigation/variables";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Bottom Navigation" description="This component is used to render a navigation for mobile devices" />
+<BluePrint 
+  title="Bottom Navigation" 
+  description="This component is used to render a navigation for mobile devices" 
+  version={30}
+  group="Navigation"
+/>
 
 <Text.Section gap='xl'>
   # Usage
@@ -71,4 +77,14 @@ import {CSSVariablesList} from "@/components/CSSVariablesList";
   # Configuration
   This component has some configuration settings. Use `<Configuration>` component to override component configuration.
   <ConfigTable filter="bottomNavigation." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - added `badge` prop for Item subcomponent
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

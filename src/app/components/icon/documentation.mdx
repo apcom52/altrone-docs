@@ -1,8 +1,9 @@
 import {IconProperties} from "@/app/components/icon/properties";
 import {Icon} from "altrone-ui";
 import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="Icon" description="This component is used to render icon" />
+<BluePrint title="Icon" description="This component is used to render icon" group="Typography" version={30} />
 
 <Text.Section>
 # Usage
@@ -16,15 +17,30 @@ Altrone uses [Google Material Icons](https://fonts.google.com/icons) out-of-box,
 
 <Playground code={`import { Icon } from 'altrone-ui';
 
-<Icon i="face" />`}>
+function App() {
+  return <Icon i="face" />
+}`}>
   <Icon i="face" />
 </Playground>
 </Text.Section>
 
+<Text.Section>
+# Properties
 <PropertiesTable title="Properties" data={IconProperties} />
+</Text.Section>
 
-<Text.Section gap="xl">
+<Text.Section>
   # Configuration
   This component has some configuration settings. Use `<Configuration>` component to override component configuration.
   <ConfigTable filter="icon." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.1">
+    - accessibility improvements
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

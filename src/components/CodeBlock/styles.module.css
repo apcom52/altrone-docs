@@ -1,0 +1,16 @@
+.CodeBlock {
+  padding: 16px 12px;
+  border-radius: 8px;
+  background: var(--default-100);
+  overflow-x: auto;
+  width: 100%;
+}
+
+:global(.AltroneDark) .CodeBlock {
+  background: var(--default-800);
+}
+
+.CodeBlock :global(pre) {
+  background: transparent !important;
+  border: none !important;
+}

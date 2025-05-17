@@ -50,6 +50,12 @@ import ToastsIconLight from "../../public/components/toasts-light.png";
 import ToastsIconDark from "../../public/components/toasts-dark.png";
 import DatePickerIconLight from "../../public/components/datePicker-light.png";
 import DatePickerIconDark from "../../public/components/datePicker-dark.png";
+import ColorPickerIconLight from "../../public/components/colorPicker-light.png";
+import ColorPickerIconDark from "../../public/components/colorPicker-dark.png";
+import AvatarIconLight from "../../public/components/avatar-light.png";
+import AvatarIconDark from "../../public/components/avatar-dark.png";
+import DummyBoxIconLight from "../../public/components/dummyBox-light.png";
+import DummyBoxIconDark from "../../public/components/dummyBox-dark.png";
 
 import FormIconLight from "../../public/components/form-light.png";
 import FormIconDark from "../../public/components/form-dark.png";
@@ -366,6 +372,14 @@ export const COMPONENTS: ComponentInstance[] = [
     darkIcon: FilePickerIconDark,
   },
   {
+    name: "colorPicker",
+    title: "Color Picker",
+    group: "forms",
+    version: 34,
+    lightIcon: ColorPickerIconLight,
+    darkIcon: ColorPickerIconDark,
+  },
+  {
     name: "calendar",
     title: "Calendar",
     group: "display",
@@ -476,6 +490,22 @@ export const COMPONENTS: ComponentInstance[] = [
     version: 30,
     lightIcon: PaginationIconLight,
     darkIcon: PaginationIconDark,
+  },
+  {
+    name: "avatar",
+    title: "Avatar",
+    group: "atoms",
+    version: 34,
+    lightIcon: AvatarIconLight,
+    darkIcon: AvatarIconDark,
+  },
+  {
+    name: "dummyBox",
+    title: "Dummy Box",
+    group: "atoms",
+    version: 34,
+    lightIcon: DummyBoxIconLight,
+    darkIcon: DummyBoxIconDark,
   },
   {
     name: "closeButton",

@@ -58,7 +58,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "autocompleteInput.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for AutocompleteInput component",
@@ -69,6 +69,18 @@ export const CONFIGS: ConfigurationOption[] = [
     availableSince: 31,
     description: "Shows additional controls for AutocompleteInput",
   },
+  {
+    path: "avatar.className",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for Avatar component",
+  },
+  {
+    path: "avatar.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description: "Additional custom style object for Avatar component",
+  },
 
   {
     path: "bottomNavigation.className",
@@ -78,7 +90,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "bottomNavigation.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for BottomNavigation component",
@@ -90,6 +102,32 @@ export const CONFIGS: ConfigurationOption[] = [
     description:
       "Additional custom className for selected BottomNavigation.Item",
   },
+  {
+    path: "bottomNavigation.item.className",
+    type: "string",
+    availableSince: 34,
+    description:
+      "Additional custom className for BottomNavigation.Item subcomponent",
+  },
+  {
+    path: "bottomNavigation.item.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description:
+      "Additional custom style object for BottomNavigation.Item subcomponent",
+  },
+  {
+    path: "bottomNavigation.item.selectedItemClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for selected items",
+  },
+  {
+    path: "bottomNavigation.item.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
+  },
 
   {
     path: "breadcrumbs.className",
@@ -99,7 +137,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "breadcrumbs.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Breadcrumbs component",
   },
@@ -112,7 +150,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "button.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Button component",
   },
@@ -123,6 +161,12 @@ export const CONFIGS: ConfigurationOption[] = [
     description:
       "Enables the rainbow effect for Button component. Default value is true",
   },
+  {
+    path: "button.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
+  },
 
   {
     path: "calendar.className",
@@ -132,7 +176,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "calendar.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Calendar component",
   },
@@ -145,7 +189,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "checkbox.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Checkbox component",
   },
@@ -158,7 +202,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "closeButton.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for CloseButton component",
   },
@@ -171,7 +215,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "collapsedList.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for CollapsedList component",
   },
@@ -189,6 +233,18 @@ export const CONFIGS: ConfigurationOption[] = [
     description:
       'Custom label for "Show X hidden" button in CollapsedList component',
   },
+  {
+    path: "colorPicker.className",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for ColorPicker component",
+  },
+  {
+    path: "colorPicker.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description: "Additional custom style object for ColorPicker component",
+  },
 
   {
     path: "dataTable.className",
@@ -198,7 +254,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dataTable.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for DataTable component",
   },
@@ -211,7 +267,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "datePicker.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for DatePicker component",
   },
@@ -269,7 +325,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "divider.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Calendar component",
   },
@@ -282,7 +338,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Dropdown component",
   },
@@ -300,7 +356,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.menu.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for Dropdown.Menu subcomponent",
@@ -313,10 +369,16 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.action.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for Dropdown.Action subcomponent",
+  },
+  {
+    path: "dropdown.action.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
   },
   {
     path: "dropdown.checkbox.className",
@@ -327,7 +389,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.checkbox.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for Dropdown.Checkbox subcomponent",
@@ -341,7 +403,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.radioList.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for Dropdown.RadioList subcomponent",
@@ -355,7 +417,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.radioItem.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for Dropdown.RadioItem subcomponent",
@@ -369,10 +431,22 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "dropdown.childMenu.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for nested Dropdown.Menu subcomponent",
+  },
+  {
+    path: "dummyBox.className",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for DummyBox component",
+  },
+  {
+    path: "dummyBox.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description: "Additional custom style object for DummyBox component",
   },
 
   {
@@ -383,7 +457,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "filePicker.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for FilePicker component",
   },
@@ -396,7 +470,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "flex.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Flex component",
   },
@@ -409,7 +483,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "form.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Form component",
   },
@@ -421,7 +495,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "form.field.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Form.Field component",
   },
@@ -434,7 +508,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "grid.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 33,
     description: "Additional custom style object for Grid component",
   },
@@ -446,7 +520,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "grid.column.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 33,
     description: "Additional custom style object for Grid.Column component",
   },
@@ -459,7 +533,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "icon.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Icon component",
   },
@@ -472,7 +546,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "list.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for List component",
   },
@@ -485,7 +559,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "loading.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Loading component",
   },
@@ -504,7 +578,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "message.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Message component",
   },
@@ -517,7 +591,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "modal.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Modal component",
   },
@@ -530,7 +604,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "navigationList.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for NavigationList component",
   },
@@ -549,7 +623,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "navigationList.group.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 31,
     description:
       "Additional custom style object for NavigationList.Group subcomponent",
@@ -563,7 +637,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "navigationList.groupAction.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 31,
     description:
       "Additional custom style object for NavigationList.GroupAction subcomponent",
@@ -577,10 +651,16 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "navigationList.link.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 31,
     description:
       "Additional custom style object for NavigationList.Link subcomponent",
+  },
+  {
+    path: "navigationList.link.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
   },
   {
     path: "navigationList.linkAction.className",
@@ -591,7 +671,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "navigationList.linkAction.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 32,
     description:
       "Additional custom style object for NavigationList.LinkAction subcomponent",
@@ -605,7 +685,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "numberInput.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for NumberInput component",
   },
@@ -637,7 +717,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "pagination.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Pagination component",
   },
@@ -650,7 +730,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "passwordInput.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for PasswordInput component",
   },
@@ -669,7 +749,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "photoViewer.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for PhotoViewer component",
   },
@@ -688,7 +768,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "popover.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Popover component",
   },
@@ -701,7 +781,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "progress.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Progress component",
   },
@@ -721,7 +801,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "radio.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Radio component",
   },
@@ -734,7 +814,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "scrollable.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Scrollable component",
   },
@@ -747,7 +827,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "search.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Search component",
   },
@@ -766,7 +846,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "select.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Scrollable component",
   },
@@ -779,7 +859,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "sideNavigation.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Scrollable component",
   },
@@ -804,7 +884,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "spoiler.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Spoiler component",
   },
@@ -817,7 +897,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "switcher.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Switcher component",
   },
@@ -830,7 +910,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "tabs.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Tabs component",
   },
@@ -841,6 +921,30 @@ export const CONFIGS: ConfigurationOption[] = [
     description:
       "Enables rainbow effect for Tabs component. Default value is true",
   },
+  {
+    path: "tabs.item.className",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for Tabs.Item subcomponent",
+  },
+  {
+    path: "tabs.item.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description: "Additional custom style object for Tabs.Item subcomponent",
+  },
+  {
+    path: "tabs.item.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
+  },
+  {
+    path: "tabs.item.selectedClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for selected links",
+  },
 
   {
     path: "tags.className",
@@ -850,7 +954,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "tags.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Tags component",
   },
@@ -863,7 +967,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text component",
   },
@@ -875,7 +979,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.section.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Section component",
   },
@@ -887,7 +991,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.screenName.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.ScreenName component",
   },
@@ -899,7 +1003,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.heading.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Heading component",
   },
@@ -911,7 +1015,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.paragraph.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Paragraph component",
   },
@@ -923,7 +1027,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.inline.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Inline component",
   },
@@ -935,7 +1039,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.code.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Code component",
   },
@@ -947,7 +1051,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.keyboard.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.Keyboard component",
   },
@@ -959,7 +1063,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.list.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.List component",
   },
@@ -971,7 +1075,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "text.listItem.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Text.ListItem component",
   },
@@ -984,7 +1088,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textarea.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Switcher component",
   },
@@ -997,7 +1101,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for TextInput component",
   },
@@ -1017,7 +1121,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.textIsland.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for TextInput.TextIsland subcomponent",
@@ -1031,7 +1135,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.iconIsland.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for TextInput.IconIsland subcomponent",
@@ -1045,7 +1149,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.actionIsland.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for TextInput.ActionIsland subcomponent",
@@ -1059,7 +1163,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.loadingIsland.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 31,
     description:
       "Additional custom style object for TextInput.LoadingIsland subcomponent",
@@ -1074,7 +1178,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "textInput.customIsland.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description:
       "Additional custom style object for TextInput.CustomIsland subcomponent",
@@ -1088,7 +1192,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "toolbar.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Toolbar component",
   },
@@ -1101,8 +1205,20 @@ export const CONFIGS: ConfigurationOption[] = [
   {
     path: "toolbar.action.className",
     type: "string",
-    availableSince: 30,
+    availableSince: 34,
     description: "Additional custom className for Toolbar.Action component",
+  },
+  {
+    path: "toolbar.action.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description: "Additional custom style object for Toolbar.Action component",
+  },
+  {
+    path: "toolbar.action.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
   },
 
   {
@@ -1113,7 +1229,7 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "tooltip.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Tooltip component",
   },
@@ -1126,8 +1242,28 @@ export const CONFIGS: ConfigurationOption[] = [
   },
   {
     path: "topNavigation.style",
-    type: "string",
+    type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for TopNavigation component",
+  },
+  {
+    path: "topNavigation.link.className",
+    type: "string",
+    availableSince: 34,
+    description:
+      "Additional custom className for TopNavigation.Link subcomponent",
+  },
+  {
+    path: "topNavigation.link.style",
+    type: "React.CSSProperties",
+    availableSince: 34,
+    description:
+      "Additional custom style object for TopNavigation.Link subcomponent",
+  },
+  {
+    path: "topNavigation.link.badgeClassName",
+    type: "string",
+    availableSince: 34,
+    description: "Additional custom className for badges",
   },
 ];

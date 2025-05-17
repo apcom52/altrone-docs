@@ -1,4 +1,4 @@
-import {CSSVariable} from "@/types/Variables";
+import { CSSVariable } from "@/types/Variables";
 
 /**
  * --toolbarActionTextColor: var(--default-700);
@@ -10,33 +10,45 @@ import {CSSVariable} from "@/types/Variables";
 
 export const ToolbarCSSVariables: CSSVariable[] = [
   {
-    name: 'toolbarActionTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "toolbarActionTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'toolbarActionHoveredBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "toolbarActionHoveredBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'toolbarActionHoveredTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "toolbarActionHoveredTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'toolbarActionPressedBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "toolbarActionPressedBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'toolbarActionPressedTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "toolbarActionPressedTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
-]
+  {
+    name: "toolbar-action-badge-background-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "toolbar-action-badge-text-color",
+    variant: "text",
+    type: "color",
+    version: 34,
+  },
+];

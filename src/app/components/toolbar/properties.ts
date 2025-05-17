@@ -1,85 +1,92 @@
-import {ComponentDescription} from "@/types/ComponentProperties";
+import { ComponentDescription } from "@/types/ComponentProperties";
 
 export const ToolbarProps: ComponentDescription = {
-  extends: 'React.HTMLAttributes<HTMLDivElement>',
+  extends: "React.HTMLAttributes<HTMLDivElement>",
   properties: [
     {
-      name: 'children',
+      name: "children",
       required: true,
-      type: 'JSX.Element[]',
-      defaultValue: 'undefined',
+      type: "JSX.Element[]",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Nested toolbar groups and actions'
+      description: "Nested toolbar groups and actions",
     },
     {
-      name: 'compact',
-      type: 'boolean',
-      defaultValue: 'false',
+      name: "compact",
+      type: "boolean",
+      defaultValue: "false",
       version: 30,
-      description: 'Makes the toolbar compact'
+      description: "Makes the toolbar compact",
     },
-  ]
-}
+  ],
+};
 
 export const ToolbarGroupProps: ComponentDescription = {
-  extends: 'React.HTMLAttributes<HTMLDivElement>',
+  extends: "React.HTMLAttributes<HTMLDivElement>",
   properties: [
     {
-      name: 'children',
+      name: "children",
       required: true,
-      type: 'JSX.Element[]',
-      defaultValue: 'undefined',
+      type: "JSX.Element[]",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Child toolbar actions'
+      description: "Child toolbar actions",
     },
     {
-      name: 'align',
-      type: 'Align',
-      defaultValue: 'start',
+      name: "align",
+      type: "Align",
+      defaultValue: "start",
       version: 30,
-      description: 'Alignment of the child actions'
+      description: "Alignment of the child actions",
     },
-  ]
-}
+  ],
+};
 
 export const ToolbarActionProps: ComponentDescription = {
-  extends: 'React.ButtonHTMLAttributes<HTMLButtonElement>',
+  extends: "React.ButtonHTMLAttributes<HTMLButtonElement>",
   properties: [
     {
-      name: 'label',
+      name: "label",
       required: true,
-      type: 'string',
-      defaultValue: 'undefined',
+      type: "string",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Label of the action'
+      description: "Label of the action",
     },
     {
-      name: 'icon',
-      type: 'JSX.Element',
-      defaultValue: 'undefined',
+      name: "icon",
+      type: "JSX.Element",
+      defaultValue: "undefined",
       version: 30,
-      description: 'Icon of the action'
+      description: "Icon of the action",
     },
     {
-      name: 'children',
-      type: 'JSX.Element',
-      defaultValue: 'undefined',
+      name: "children",
+      type: "JSX.Element",
+      defaultValue: "undefined",
       version: 30,
-      description: 'If the prop is set then Altrone shows it instead of icon'
+      description: "If the prop is set then Altrone shows it instead of icon",
     },
     {
-      name: 'showLabel',
-      type: 'boolean',
-      defaultValue: 'true',
+      name: "showLabel",
+      type: "boolean",
+      defaultValue: "true",
       version: 30,
-      description: 'Shows the label of the action'
+      description: "Shows the label of the action",
     },
     {
-      name: 'renderFunc',
-      type: 'RenderFunc<HTMLButtonElement, ToolbarActionProps & { compact: boolean }>',
-      defaultValue: 'undefined',
-      version: 30,
-      description: 'Custom render function for the action'
+      name: "badge",
+      type: "string | number | JSX.Element",
+      defaultValue: "undefined",
+      version: 34,
+      description: "Shows the badge of the action",
     },
-  ]
-}
+    {
+      name: "renderFunc",
+      type: "RenderFunc<HTMLButtonElement, ToolbarActionProps & { compact: boolean }>",
+      defaultValue: "undefined",
+      version: 30,
+      description: "Custom render function for the action",
+    },
+  ],
+};

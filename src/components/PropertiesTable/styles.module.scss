@@ -9,20 +9,21 @@
   color: var(--primary-600);
   text-decoration: none;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     text-decoration: underline;
   }
 }
 
 .PropNameColumn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   font-size: var(--smallParagraphFontSize);
   line-height: var(--smallParagraphLineHeight);
-  font-weight: 600;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--default-900);
+  font-weight: 550;
+  font-family: "JetBrains Mono Variable", monospace;
+  color: #1f2d5c;
   gap: 2px;
 }
 
@@ -30,7 +31,7 @@
   font-size: var(--smallParagraphFontSize);
   line-height: var(--smallParagraphLineHeight);
   font-weight: 400;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   color: var(--default-600);
   max-width: 240px;
   min-width: 80px;
@@ -61,14 +62,14 @@
   padding: 1px 4px;
   border-radius: 4px;
   font-size: 14px;
-  background-color: #7E57C2;
+  background-color: #7e57c2;
   color: var(--buttonDangerTextColor);
   gap: 2px;
 
   i {
     font-size: 10px;
     font-style: normal;
-  };
+  }
 }
 
 :global(.AltroneDark) {
@@ -85,6 +86,109 @@
   }
 
   .NewLabel {
-    background-color: #4527A0;
+    background-color: #4527a0;
   }
+}
+
+.PropertyTableWrapper {
+  padding: 12px 0;
+}
+
+.PropertyWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 12px;
+  border-bottom: 1px solid var(--property-divider);
+
+  &:first-of-type {
+    border-top: 1px solid var(--property-divider);
+  }
+}
+
+.Property {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.PropertyHeader {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 8px;
+}
+
+.PropertyName {
+  font-family: "JetBrains Mono Variable", monospace;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 650;
+  color: var(--property-color);
+}
+
+.PropertyMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "JetBrains Mono Variable", monospace;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 450;
+  color: #8e8c99;
+  margin: 0 -4px;
+  gap: 4px;
+}
+
+.PropertyMetaItem {
+  display: inline;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono Variable", monospace;
+  font-size: 12px;
+}
+
+.PropertyType {
+  background-color: var(--property-type-bg-color);
+  color: var(--property-type-color);
+}
+
+.PropertyRequired {
+  background-color: var(--property-required-bg-color);
+  color: var(--property-required-color);
+}
+
+.PropertyVersion {
+  background-color: var(--property-version-bg-color);
+  color: var(--property-version-color);
+  font-weight: 400;
+}
+
+.PropertyDefault {
+  background-color: var(--property-default-bg-color);
+  color: var(--property-default-color);
+  font-weight: 400;
+}
+
+.PropertyDeprecated {
+  background-color: #f5a898;
+  color: #5c271f;
+  font-weight: 400;
+}
+
+.PropertyValue {
+  font-weight: 600;
+}
+
+.PropertyDescription {
+  font-family: "Inter Variable", sans-serif;
+  flex: 1;
+  color: var(--property-description-color);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.PropertyNameDeprecated {
+  text-decoration: line-through;
+  color: var(--default-400);
 }
