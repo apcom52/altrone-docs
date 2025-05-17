@@ -1,82 +1,136 @@
-import {CSSVariable} from "@/types/Variables";
+import { CSSVariable } from "@/types/Variables";
 
 export const MessagesCSSVariables: CSSVariable[] = [
   {
-    name: 'primaryHeadingTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "primaryHeadingTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'successHeadingTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "successHeadingTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'warningHeadingTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "warningHeadingTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'dangerHeadingTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "dangerHeadingTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'primaryBodyTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "primaryBodyTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'successBodyTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "successBodyTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'warningBodyTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "warningBodyTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'dangerBodyTextColor',
-    variant: 'text',
-    type: 'color',
-    version: 30
+    name: "dangerBodyTextColor",
+    variant: "text",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'messageBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "messageBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'messagePrimaryBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "messagePrimaryBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'messageSuccessBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "messageSuccessBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'messageWarningBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "messageWarningBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
   {
-    name: 'messageDangerBackgroundColor',
-    variant: 'surface',
-    type: 'color',
-    version: 30
+    name: "messageDangerBackgroundColor",
+    variant: "surface",
+    type: "color",
+    version: 30,
   },
-]
+  {
+    name: "message-background-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-heading-color",
+    variant: "text",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-body-color",
+    variant: "text",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-close-button-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-left-border-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-icon-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "message-padding",
+    variant: "size",
+    type: "number",
+    version: 34,
+  },
+  {
+    name: "message-rounding",
+    variant: "rounding",
+    type: "number",
+    version: 34,
+  },
+  {
+    name: "message-border-width",
+    variant: "size",
+    type: "number",
+    version: 34,
+  },
+];

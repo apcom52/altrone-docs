@@ -170,9 +170,9 @@
   font-weight: 400;
 }
 
-.PropertyDefault {
-  background-color: var(--property-default-bg-color);
-  color: var(--property-default-color);
+.PropertyDeprecated {
+  background-color: #f5a898;
+  color: #5c271f;
   font-weight: 400;
 }
 
@@ -186,4 +186,9 @@
   color: var(--property-description-color);
   font-size: 14px;
   font-weight: 400;
+}
+
+.PropertyNameDeprecated {
+  text-decoration: line-through;
+  color: var(--default-400);
 }

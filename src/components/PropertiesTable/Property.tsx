@@ -13,7 +13,14 @@ export const Property = memo<ComponentType>((property) => {
     <div className={s.PropertyWrapper}>
       <div className={s.Property}>
         <div className={s.PropertyHeader}>
-          <div className={s.PropertyName}>{property.name}</div>
+          <div
+            className={clsx(
+              s.PropertyName,
+              property.deprecated && s.PropertyNameDeprecated,
+            )}
+          >
+            {property.name}
+          </div>
           <div className={s.PropertyMeta}>
             {property.example ? (
               <Button

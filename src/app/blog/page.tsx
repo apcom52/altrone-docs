@@ -5,5 +5,5 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const { replace } = useRouter();
 
-  replace(`/blog/release-3.3`);
+  replace(`/blog/release-3.4`);
 }

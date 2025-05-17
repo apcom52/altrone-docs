@@ -30,5 +30,9 @@ import {NewLabel} from "@/components/NewLabel";
     <CodeBlock children={`static getNumberDelimitersByLocale(locale: string) => { decimal: string, grouping: string }`} />
     <NewLabel version={32} />
     Returns decimal and grouping delimiters for the specified locale.
+
+    <CodeBlock children={`static getColorLuminance(color: string) => 'light' | 'dark'`} />
+    <NewLabel version={34} />
+    Returns `light` or `dark` string depending on the luminance of the specified color.
   </Text.Section>
 </Text.Section>

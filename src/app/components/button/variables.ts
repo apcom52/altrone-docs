@@ -550,4 +550,16 @@ export const ButtonCSSVariables: CSSVariable[] = [
     type: "color",
     version: 33,
   },
+  {
+    name: "button-badge-background-color",
+    variant: "surface",
+    type: "color",
+    version: 34,
+  },
+  {
+    name: "button-badge-text-color",
+    variant: "text",
+    type: "color",
+    version: 34,
+  },
 ];

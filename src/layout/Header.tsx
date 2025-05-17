@@ -40,6 +40,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
   const isComponents = pathname.startsWith("/components");
   const isAPI = pathname.startsWith("/api");
   const isBlog = pathname.startsWith("/blog");
+  const isRoadmap = pathname.startsWith("/roadmap");
 
   return (
     <TopNavigation className={s.Header}>
@@ -127,7 +128,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
         />
         <TopNavigation.Link
           href="/roadmap"
-          selected={isBlog}
+          selected={isRoadmap}
           leftIcon={<Icon i="view_agenda" />}
           label="Roadmap"
         />

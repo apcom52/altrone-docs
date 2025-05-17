@@ -11,8 +11,14 @@ import {
 import {NavigationListCSSVariables} from "@/app/components/navigationList/variables";
 import {CSSVariablesList} from "@/components/CSSVariablesList";
 import {NewLabel} from "@/components/NewLabel";
+import {HistoryItem} from "@/components/HistoryItem";
 
-<BluePrint title="NavigationList" description="This component is used to render a navigation throughout your application" />
+<BluePrint 
+  title="NavigationList" 
+  description="This component is used to render a navigation throughout your application" 
+  version={30}
+  group="Navigation"
+/>
 
 <Text.Section gap='xl'>
   # Usage
@@ -90,4 +96,27 @@ import {NewLabel} from "@/components/NewLabel";
   # Configuration
   This component has some configuration settings. Use `<Configuration>` component to override component configuration.
   <ConfigTable filter="navigationList." />
+</Text.Section>
+
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - added `badge` prop for Item subcomponent
+  </HistoryItem>
+  <HistoryItem version="3.2">
+    - added nested `Link` subcomponent
+    - added new CSS variables
+  </HistoryItem>
+  <HistoryItem version="3.2">
+    - added `LinkAction` subcomponent
+  </HistoryItem>
+  <HistoryItem version="3.1">
+    - added `GroupAction` subcomponent
+    - added new configuration options for `Group`, `Link` and new `GroupAction` subcomponents
+    - added new CSS variables
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

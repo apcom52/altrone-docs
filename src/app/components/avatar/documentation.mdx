@@ -1,0 +1,55 @@
+import {AvatarProperties} from "@/app/components/avatar/properties";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
+import { Avatar, Flex } from "altrone-ui";
+
+<BluePrint 
+  title="Avatar" 
+  description="This component is used to display user avatar (photo or initials)" 
+  group="Atoms"
+  version={34}
+/>
+
+<Text.Section>
+# Usage
+
+The purpose of this component is very simple - to display user avatar (it could be photo or initials). When user has no photo, initials are displayed.
+
+By default when initials are displayed, the component shows first letter of the first name and last name. But last name is optional, so when it is not provided, only first letter of the first name will be displayed.
+
+<Playground code={`import { Flex, Avatar } from 'altrone-ui';
+
+function App() {
+  return <Flex gap="l">
+    <Avatar firstName="Severus" lastName="Snape" />
+    <Avatar firstName="Albus" lastName="Dumbledore" color="#6E56CF" />
+    <Avatar firstName="Voldemort" color="#56BA9F" />
+    <Avatar firstName="Bellatrix" lastName="Lestrange" color="#008573" imageSrc='https://pm1.aminoapps.com/6210/4c1e091ebb2bb32fe4b15fcb996ed6477480dbd9_128.jpg' />
+  </Flex>
+}`}>
+  <Flex gap="l">
+    <Avatar firstName="Severus" lastName="Snape" />
+    <Avatar firstName="Albus" lastName="Dumbledore" color="#6E56CF" />
+    <Avatar firstName="Voldemort" color="#56BA9F" />
+    <Avatar firstName="Bellatrix" lastName="Lestrange" color="#008573" imageSrc='https://pm1.aminoapps.com/6210/4c1e091ebb2bb32fe4b15fcb996ed6477480dbd9_128.jpg' />
+  </Flex>
+</Playground>
+</Text.Section>
+
+<Text.Section>
+# Properties
+<PropertiesTable title="Properties" data={AvatarProperties} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="avatar." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.4">
+    - component created
+  </HistoryItem>
+</Text.Section>
