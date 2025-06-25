@@ -40,35 +40,58 @@ export const CMSVersions = () => {
         type: "text",
         label: "Full title",
       },
-      {
-        accessor: "numeric",
-        type: "text",
-        label: "Actions",
-        renderFunc: (ref, { value, item }) => {
-          return (
-            <Flex gap="s">
-              {value !== currentVersion && (
-                <Button
-                  label="Set as current"
-                  onClick={() => setCurrentVersion(item.numeric)}
-                />
-              )}
-              <EditVersion version={item.numeric} />
-            </Flex>
-          );
-        },
-      },
+      // {
+      //   accessor: "numeric",
+      //   type: "text",
+      //   label: "Actions",
+      //   renderFunc: (ref, { value, item }) => {
+      //     return (
+      //       <Flex gap="s">
+      //         {value !== currentVersion && (
+      //           <Button
+      //             label="Set as current"
+      //             onClick={() => setCurrentVersion(item.numeric)}
+      //           />
+      //         )}
+      //         <EditVersion version={item.numeric} />
+      //       </Flex>
+      //     );
+      //   },
+      // },
     ];
   }, [currentVersion]);
 
   return (
-    <DataTable<CMSVersion> data={versions} columns={columns} selectable>
-      <DataTable.Action
-        label="Refresh"
-        showLabel={false}
-        leftIcon={<Icon i="refresh" />}
-      />
-      <AddVersion />
+    <DataTable<CMSVersion>
+      data={versions}
+      columns={columns}
+      selectable
+      renderRowActions={() => {
+        return (
+          <DataTable.RowActions>
+            <DataTable.Action label="Edit" leftIcon={<Icon i="edit" />} />
+            <DataTable.Action label="Set as current" collapsed />
+            <DataTable.Action label="Delete" danger collapsed />
+          </DataTable.RowActions>
+        );
+      }}
+    >
+      {({ selectableMode }) => (
+        <>
+          <DataTable.Action
+            label="Refresh"
+            showLabel={false}
+            leftIcon={<Icon i="refresh" />}
+          />
+          <AddVersion />
+          <DataTable.Action
+            label="Refresh"
+            showLabel={false}
+            leftIcon={<Icon i="refresh" />}
+          />
+          <AddVersion />
+        </>
+      )}
     </DataTable>
   );
 };

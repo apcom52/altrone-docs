@@ -1,0 +1,63 @@
+import {RangeProperties} from "@/app/components/range/properties";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {RangeDemo} from "./demo";
+import {RangeCSSVariables} from "@/app/components/range/variables";
+
+<BluePrint 
+  title="Range" 
+  description="This component is used to pick a value from a range" 
+  group="Form controls"
+  version={35}
+/>
+
+<Text.Section>
+# Usage
+
+<Playground code={`import { Range } from 'altrone-ui';
+
+function App() {
+  const [value1, setValue1] = useState<number>(24);
+  const [value2, setValue2] = useState<number>(50);
+
+  return (
+    <Flex gap="m">
+      <Range value={value1} onChange={setValue1} min={0} max={100} />
+      <Range
+        value={value2}
+        onChange={setValue2}
+        min={0}
+        max={100}
+        showCurrentValue="always"
+        icon={<Icon i="volume_up" />}
+      />
+    </Flex>
+  );
+}`}>
+  <RangeDemo />
+</Playground>
+</Text.Section>
+
+<Text.Section>
+# Properties
+<PropertiesTable title="Properties" data={RangeProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={RangeCSSVariables} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="range." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.5">
+    - component created
+  </HistoryItem>
+</Text.Section>

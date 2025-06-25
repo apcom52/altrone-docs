@@ -30,7 +30,12 @@ export const CMSSidebar = () => {
           label="Groups"
           onClick={() => setCurrentSection(CMSCurrentSection.GROUPS)}
         />
-        <NavigationList.Link icon={<Icon i="pages" />} label="Pages" />
+        <NavigationList.Link
+          icon={<Icon i="pages" />}
+          selected={currentSection === CMSCurrentSection.PAGES}
+          label="Pages"
+          onClick={() => setCurrentSection(CMSCurrentSection.PAGES)}
+        />
         <NavigationList.Link icon={<Icon i="article" />} label="Articles" />
       </NavigationList.Group>
     </NavigationList>

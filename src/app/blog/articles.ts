@@ -34,4 +34,8 @@ export const ARTICLES: ArticleItem[] = [
     id: 6,
     title: "Altrone 3.4 Release Notes",
   },
+  {
+    id: 7,
+    title: "Altrone 3.5 Release Notes",
+  },
 ];

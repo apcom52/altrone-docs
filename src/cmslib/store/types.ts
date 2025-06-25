@@ -1,45 +1,39 @@
 import { CMSCurrentSection } from ".";
 
-export type CMSVersion = {
-  numeric: number;
-  human: string;
-  fullTitle: string;
-};
+export enum Entity {
+  Version = "version",
+  Volume = "volume",
+  Group = "group",
+  Page = "page",
+  Article = "article",
+}
 
-export type CMSVolume = {
+export type EntityRow = {
   id: string;
+  type: Entity;
   slug: string;
   title: string;
-};
-
-export type CMSGroup = {
-  id: string;
-  slug: string;
-  title: string;
-  volumeId: string;
-};
-
-export type CMSSchema = {
-  currentVersion: number;
-  versions: CMSVersion[];
-  volumes: CMSVolume[];
-  groups: CMSGroup[];
+  data: object;
 };
 
 export interface CMSStore {
   loading: boolean;
   touched: boolean;
   currentVersion: number;
-  versions: CMSVersion[];
-  volumes: CMSVolume[];
-  groups: CMSGroup[];
+  versions: EntityRow[];
+  volumes: EntityRow[];
+  groups: EntityRow[];
+  pages: EntityRow[];
+  articles: EntityRow[];
   currentSection: CMSCurrentSection;
 
   fetchDocument: () => Promise<void>;
   updateDocument: () => Promise<void>;
   setCurrentVersion: (version: number) => Promise<void>;
-  setVersions: (versions: CMSVersion[]) => Promise<void>;
-  setVolumes: (volumes: CMSVolume[]) => Promise<void>;
-  setGroups: (groups: CMSGroup[]) => Promise<void>;
+  setVersions: (versions: EntityRow[]) => Promise<void>;
+  setVolumes: (volumes: EntityRow[]) => Promise<void>;
+  setGroups: (groups: EntityRow[]) => Promise<void>;
+  setPages: (pages: EntityRow[]) => Promise<void>;
+  setArticles: (articles: EntityRow[]) => Promise<void>;
   setCurrentSection: (section: CMSCurrentSection) => Promise<void>;
 }

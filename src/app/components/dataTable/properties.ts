@@ -49,6 +49,20 @@ export const DataTableProperties: ComponentDescription = {
         "Shows footer where you can see status information and pagination",
     },
     {
+      name: "renderRowActions",
+      type: "(context: DataTableRenderRowActionsContext<T>) => ReactElement<DataTableRowActionsProps>",
+      defaultValue: "undefined",
+      version: 35,
+      description: "Custom render function for row actions",
+    },
+    {
+      name: "showEmptyBanner",
+      type: "boolean",
+      defaultValue: "true",
+      version: 35,
+      description: "Shows empty banner when there is no data",
+    },
+    {
       name: "defaultPage",
       type: "number",
       defaultValue: "1",
@@ -207,6 +221,48 @@ export const DataTableActionProperties: ComponentDescription = {
       defaultValue: "true",
       version: 30,
       description: "When the prop is false then only icon is visible",
+    },
+  ],
+};
+
+export const DataTableRowActionsProperties: ComponentDescription = {
+  extends: "React.HTMLAttributes<HTMLDivElement>",
+  properties: [
+    {
+      name: "children",
+      type: "StrictReactElements<DataTableRowActionProps>",
+      required: true,
+      defaultValue: "undefined",
+      version: 35,
+      description: "List of actions",
+    },
+  ],
+};
+
+export const DataTableRowActionProperties: ComponentDescription = {
+  extends: "<Button>",
+  properties: [
+    {
+      name: "label",
+      type: "string",
+      required: true,
+      defaultValue: "undefined",
+      version: 35,
+      description: "Label of the action",
+    },
+    {
+      name: "collapsed",
+      type: "boolean",
+      defaultValue: "false",
+      version: 35,
+      description: "If true then action is collapsed by default",
+    },
+    {
+      name: "onClick",
+      type: "() => void",
+      defaultValue: "undefined",
+      version: 35,
+      description: "Callback fired when action is clicked",
     },
   ],
 };

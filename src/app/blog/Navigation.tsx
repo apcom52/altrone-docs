@@ -23,6 +23,12 @@ export const Navigation = () => {
 
       <NavigationList.Group title="Blog">
         <NavigationList.Link
+          href={`/blog/release-3.5`}
+          label="3.5 Release"
+          selected={path.includes(`/blog/release-3.5`)}
+          renderFunc={linkRenderer}
+        />
+        <NavigationList.Link
           href={`/blog/release-3.4`}
           label="3.4 Release"
           selected={path.includes(`/blog/release-3.4`)}

@@ -7,6 +7,8 @@ import {
   DataTableColumnProperties,
   DataTableProperties,
   DataTableRenderContextProperties,
+  DataTableRowActionsProperties,
+  DataTableRowActionProperties,
 } from "@/app/components/dataTable/properties";
 import { Text } from "altrone-ui";
 import { DataTableDemo } from "@/app/components/dataTable/example";
@@ -14,6 +16,7 @@ import { DataTableCSSVariables } from "@/app/components/dataTable/variables";
 import { CSSVariablesList } from "@/components/CSSVariablesList";
 import { NewLabel } from "@/components/NewLabel";
 import { CodeBlock } from "@/components/CodeBlock";
+import { HistoryItem } from "@/components/HistoryItem";
 
 <BluePrint
   title="Data Table"
@@ -23,11 +26,13 @@ import { CodeBlock } from "@/components/CodeBlock";
 <Text.Section>
 # Usage
 
-You need to provide API request to the component to upload file automatically
+This component is used to render big amount of data. It is recommended to use it with pagination and filtering.
+
+To render DataTable you need to set columns. You can set columns in `columns` property.
 
 {/* prettier-ignore-start */}
 
-  <Playground code={`import { FilePicker } from 'altrone-ui';
+  <Playground code={`import { DataTable } from 'altrone-ui';
 
 const EMPLOYEES = [
   {
@@ -174,6 +179,24 @@ Also some types support additional options. For example, you can set delimiter f
     <PropertiesTable title="Properties" data={DataTableActionProperties} />
 
   </Text.Section>
+
+  <Text.Section>
+    ## DataTable.RowActions
+    <NewLabel version={35} />
+
+    This component is used to wrap your row actions. It is required to use `DataTable.RowAction` components as children.
+
+    <PropertiesTable title="Properties" data={DataTableRowActionsProperties} />
+  </Text.Section>
+
+  <Text.Section>
+    ## DataTable.RowAction
+    <NewLabel version={35} />
+
+    This subcomponent is used to create custom actions in DataTable row.
+
+    <PropertiesTable title="Properties" data={DataTableRowActionProperties} />
+  </Text.Section>
 </Text.Section>
 
 <Text.Section>
@@ -259,4 +282,33 @@ If you want to show some actions only in selectable mode, you need to use functi
 This component has some configuration settings. Use `<Configuration>` component to override component configuration.
 
 <ConfigTable filter="dataTable." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.5">
+    - added `RowActions` and `RowAction` components
+    - added `renderRowActions` property
+    - added `showEmptyBanner` property
+  </HistoryItem>
+  <HistoryItem version="3.3">
+    - added date, month and year filters
+    - improved sorting functionality
+    - added new `defaultFilters`, `defaultSort` and `defaultSearch` props
+    - added `onFiltersChange`, `onSortChange` and `onPageChange` callbacks
+    - added new `locale` option for DataTable column 
+  </HistoryItem>
+  <HistoryItem version="3.2">
+    - added new `type` property for DataTable column
+    - filters now use type property to determine the type of the column
+    - added new `renderFunc` property for DataTable column
+    - now you can set parameters for default column renderer using new options property
+    - some default renderers (like date) uses new locale configuration settings to format the value
+  </HistoryItem>
+  <HistoryItem version="3.1">
+    - added filters for boolean data type
+  </HistoryItem>
+  <HistoryItem version="3.0">
+    - component created
+  </HistoryItem>
 </Text.Section>

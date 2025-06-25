@@ -57,7 +57,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           content={
             <Dropdown.Menu>
               <Dropdown.Action
-                label="3.4 Curious CatZilla"
+                label="3.5 Curious CatZilla"
                 icon={<Icon i="check" />}
                 hintText="Latest"
               />
@@ -74,7 +74,7 @@ export const Header = ({ selected, onThemeChange }: HeaderProps) => {
           {({ opened }) => (
             <TopNavigation.Link
               selected={opened}
-              label="v3.4"
+              label="v3.5"
               rightIcon={<Icon i={opened ? "expand_less" : "expand_more"} />}
             />
           )}

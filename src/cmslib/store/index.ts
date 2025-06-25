@@ -1,5 +1,12 @@
 import { create } from "zustand";
-import { CMSGroup, CMSStore, CMSVersion, CMSVolume } from "./types";
+import {
+  CMSArticle,
+  CMSGroup,
+  CMSPage,
+  CMSStore,
+  CMSVersion,
+  CMSVolume,
+} from "./types";
 
 export enum CMSCurrentSection {
   VERSIONS = "versions",
@@ -16,6 +23,8 @@ export const useCMS = create<CMSStore>((set, get, store) => ({
   versions: [],
   volumes: [],
   groups: [],
+  pages: [],
+  articles: [],
   currentSection: CMSCurrentSection.VERSIONS,
 
   fetchDocument: async () => {
@@ -26,6 +35,8 @@ export const useCMS = create<CMSStore>((set, get, store) => ({
       versions: data.versions || [],
       volumes: data.volumes || [],
       groups: data.groups || [],
+      pages: data.pages || [],
+      articles: data.articles || [],
       currentVersion: data.currentVersion || 0,
       loading: false,
     });
@@ -38,6 +49,8 @@ export const useCMS = create<CMSStore>((set, get, store) => ({
         currentVersion: get().currentVersion,
         volumes: get().volumes,
         groups: get().groups,
+        pages: get().pages,
+        articles: get().articles,
       }),
     });
   },
@@ -63,6 +76,18 @@ export const useCMS = create<CMSStore>((set, get, store) => ({
     set({
       touched: true,
       groups,
+    });
+  },
+  setPages: async (pages: CMSPage[]) => {
+    set({
+      touched: true,
+      pages,
+    });
+  },
+  setArticles: async (articles: CMSArticle[]) => {
+    set({
+      touched: true,
+      articles,
     });
   },
   setCurrentSection: async (section: CMSCurrentSection) => {

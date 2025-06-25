@@ -1,0 +1,51 @@
+import {EmptyProperties} from "@/app/components/empty/properties";
+import {ConfigTable} from "@/components/PropertiesTable/ConfigTable";
+import {HistoryItem} from "@/components/HistoryItem";
+import {CSSVariablesList} from "@/components/CSSVariablesList";
+import {EmptyCSSVariables} from "@/app/components/empty/variables";
+import {Empty} from "altrone-ui";
+
+<BluePrint 
+  title="Empty" 
+  description="This component is used to display empty state" 
+  group="Atoms"
+  version={35}
+/>
+
+<Text.Section>
+# Usage
+
+<Playground code={`import { Empty } from 'altrone-ui';
+
+function App() {
+
+  return (
+    <Empty />
+  );
+}`}>
+  <Empty />
+</Playground>
+</Text.Section>
+
+<Text.Section>
+# Properties
+<PropertiesTable title="Properties" data={EmptyProperties} />
+</Text.Section>
+
+<Text.Section gap='xl'>
+  # CSS Variables
+  <CSSVariablesList data={EmptyCSSVariables} />
+</Text.Section>
+
+<Text.Section>
+  # Configuration
+  This component has some configuration settings. Use `<Configuration>` component to override component configuration.
+  <ConfigTable filter="empty." />
+</Text.Section>
+
+<Text.Section>
+  # History
+  <HistoryItem version="3.5">
+    - component created
+  </HistoryItem>
+</Text.Section>

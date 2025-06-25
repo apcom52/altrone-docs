@@ -56,6 +56,10 @@ import AvatarIconLight from "../../public/components/avatar-light.png";
 import AvatarIconDark from "../../public/components/avatar-dark.png";
 import DummyBoxIconLight from "../../public/components/dummyBox-light.png";
 import DummyBoxIconDark from "../../public/components/dummyBox-dark.png";
+import RangeIconLight from "../../public/components/range-light.png";
+import RangeIconDark from "../../public/components/range-dark.png";
+import EmptyIconLight from "../../public/components/empty-light.png";
+import EmptyIconDark from "../../public/components/empty-dark.png";
 
 import FormIconLight from "../../public/components/form-light.png";
 import FormIconDark from "../../public/components/form-dark.png";
@@ -380,6 +384,14 @@ export const COMPONENTS: ComponentInstance[] = [
     darkIcon: ColorPickerIconDark,
   },
   {
+    name: "range",
+    title: "Range",
+    group: "forms",
+    version: 35,
+    lightIcon: RangeIconLight,
+    darkIcon: RangeIconDark,
+  },
+  {
     name: "calendar",
     title: "Calendar",
     group: "display",
@@ -530,5 +542,13 @@ export const COMPONENTS: ComponentInstance[] = [
     version: 30,
     lightIcon: LoadingIconLight,
     darkIcon: LoadingIconDark,
+  },
+  {
+    name: "empty",
+    title: "Empty",
+    group: "atoms",
+    version: 35,
+    lightIcon: EmptyIconLight,
+    darkIcon: EmptyIconDark,
   },
 ];

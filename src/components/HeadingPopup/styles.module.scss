@@ -1,7 +1,7 @@
 .ComponentsPopup {
-  --topGradient: #ffdde1;
-  --bottomGradient: #ee9ca7;
-  --textColor: black;
+  --topGradient: 1.000000 0.866667 0.882353;
+  --bottomGradient: 0.933333 0.611765 0.654902;
+  --textColor: 0 0 0;
 
   display: flex;
   align-items: stretch;
@@ -17,14 +17,14 @@
   border-bottom-left-radius: 8px;
   background: linear-gradient(
     to bottom,
-    var(--topGradient) 0%,
-    var(--bottomGradient) 100%
+    color(display-p3 var(--topGradient) / 0.25) 0%,
+    color(display-p3 var(--bottomGradient) / 0.25) 100%
   );
 }
 
 .TealColor {
-  --topGradient: #b2dfdb;
-  --bottomGradient: #009688;
+  --topGradient: 0.698039 0.874510 0.858824;
+  --bottomGradient: 0.000000 0.588235 0.533333;
 }
 
 .StripLabel {
@@ -74,6 +74,7 @@
   line-height: 12px;
   cursor: pointer;
   transition: color 0.2s linear;
+  color: var(--default-500);
 
   &:hover,
   &:focus-visible {
@@ -83,14 +84,19 @@
 
 :global(.AltroneDark) {
   .ComponentsPopup {
-    --topGradient: #880e4f;
-    --bottomGradient: #d81b60;
-    --textColor: black;
+    --topGradient: 0.533333 0.054902 0.309804;
+    --bottomGradient: 0.847059 0.105882 0.376471;
+    --textColor: 0 0 0;
   }
 
   .TealColor {
-    --topGradient: #00695c;
-    --bottomGradient: #009688;
-    --textColor: black;
+    --topGradient: 0.000000 0.411765 0.360784;
+    --bottomGradient: 0.000000 0.588235 0.533333;
+    --textColor: 0 0 0;
+  }
+
+  .ComponentLink {
+    color: var(--default-50);
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 }

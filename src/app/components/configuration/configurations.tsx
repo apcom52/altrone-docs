@@ -258,6 +258,47 @@ export const CONFIGS: ConfigurationOption[] = [
     availableSince: 30,
     description: "Additional custom style object for DataTable component",
   },
+  {
+    path: "dataTable.action.className",
+    type: "string",
+    availableSince: 35,
+    description: "Additional custom className for DataTable.Action component",
+  },
+  {
+    path: "dataTable.action.style",
+    type: "React.CSSProperties",
+    availableSince: 35,
+    description:
+      "Additional custom style object for DataTable.Action component",
+  },
+  {
+    path: "dataTable.rowActions.className",
+    type: "string",
+    availableSince: 35,
+    description:
+      "Additional custom className for DataTable.RowActions component",
+  },
+  {
+    path: "dataTable.rowActions.style",
+    type: "React.CSSProperties",
+    availableSince: 35,
+    description:
+      "Additional custom style object for DataTable.RowActions component",
+  },
+  {
+    path: "dataTable.rowAction.className",
+    type: "string",
+    availableSince: 35,
+    description:
+      "Additional custom className for DataTable.RowAction component",
+  },
+  {
+    path: "dataTable.rowAction.style",
+    type: "React.CSSProperties",
+    availableSince: 35,
+    description:
+      "Additional custom style object for DataTable.RowAction component",
+  },
 
   {
     path: "datePicker.className",
@@ -447,6 +488,19 @@ export const CONFIGS: ConfigurationOption[] = [
     type: "React.CSSProperties",
     availableSince: 34,
     description: "Additional custom style object for DummyBox component",
+  },
+
+  {
+    path: "empty.className",
+    type: "string",
+    availableSince: 35,
+    description: "Additional custom className for Empty component",
+  },
+  {
+    path: "empty.style",
+    type: "React.CSSProperties",
+    availableSince: 35,
+    description: "Additional custom style object for Empty component",
   },
 
   {
@@ -804,6 +858,25 @@ export const CONFIGS: ConfigurationOption[] = [
     type: "React.CSSProperties",
     availableSince: 30,
     description: "Additional custom style object for Radio component",
+  },
+  {
+    path: "range.className",
+    type: "string",
+    availableSince: 35,
+    description: "Additional custom className for Range component",
+  },
+  {
+    path: "range.style",
+    type: "React.CSSProperties",
+    availableSince: 35,
+    description: "Additional custom style object for Range component",
+  },
+  {
+    path: "range.activeTrackClassName",
+    type: "string",
+    availableSince: 35,
+    description:
+      "Additional custom className for active track of Range component",
   },
 
   {
